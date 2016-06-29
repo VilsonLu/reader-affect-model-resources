@@ -1,0 +1,9 @@
+D:\Documents\Visual Studio 2015\Projects\DataCollector\DataCollector\bin\Debug\DataCollector.exe.config
+D:\Documents\Visual Studio 2015\Projects\DataCollector\DataCollector\bin\Debug\DataCollector.exe
+D:\Documents\Visual Studio 2015\Projects\DataCollector\DataCollector\bin\Debug\DataCollector.pdb
+D:\Documents\Visual Studio 2015\Projects\DataCollector\DataCollector\obj\Debug\DataCollector.MainFrame.resources
+D:\Documents\Visual Studio 2015\Projects\DataCollector\DataCollector\obj\Debug\DataCollector.Properties.Resources.resources
+D:\Documents\Visual Studio 2015\Projects\DataCollector\DataCollector\obj\Debug\DataCollector.csproj.GenerateResource.Cache
+D:\Documents\Visual Studio 2015\Projects\DataCollector\DataCollector\obj\Debug\DataCollector.exe
+D:\Documents\Visual Studio 2015\Projects\DataCollector\DataCollector\obj\Debug\DataCollector.pdb
+D:\Documents\Visual Studio 2015\Projects\DataCollector\DataCollector\obj\Debug\DataCollector.csprojResolveAssemblyReference.cache

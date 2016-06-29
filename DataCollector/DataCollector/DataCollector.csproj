@@ -67,6 +67,7 @@
   <ItemGroup>
     <Compile Include="FileHandlers\ConfigIniParser.cs" />
     <Compile Include="FileHandlers\ProgramLogger.cs" />
+    <Compile Include="Models\Enums.cs" />
     <Compile Include="Views\AnnotatorFrame.cs">
       <SubType>Form</SubType>
     </Compile>

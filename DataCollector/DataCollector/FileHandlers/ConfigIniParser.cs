@@ -1,4 +1,5 @@
-﻿using IniParser;
+﻿using DataCollector.Models;
+using IniParser;
 using IniParser.Model;
 
 using System;
@@ -26,8 +27,8 @@ namespace DataCollector.FileHandlers {
             return data["RESOURCES"]["storiespath"];
         }
 
-        public static String GetSelectedStoryPath(String story) {
-            return data["STORIES"][story];
+        public static String GetSelectedStoryPath(Stories story) {
+            return data["STORIES"][story.ToString()];
         }
     }
 }

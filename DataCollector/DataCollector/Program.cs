@@ -1,6 +1,6 @@
 ﻿using DataCollector.Controller;
 using DataCollector.FileHandlers;
-using DataCollector.FileHandlers;
+using DataCollector.Models;
 using DataCollector.Views;
 using System;
 using System.Collections.Generic;
@@ -26,7 +26,7 @@ namespace DataCollector {
             }*/
             Console.WriteLine(ConfigIniParser.GetStoriesPath());
             Console.WriteLine(ConfigIniParser.GetResultsPath());
-            Console.WriteLine(ConfigIniParser.GetSelectedStoryPath("test"));
+            Console.WriteLine(ConfigIniParser.GetSelectedStoryPath(Stories.TEST));
         }
     }
 }

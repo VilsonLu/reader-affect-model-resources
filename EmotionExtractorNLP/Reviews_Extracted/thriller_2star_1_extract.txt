@@ -1,0 +1,12 @@
+open
+unique
+kind
+humor
+like
+offensive
+love
+dark
+love
+love
+care
+good

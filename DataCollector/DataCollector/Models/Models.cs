@@ -9,13 +9,14 @@ namespace DataCollector.FileHandlers {
     /// Data structure for the 'Story,' which is a list of all the segments.
     /// </summary>
     static class Story {
-        static public List<Segment> segmentList { get; set; }
-        static public String title { get; set; }
-        static public String author { get; set; }
+        static public List<Segment> SegmentList { get; set; }
+        static public String Title { get; set; }
+        static public String Author { get; set; }
+
         static Story() {
-            segmentList = new List<Segment>();
-            title = "";
-            author = "";
+            SegmentList = new List<Segment>();
+            Title = "";
+            Author = "";
         }
 
         /// <summary>
@@ -23,7 +24,7 @@ namespace DataCollector.FileHandlers {
         /// </summary>
         /// <returns>TRUE if segmentList is empty, else FALSE.</returns>
         static public Boolean IsEmpty() {
-            if(segmentList.Any())
+            if(SegmentList.Any())
                 return false;
             else
                 return true;
@@ -33,9 +34,9 @@ namespace DataCollector.FileHandlers {
         /// Resets the Story data structure.
         /// </summary>
         static public void Reset() {
-            segmentList.Clear();
-            title = "";
-            author = "";
+            SegmentList.Clear();
+            Title = "";
+            Author = "";
         }
     }
 
@@ -43,12 +44,12 @@ namespace DataCollector.FileHandlers {
     /// Data structure for the 'Segment,' which is a list of all the parts in a particular segment.
     /// </summary>
     public class Segment {
-        public int id { get; set; }
-        public List<String> partList { get; set; }
+        public int Id { get; set; }
+        public List<String> PartList { get; set; }
 
         public Segment(int segmentCtr) {
-            id = segmentCtr;
-            partList = new List<String>();
+            Id = segmentCtr;
+            PartList = new List<String>();
         }
     }
 }

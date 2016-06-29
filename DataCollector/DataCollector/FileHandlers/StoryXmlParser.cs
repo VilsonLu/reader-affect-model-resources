@@ -23,8 +23,8 @@ namespace DataCollector.FileHandlers {
             xmlStory.Load(xmlPath);
 
             XmlAttributeCollection storyAttributes = xmlStory.SelectSingleNode("/story").Attributes;
-            Story.title = storyAttributes["title"].Value;
-            Story.author = storyAttributes["author"].Value;
+            Story.Title = storyAttributes["title"].Value;
+            Story.Author = storyAttributes["author"].Value;
 
             // Get all the 'segment' nodes
             XmlNodeList segmentNodeList = xmlStory.SelectNodes("/story/segment");
@@ -36,14 +36,14 @@ namespace DataCollector.FileHandlers {
                 foreach(XmlNode part in partNodeList) {
                     String PartSentence;
                     PartSentence = part.InnerText;
-                    tempSegment.partList.Add(PartSentence);
+                    tempSegment.PartList.Add(PartSentence);
                 }
 
                 segmentCtr++;
                 parsedStory.Add(tempSegment);
             }
 
-            Story.segmentList = parsedStory;
+            Story.SegmentList = parsedStory;
         }
     }
 }

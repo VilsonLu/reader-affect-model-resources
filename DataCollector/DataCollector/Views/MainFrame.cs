@@ -55,14 +55,14 @@ namespace DataCollector {
             StoryNavigator.Next();
 
             try {
-                current = StoryNavigator.ParagraphBuilder(Story.segmentList[StoryNavigator.segCurr].partList);
+                current = StoryNavigator.ParagraphBuilder(Story.SegmentList[StoryNavigator.segCurr].PartList);
                 currValid = true;
             } catch(ArgumentOutOfRangeException ex) {
                 currValid = false;
             }
 
             try {
-                previous = StoryNavigator.ParagraphBuilder(Story.segmentList[StoryNavigator.segPrev].partList);
+                previous = StoryNavigator.ParagraphBuilder(Story.SegmentList[StoryNavigator.segPrev].PartList);
                 prevValid = true;
             } catch(ArgumentOutOfRangeException ex) {
                 prevValid = false;
@@ -75,13 +75,13 @@ namespace DataCollector {
             } else if(currValid && !prevValid) { // first segment
                 lblCurr.Text = current;
                 lblPrev.TextAlign = ContentAlignment.BottomCenter;
-                lblPrev.Text = "'"+Story.title+"' by "+Story.author;
+                lblPrev.Text = "'"+Story.Title+"' by "+Story.Author;
             } else { // last segment
                 lblCurr.TextAlign = ContentAlignment.TopCenter;
                 lblCurr.Text = "THE END";
                 lblPrev.Text = previous;
                 btnNext.Enabled = false;
-                lblStatus.Text = "End of '"+Story.title+"' reached";
+                lblStatus.Text = "End of '"+Story.Title+"' reached";
             }
         }
         #endregion
@@ -91,7 +91,7 @@ namespace DataCollector {
             Reset();
             try {
                 StoryXmlParser.ParseFile(storyPath);
-                lblStatus.Text = "'" + Story.title + "' is loaded";
+                lblStatus.Text = "'" + Story.Title + "' is loaded";
                 UpdateSegments();
             } catch (Exception ex) {
                 MessageBox.Show("Story XML file does not exist.", "ERROR!");

@@ -5,8 +5,6 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataCollector", "DataCollector\DataCollector.csproj", "{99C02E46-7B35-4391-AC28-604FC842ADED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Observatory", "C:\Users\addicteduser\Desktop\Observatory Mod (FINAL) - Test\Observatory\Observatory.csproj", "{6E4E3D5C-6442-4D74-B511-43CDE3938850}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{99C02E46-7B35-4391-AC28-604FC842ADED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{99C02E46-7B35-4391-AC28-604FC842ADED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{99C02E46-7B35-4391-AC28-604FC842ADED}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6E4E3D5C-6442-4D74-B511-43CDE3938850}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6E4E3D5C-6442-4D74-B511-43CDE3938850}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6E4E3D5C-6442-4D74-B511-43CDE3938850}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6E4E3D5C-6442-4D74-B511-43CDE3938850}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

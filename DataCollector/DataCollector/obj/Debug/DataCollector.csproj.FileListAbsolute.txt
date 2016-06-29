@@ -7,14 +7,4 @@ D:\Documents\Visual Studio 2015\Projects\DataCollector\DataCollector\obj\Debug\D
 D:\Documents\Visual Studio 2015\Projects\DataCollector\DataCollector\obj\Debug\DataCollector.exe
 D:\Documents\Visual Studio 2015\Projects\DataCollector\DataCollector\obj\Debug\DataCollector.pdb
 D:\Documents\Visual Studio 2015\Projects\DataCollector\DataCollector\obj\Debug\DataCollector.csprojResolveAssemblyReference.cache
-D:\Programming Files\_My Repositories\ReaderAffectModelRepo\DataCollector\DataCollector\bin\Debug\DataCollector.exe.config
-D:\Programming Files\_My Repositories\ReaderAffectModelRepo\DataCollector\DataCollector\obj\Debug\DataCollector.exe
-D:\Programming Files\_My Repositories\ReaderAffectModelRepo\DataCollector\DataCollector\obj\Debug\DataCollector.pdb
-D:\Programming Files\_My Repositories\ReaderAffectModelRepo\DataCollector\DataCollector\bin\Debug\DataCollector.exe
-D:\Programming Files\_My Repositories\ReaderAffectModelRepo\DataCollector\DataCollector\bin\Debug\DataCollector.pdb
 D:\Programming Files\_My Repositories\ReaderAffectModelRepo\DataCollector\DataCollector\bin\Debug\INIFileParser.dll
-D:\Programming Files\_My Repositories\ReaderAffectModelRepo\DataCollector\DataCollector\bin\Debug\INIFileParser.xml
-D:\Programming Files\_My Repositories\ReaderAffectModelRepo\DataCollector\DataCollector\obj\Debug\DataCollector.csprojResolveAssemblyReference.cache
-D:\Programming Files\_My Repositories\ReaderAffectModelRepo\DataCollector\DataCollector\obj\Debug\DataCollector.MainFrame.resources
-D:\Programming Files\_My Repositories\ReaderAffectModelRepo\DataCollector\DataCollector\obj\Debug\DataCollector.Properties.Resources.resources
-D:\Programming Files\_My Repositories\ReaderAffectModelRepo\DataCollector\DataCollector\obj\Debug\DataCollector.csproj.GenerateResource.Cache

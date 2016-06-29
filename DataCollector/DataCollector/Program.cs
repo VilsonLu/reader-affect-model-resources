@@ -1,7 +1,4 @@
-﻿using DataCollector.Controller;
-using DataCollector.FileHandlers;
-using DataCollector.Models;
-using DataCollector.Views;
+﻿using DataCollector.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;

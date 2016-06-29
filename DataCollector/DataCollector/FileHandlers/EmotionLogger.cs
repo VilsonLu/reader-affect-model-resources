@@ -38,7 +38,7 @@ namespace DataCollector.FileHandlers {
                     writer.Write(values[i].Value + ",");
                 }
                 writer.WriteLine(endTime);*/
-                writer.WriteLine(startTime+","+emotion+","+intensity.ToString()+","+endTime);
+                writer.WriteLine(startTime + "," + emotion + "," + intensity.ToString() + "," + endTime);
                 writer.Flush();
             } else
                 MessageBox.Show("Stream is closed!", "Error");

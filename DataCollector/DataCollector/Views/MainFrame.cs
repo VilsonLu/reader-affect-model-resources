@@ -5,14 +5,17 @@ using System.Drawing;
 using System.Windows.Forms;
 using DataCollector.Models;
 
-namespace DataCollector {
+namespace DataCollector.Views {
     public partial class MainFrame : Form {
         private static AnnotatorFrame annotator;
         private static String storyPath;
+        private static string user;
+        private static Stories selectedStory;
 
         public MainFrame() {
+            user = new PromptFrame().ShowPromptFrame();
+            Console.Write("USER: "+user);
             InitializeComponent();
-            annotator = new AnnotatorFrame(this);
             cbStoryList.SelectedIndex = 0;
             GetStory();
             Visible = true;
@@ -34,7 +37,7 @@ namespace DataCollector {
         }
 
         private void ShowAnnotatorFrame() {
-            annotator.show();
+            annotator.ShowAnnotatorFrame();
         }
 
         /// <summary>
@@ -66,10 +69,19 @@ namespace DataCollector {
                 lblCurr.Text = current;
                 lblPrev.TextAlign = ContentAlignment.BottomLeft;
                 lblPrev.Text = previous;
+                lblProgress1.Text = Story.SegmentList[StoryNavigator.segCurr].Id.ToString();
             } else if(currValid && !prevValid) { // first segment
                 lblCurr.Text = current;
                 lblPrev.TextAlign = ContentAlignment.BottomCenter;
                 lblPrev.Text = "'"+Story.Title+"' by "+Story.Author;
+
+                lblProgress0.Visible = true;
+                lblProgress1.Visible = true;
+                lblProgress2.Visible = true;
+                lblProgress3.Visible = true;
+
+                lblProgress1.Text = Story.SegmentList[StoryNavigator.segCurr].Id.ToString();
+                lblProgress3.Text = Story.SegmentList.Count.ToString();
             } else { // last segment
                 lblCurr.TextAlign = ContentAlignment.TopCenter;
                 lblCurr.Text = "THE END";
@@ -85,6 +97,7 @@ namespace DataCollector {
             Reset();
             try {
                 StoryXmlParser.ParseFile(storyPath);
+                annotator = new AnnotatorFrame(this, user, selectedStory.ToString());
                 lblStatus.Text = "'" + Story.Title + "' is loaded";
                 UpdateSegments();
             } catch (Exception ex) {
@@ -98,6 +111,11 @@ namespace DataCollector {
             StoryNavigator.Reset();
             lblCurr.TextAlign = ContentAlignment.TopLeft;
             btnNext.Enabled = true;
+
+            lblProgress0.Visible = false;
+            lblProgress1.Visible = false;
+            lblProgress2.Visible = false;
+            lblProgress3.Visible = false;
         }
         #endregion
 
@@ -112,18 +130,19 @@ namespace DataCollector {
         private void GetStory() {
             switch(cbStoryList.SelectedIndex) {
                 case 0:
-                    storyPath = ConfigIniParser.GetSelectedStoryPath(Stories.TEST);
+                    selectedStory = Stories.TEST;
                     break;
                 case 1:
-                    storyPath = ConfigIniParser.GetSelectedStoryPath(Stories.S1);
+                    selectedStory = Stories.MFTS;
                     break;
                 case 2:
-                    storyPath = ConfigIniParser.GetSelectedStoryPath(Stories.S2);
+                    selectedStory = Stories.TFATJ;
                     break;
                 case 3:
-                    storyPath = ConfigIniParser.GetSelectedStoryPath(Stories.S3);
+                    selectedStory = Stories.TV;
                     break;
             }
+            storyPath = ConfigIniParser.GetSelectedStoryPath(selectedStory);
         }
         #endregion
     }

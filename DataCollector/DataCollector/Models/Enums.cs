@@ -6,6 +6,6 @@ using System.Threading.Tasks;
 
 namespace DataCollector.Models {
     public enum Stories {
-        TEST, S1, S2, S3
+        TEST, MFTS, TFATJ, TV
     };
 }

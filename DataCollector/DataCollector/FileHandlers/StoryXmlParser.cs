@@ -17,7 +17,7 @@ namespace DataCollector.FileHandlers {
         public static void ParseFile(String xmlPath) {
             XmlDocument xmlStory = new XmlDocument();
             List<Segment> parsedStory = new List<Segment>();
-            int segmentCtr = 0;
+            int segmentCtr = 1;
 
             // Load the XML path
             xmlStory.Load(xmlPath);

@@ -65,16 +65,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App\Utilities.cs" />
     <Compile Include="FileHandlers\ConfigIniParser.cs" />
     <Compile Include="FileHandlers\ProgramLogger.cs" />
     <Compile Include="Models\Enums.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Views\AnnotatorFrame.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\AnnotatorFrame.Designer.cs">
       <DependentUpon>AnnotatorFrame.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controller\Driver.cs" />
     <Compile Include="FileHandlers\EmotionLogger.cs" />
     <Compile Include="Models\StoryNavigator.cs" />
     <Compile Include="Views\MainFrame.cs">
@@ -87,20 +92,27 @@
     <Compile Include="FileHandlers\StoryXmlParser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\PromptFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\PromptFrame.Designer.cs">
+      <DependentUpon>PromptFrame.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Views\AnnotatorFrame.resx">
+      <DependentUpon>AnnotatorFrame.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\MainFrame.resx">
       <DependentUpon>MainFrame.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <None Include="Config.ini" />
+    <EmbeddedResource Include="Views\PromptFrame.resx">
+      <DependentUpon>PromptFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Resources\App\Config.ini" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -117,9 +129,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Images\Emojis\happy.png" />
-    <Content Include="Resources\Stories\test.xml">
+    <Content Include="Resources\Images\Icons\Add.png" />
+    <Content Include="Resources\Images\Icons\LoadStory.png" />
+    <Content Include="Resources\Images\Icons\Next.png" />
+    <Content Include="Resources\Images\Icons\Remove.png" />
+    <Content Include="Resources\Stories\ManFromTheSouth.xml" />
+    <Content Include="Resources\Stories\Test.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Resources\Stories\TheFishermanAndTheJinni.xml" />
+    <Content Include="Resources\Stories\TheVeldt.xml" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">

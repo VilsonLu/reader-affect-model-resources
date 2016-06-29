@@ -15,7 +15,7 @@ namespace DataCollector.FileHandlers {
 
         static ConfigIniParser() {
             parser = new FileIniDataParser();
-            data = parser.ReadFile("../../Config.ini");
+            data = parser.ReadFile("../../Resources/App/Config.ini");
         }
 
         /// <summary>

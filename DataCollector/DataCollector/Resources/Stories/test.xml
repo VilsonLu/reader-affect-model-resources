@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <story title="Test" author="TinTin Kalaw">
-  <segment>
-    <part>This is a test segment.</part>
-    <part>It has a 2nd part.</part>
-  </segment>
-  <segment>
-    <part>This is another segment.</part>
-    <part>It has an *italicized* word.</part>
-    <part>Oh look! A very long part fjaksdfajskldjfasdklajsdklfjasdfa. ajdshfajksdhfajsehfjaksdhfasdfjasd. dfkasdjfaefladsjfklasdjflas. dsnfasjefawefkjasdfjaksdfa.</part>
-  </segment>
-  <segment>
-    <part>This is the last segment.</part>
-  </segment>
+	<segment>
+		<part>This is a test segment.</part>
+		<part>It has a 2nd part.</part>
+	</segment>
+	<segment>
+		<part>This is another segment.</part>
+		<part>It has an *italicized* word.</part>
+		<part>Oh look! A very long part fjaksdfajskldjfasdklajsdklfjasdfa. ajdshfajksdhfajsehfjaksdhfasdfjasd. dfkasdjfaefladsjfklasdjflas. dsnfasjefawefkjasdfjaksdfa.</part>
+	</segment>
+	<segment>
+		<part>This is the last segment.</part>
+	</segment>
 </story>

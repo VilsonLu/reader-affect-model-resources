@@ -15,18 +15,22 @@ namespace DataCollector.FileHandlers {
 
         static ConfigIniParser() {
             parser = new FileIniDataParser();
-            Console.WriteLine("HELLO");
             data = parser.ReadFile("../../Config.ini");
         }
 
+        /// <summary>
+        /// Returns the directory to the Results folder.
+        /// </summary>
+        /// <returns>tThe directory to the Results folder.</returns>
         public static String GetResultsPath() {
             return data["RESOURCES"]["resultspath"];
         }
 
-        public static String GetStoriesPath() {
-            return data["RESOURCES"]["storiespath"];
-        }
-
+        /// <summary>
+        /// Returns the directory of the given 'story'.
+        /// </summary>
+        /// <param name="story"></param>
+        /// <returns></returns>
         public static String GetSelectedStoryPath(Stories story) {
             return data["STORIES"][story.ToString()];
         }

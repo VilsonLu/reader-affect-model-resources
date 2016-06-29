@@ -1,15 +1,9 @@
 ﻿using DataCollector.FileHandlers;
 using DataCollector.Views;
-using DataCollector.FileHandlers;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using DataCollector.Models;
 
 namespace DataCollector {
     public partial class MainFrame : Form {
@@ -118,16 +112,16 @@ namespace DataCollector {
         private void GetStory() {
             switch(cbStoryList.SelectedIndex) {
                 case 0:
-                    storyPath = "../../Resources/Stories/test.xml";
+                    storyPath = ConfigIniParser.GetSelectedStoryPath(Stories.TEST);
                     break;
                 case 1:
-                    storyPath = "";
+                    storyPath = ConfigIniParser.GetSelectedStoryPath(Stories.S1);
                     break;
                 case 2:
-                    storyPath = "";
+                    storyPath = ConfigIniParser.GetSelectedStoryPath(Stories.S2);
                     break;
                 case 3:
-                    storyPath = "";
+                    storyPath = ConfigIniParser.GetSelectedStoryPath(Stories.S3);
                     break;
             }
         }

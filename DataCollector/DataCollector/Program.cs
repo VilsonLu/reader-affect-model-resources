@@ -15,7 +15,7 @@ namespace DataCollector {
         /// </summary>
         [STAThread]
         static void Main() {
-            /*try {
+            try {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
                 Application.Run(new MainFrame());
@@ -23,10 +23,7 @@ namespace DataCollector {
                 //new Driver();
             } catch (Exception e) {
                 MessageBox.Show(e.Message + "\n" + e.StackTrace);
-            }*/
-            Console.WriteLine(ConfigIniParser.GetStoriesPath());
-            Console.WriteLine(ConfigIniParser.GetResultsPath());
-            Console.WriteLine(ConfigIniParser.GetSelectedStoryPath(Stories.TEST));
+            }
         }
     }
 }

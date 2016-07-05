@@ -111,7 +111,6 @@
     <EmbeddedResource Include="Views\PromptFrame.resx">
       <DependentUpon>PromptFrame.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

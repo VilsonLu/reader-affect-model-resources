@@ -48,9 +48,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="INIFileParser, Version=2.3.0.0, Culture=neutral, PublicKeyToken=79af7b307b65cf3c, processorArchitecture=MSIL">
-      <HintPath>..\packages\ini-parser.2.3.0\lib\net20\INIFileParser.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="DotNetEmotivSDK">
+      <HintPath>Resources\Emotiv SDK\Old\DotNetEmotivSDK.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -66,7 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App\Utilities.cs" />
-    <Compile Include="FileHandlers\ConfigIniParser.cs" />
+    <Compile Include="FileHandlers\EmotivLogger.cs" />
     <Compile Include="FileHandlers\ProgramLogger.cs" />
     <Compile Include="Models\Enums.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -81,7 +80,7 @@
       <DependentUpon>AnnotatorFrame.cs</DependentUpon>
     </Compile>
     <Compile Include="FileHandlers\EmotionLogger.cs" />
-    <Compile Include="Models\StoryNavigator.cs" />
+    <Compile Include="App\StoryNavigator.cs" />
     <Compile Include="Views\MainFrame.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,14 +104,13 @@
       <DependentUpon>MainFrame.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\PromptFrame.resx">
       <DependentUpon>PromptFrame.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Resources\App\Config.ini" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -123,22 +121,35 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Results\.gitignore">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="edk.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="edk_utils.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Emotiv SDK\New\DotNetEmotivSDK-vs2010.dll" />
+    <Content Include="Resources\Emotiv SDK\Old\DotNetEmotivSDK.dll" />
+    <Content Include="Resources\Emotiv SDK\Old\edk.dll" />
+    <Content Include="Resources\Emotiv SDK\Old\edk_utils.dll" />
     <Content Include="Resources\Images\Emojis\happy.png" />
     <Content Include="Resources\Images\Icons\Add.png" />
     <Content Include="Resources\Images\Icons\LoadStory.png" />
     <Content Include="Resources\Images\Icons\Next.png" />
     <Content Include="Resources\Images\Icons\Remove.png" />
-    <Content Include="Resources\Stories\ManFromTheSouth.xml" />
-    <Content Include="Resources\Stories\Test.xml">
+    <EmbeddedResource Include="Resources\Stories\ManFromTheSouth.xml" />
+    <EmbeddedResource Include="Resources\Stories\Test.xml">
       <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Resources\Stories\TheFishermanAndTheJinni.xml" />
-    <Content Include="Resources\Stories\TheVeldt.xml" />
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Stories\TheFishermanAndTheJinni.xml" />
+    <EmbeddedResource Include="Resources\Stories\TheVeldt.xml" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
@@ -152,9 +163,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\Results\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -20,33 +20,57 @@ namespace DataCollector.Views {
         private String selectedEmotion;
         private int intensity;
 
-        public AnnotatorFrame(Form parent, String user, String story) {
+        public AnnotatorFrame(Form parent, String filename) {
             InitializeComponent();
             this.parent = parent;
-            filename = ConfigIniParser.GetResultsPath() + user + "_EmoAnno_" + story + "_" + Utilities.GetTimestamp() + ".csv";
             log = new EmotionLogger(filename);
         }
 
+        /// <summary>
+        /// Shows the AnnotatorFrame and takes note of the startTime.
+        /// </summary>
         public void ShowAnnotatorFrame() {
-            startTime = (DateTime.Now.ToLocalTime() - new DateTime(1970, 1, 1).ToLocalTime()).TotalMilliseconds;
+            startTime = Utilities.GetCsvTimestamp();
             parent.Enabled = false;
             ShowDialog();
         }
 
+        /// <summary>
+        /// Takes note of the endTime and the intensity of the selectedEmotion.
+        /// Writes the startTime, selectedEmotion, intensity, and endTime to the CSV file.
+        /// Event handler for btnSubmit.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSubmit_Click(object sender, EventArgs e) {
             intensity = trackBar1.Value;
-            endTime = (DateTime.Now.ToLocalTime() - new DateTime(1970, 1, 1).ToLocalTime()).TotalMilliseconds;
-            log.writeValues(startTime.ToString(), selectedEmotion, intensity, endTime.ToString());
+            endTime = Utilities.GetCsvTimestamp();
+            log.LogValues(startTime.ToString(), selectedEmotion, intensity, endTime.ToString());
             CloseAnnotatorFrame();
         }
 
+        /// <summary>
+        /// Hides the AnnotatorFrame.
+        /// </summary>
         private void CloseAnnotatorFrame() {
-            Visible = false;
+            if(StoryNavigator.IsLastSegmentIndexBased())
+                log.Close();
+
+            Close();
             parent.Enabled = true;
+
         }
 
         /// <summary>
-        /// Gets the corresponing value of the selected RadioButton.
+        /// Closes the EmotionLogger stream.
+        /// </summary>
+        public void CloseLogger() {
+            log.Close();
+        }
+
+        /// <summary>
+        /// Takes note of the selectedEmotion.
+        /// Event handler for the radio button group.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

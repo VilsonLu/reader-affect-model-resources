@@ -7,47 +7,37 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DataCollector.FileHandlers {
-    class EmotionLogger {
+    public class EmotionLogger {
         private StreamWriter writer;
-        private Boolean isOpen = false;
-        public bool Open { get { return isOpen; } }
+        private string header = "START_TIME, EMOTION, INTENSITY, END_TIME";
 
+        /// <summary>
+        /// Creates an instance of the EmotionLogger and corresponding output file.
+        /// </summary>
+        /// <param name="filename"></param>
         public EmotionLogger(String filename) {
             writer = new StreamWriter(filename);
             writer.AutoFlush = true;
-            isOpen = true;
-            init();
+            writer.WriteLine(header);
         }
 
-        private void init() {
-            if(isOpen) {
-                /*writer.Write("Start time,");
-                for(int i = 0; i < values.Count; i++) {
-                    writer.Write(values[i].Name + ",");
-                }
-                //writer.WriteLine("End time");*/
-                writer.WriteLine("Start Time,Emotion,Intensity,EndTime");
-                writer.Flush();
-            }
+        /// <summary>
+        /// Appends the paramerter values to the EmotionAnnotation.csv file.
+        /// </summary>
+        /// <param name="startTime"></param>
+        /// <param name="emotion"></param>
+        /// <param name="intensity"></param>
+        /// <param name="endTime"></param>
+        public void LogValues(String startTime, String emotion, int intensity, String endTime) {
+            writer.WriteLine(startTime + "," + emotion + "," + intensity.ToString() + "," + endTime);
         }
 
-        public void writeValues(String startTime, String emotion, int intensity, String endTime) {
-            if(isOpen) {
-                /*writer.Write(startTime + ",");
-                for(int i = 0; i < values.Count; i++) {
-                    writer.Write(values[i].Value + ",");
-                }
-                writer.WriteLine(endTime);*/
-                writer.WriteLine(startTime + "," + emotion + "," + intensity.ToString() + "," + endTime);
-                writer.Flush();
-            } else
-                MessageBox.Show("Stream is closed!", "Error");
-        }
-
-        public void end() {
+        /// <summary>
+        /// Closes the writer.
+        /// </summary>
+        public void Close() {
             writer.Flush();
             writer.Close();
-            isOpen = false;
         }
     }
 }

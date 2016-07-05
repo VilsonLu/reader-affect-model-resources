@@ -1,4 +1,6 @@
-﻿namespace DataCollector.Views
+﻿using System.Windows.Forms;
+
+namespace DataCollector.Views
 {
     partial class MainFrame
     {
@@ -30,20 +32,23 @@
         {
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.lblStatus = new System.Windows.Forms.ToolStripStatusLabel();
-            this.lblProgress0 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.lblProgress1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.lblProgress2 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.lblProgress3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.cbStoryList = new System.Windows.Forms.ToolStripComboBox();
-            this.tBtnLoad = new System.Windows.Forms.ToolStripButton();
+            this.tBtnRecord = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.lblEegStatus = new System.Windows.Forms.ToolStripLabel();
             this.lblPrev = new System.Windows.Forms.Label();
             this.lblSpace = new System.Windows.Forms.Label();
             this.lblCurr = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnNext = new System.Windows.Forms.Button();
+            this.lblStatus = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lblProgress0 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lblProgress1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lblProgress2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lblProgress3 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripContainer1.BottomToolStripPanel.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -91,41 +96,6 @@
             this.statusStrip1.Size = new System.Drawing.Size(779, 25);
             this.statusStrip1.TabIndex = 0;
             // 
-            // lblStatus
-            // 
-            this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(116, 20);
-            this.lblStatus.Text = "No story loaded";
-            this.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblProgress0
-            // 
-            this.lblProgress0.Name = "lblProgress0";
-            this.lblProgress0.Size = new System.Drawing.Size(80, 20);
-            this.lblProgress0.Text = "|  Segment";
-            this.lblProgress0.Visible = false;
-            // 
-            // lblProgress1
-            // 
-            this.lblProgress1.Name = "lblProgress1";
-            this.lblProgress1.Size = new System.Drawing.Size(18, 20);
-            this.lblProgress1.Text = "#";
-            this.lblProgress1.Visible = false;
-            // 
-            // lblProgress2
-            // 
-            this.lblProgress2.Name = "lblProgress2";
-            this.lblProgress2.Size = new System.Drawing.Size(23, 20);
-            this.lblProgress2.Text = "of";
-            this.lblProgress2.Visible = false;
-            // 
-            // lblProgress3
-            // 
-            this.lblProgress3.Name = "lblProgress3";
-            this.lblProgress3.Size = new System.Drawing.Size(18, 20);
-            this.lblProgress3.Text = "#";
-            this.lblProgress3.Visible = false;
-            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.toolStrip1);
@@ -147,7 +117,9 @@
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cbStoryList,
-            this.tBtnLoad});
+            this.tBtnRecord,
+            this.toolStripSeparator1,
+            this.lblEegStatus});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
@@ -168,16 +140,31 @@
             this.cbStoryList.Size = new System.Drawing.Size(160, 47);
             this.cbStoryList.SelectedIndexChanged += new System.EventHandler(this.cbStoryList_SelectedIndexChanged);
             // 
-            // tBtnLoad
+            // tBtnRecord
             // 
-            this.tBtnLoad.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBtnLoad.Image = global::DataCollector.Properties.Resources.LoadStory;
-            this.tBtnLoad.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tBtnLoad.Name = "tBtnLoad";
-            this.tBtnLoad.Size = new System.Drawing.Size(46, 44);
-            this.tBtnLoad.Text = "Load";
-            this.tBtnLoad.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.tBtnLoad.Click += new System.EventHandler(this.tBtnLoad_Click);
+            this.tBtnRecord.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBtnRecord.Image = global::DataCollector.Properties.Resources.LoadStory;
+            this.tBtnRecord.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tBtnRecord.Name = "tBtnRecord";
+            this.tBtnRecord.Size = new System.Drawing.Size(44, 44);
+            this.tBtnRecord.Text = "Start";
+            this.tBtnRecord.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tBtnRecord.Click += new System.EventHandler(this.tBtnRecord_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 47);
+            // 
+            // lblEegStatus
+            // 
+            this.lblEegStatus.AutoSize = false;
+            this.lblEegStatus.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEegStatus.ForeColor = System.Drawing.Color.Red;
+            this.lblEegStatus.Name = "lblEegStatus";
+            this.lblEegStatus.Size = new System.Drawing.Size(150, 44);
+            this.lblEegStatus.Text = "EEG is not recording";
+            this.lblEegStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblPrev
             // 
@@ -240,6 +227,47 @@
             this.btnNext.UseVisualStyleBackColor = true;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
+            // lblStatus
+            // 
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(116, 20);
+            this.lblStatus.Text = "No story loaded";
+            this.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblProgress0
+            // 
+            this.lblProgress0.Name = "lblProgress0";
+            this.lblProgress0.Size = new System.Drawing.Size(80, 20);
+            this.lblProgress0.Text = "|  Segment";
+            this.lblProgress0.Visible = false;
+            // 
+            // lblProgress1
+            // 
+            this.lblProgress1.Name = "lblProgress1";
+            this.lblProgress1.Size = new System.Drawing.Size(18, 20);
+            this.lblProgress1.Text = "#";
+            this.lblProgress1.Visible = false;
+            // 
+            // lblProgress2
+            // 
+            this.lblProgress2.Name = "lblProgress2";
+            this.lblProgress2.Size = new System.Drawing.Size(23, 20);
+            this.lblProgress2.Text = "of";
+            this.lblProgress2.Visible = false;
+            // 
+            // lblProgress3
+            // 
+            this.lblProgress3.Name = "lblProgress3";
+            this.lblProgress3.Size = new System.Drawing.Size(18, 20);
+            this.lblProgress3.Text = "#";
+            this.lblProgress3.Visible = false;
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(151, 20);
+            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
+            // 
             // MainFrame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -273,7 +301,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripComboBox cbStoryList;
-        private System.Windows.Forms.ToolStripButton tBtnLoad;
         private System.Windows.Forms.Label lblPrev;
         private System.Windows.Forms.Label lblSpace;
         private System.Windows.Forms.Label lblCurr;
@@ -284,6 +311,10 @@
         private System.Windows.Forms.ToolStripStatusLabel lblProgress1;
         private System.Windows.Forms.ToolStripStatusLabel lblProgress2;
         private System.Windows.Forms.ToolStripStatusLabel lblProgress3;
+        private ToolStripLabel lblEegStatus;
+        private ToolStripButton tBtnRecord;
+        private ToolStripSeparator toolStripSeparator1;
+        private ToolStripStatusLabel toolStripStatusLabel1;
     }
 }
 

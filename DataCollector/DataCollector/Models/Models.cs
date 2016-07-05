@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataCollector.FileHandlers {
+namespace DataCollector.Models {
     /// <summary>
     /// Data structure for the 'Story,' which is a list of all the segments.
     /// </summary>

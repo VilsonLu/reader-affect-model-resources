@@ -22,7 +22,7 @@ namespace DataCollector.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace DataCollector.Properties {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("DataCollector.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace DataCollector.Properties {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace DataCollector.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Add {
+        public static System.Drawing.Bitmap Add {
             get {
                 object obj = ResourceManager.GetObject("Add", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -73,7 +73,7 @@ namespace DataCollector.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap happy {
+        public static System.Drawing.Bitmap happy {
             get {
                 object obj = ResourceManager.GetObject("happy", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -83,7 +83,7 @@ namespace DataCollector.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap LoadStory {
+        public static System.Drawing.Bitmap LoadStory {
             get {
                 object obj = ResourceManager.GetObject("LoadStory", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -91,9 +91,25 @@ namespace DataCollector.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+        ///&lt;story title=&quot;Man from the South&quot; author=&quot;Roald Dahl&quot;&gt;
+        ///	&lt;segment&gt;
+        ///		&lt;part&gt;It was getting on towards six o’clock so I thought I&apos;d buy myself a beer and go out and sit in a deckchair by the swimming pool and have a little evening sun.&lt;/part&gt;
+        ///		&lt;part&gt;I went to the bar and got the beer and carried it outside and wandered down the garden towards the pool.&lt;/part&gt;
+        ///	&lt;/segment&gt;
+        ///	&lt;segment&gt;
+        ///		&lt;part&gt;It was a fine garden with lawns and beds of azaleas and tall coconut palms [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string ManFromTheSouth {
+            get {
+                return ResourceManager.GetString("ManFromTheSouth", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Next {
+        public static System.Drawing.Bitmap Next {
             get {
                 object obj = ResourceManager.GetObject("Next", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -103,10 +119,111 @@ namespace DataCollector.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Remove {
+        public static System.Drawing.Bitmap Remove {
             get {
                 object obj = ResourceManager.GetObject("Remove", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+        ///&lt;story title=&quot;Test&quot; author=&quot;TinTin Kalaw&quot;&gt;
+        ///	&lt;segment&gt;
+        ///		&lt;part&gt;This is a test segment.&lt;/part&gt;
+        ///		&lt;part&gt;It has a 2nd part.&lt;/part&gt;
+        ///	&lt;/segment&gt;
+        ///	&lt;segment&gt;
+        ///		&lt;part&gt;This is another segment.&lt;/part&gt;
+        ///		&lt;part&gt;It has an *italicized* word.&lt;/part&gt;
+        ///		&lt;part&gt;Oh look! A very long part fjaksdfajskldjfasdklajsdklfjasdfa. ajdshfajksdhfajsehfjaksdhfasdfjasd. dfkasdjfaefladsjfklasdjflas. dsnfasjefawefkjasdfjaksdfa.&lt;/part&gt;
+        ///	&lt;/segment&gt;
+        ///	&lt;segment&gt;
+        ///		&lt;part&gt;This is the last segment.&lt; [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string Test {
+            get {
+                return ResourceManager.GetString("Test", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+        ///&lt;story title=&quot;Man from the South&quot; author=&quot;Roald Dahl&quot;&gt;
+        ///	&lt;segment&gt;
+        ///		&lt;part&gt;&lt;/part&gt;
+        ///	&lt;/segment&gt;
+        ///	&lt;segment&gt;
+        ///		&lt;part&gt;&lt;/part&gt;
+        ///	&lt;/segment&gt;
+        ///	&lt;segment&gt;
+        ///		&lt;part&gt;&lt;/part&gt;
+        ///	&lt;/segment&gt;
+        ///	&lt;segment&gt;
+        ///		&lt;part&gt;&lt;/part&gt;
+        ///	&lt;/segment&gt;
+        ///	&lt;segment&gt;
+        ///		&lt;part&gt;&lt;/part&gt;
+        ///	&lt;/segment&gt;
+        ///	&lt;segment&gt;
+        ///		&lt;part&gt;&lt;/part&gt;
+        ///	&lt;/segment&gt;
+        ///	&lt;segment&gt;
+        ///		&lt;part&gt;&lt;/part&gt;
+        ///	&lt;/segment&gt;
+        ///	&lt;segment&gt;
+        ///		&lt;part&gt;&lt;/part&gt;
+        ///	&lt;/segment&gt;
+        ///	&lt;segment&gt;
+        ///		&lt;part&gt;&lt;/part&gt;
+        ///	&lt;/segment&gt;
+        ///	&lt;segment&gt;
+        ///		&lt;part&gt;&lt;/part&gt;
+        ///	&lt;/segme [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string TheFishermanAndTheJinni {
+            get {
+                return ResourceManager.GetString("TheFishermanAndTheJinni", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+        ///&lt;story title=&quot;Man from the South&quot; author=&quot;Roald Dahl&quot;&gt;
+        ///	&lt;segment&gt;
+        ///		&lt;part&gt;&lt;/part&gt;
+        ///	&lt;/segment&gt;
+        ///	&lt;segment&gt;
+        ///		&lt;part&gt;&lt;/part&gt;
+        ///	&lt;/segment&gt;
+        ///	&lt;segment&gt;
+        ///		&lt;part&gt;&lt;/part&gt;
+        ///	&lt;/segment&gt;
+        ///	&lt;segment&gt;
+        ///		&lt;part&gt;&lt;/part&gt;
+        ///	&lt;/segment&gt;
+        ///	&lt;segment&gt;
+        ///		&lt;part&gt;&lt;/part&gt;
+        ///	&lt;/segment&gt;
+        ///	&lt;segment&gt;
+        ///		&lt;part&gt;&lt;/part&gt;
+        ///	&lt;/segment&gt;
+        ///	&lt;segment&gt;
+        ///		&lt;part&gt;&lt;/part&gt;
+        ///	&lt;/segment&gt;
+        ///	&lt;segment&gt;
+        ///		&lt;part&gt;&lt;/part&gt;
+        ///	&lt;/segment&gt;
+        ///	&lt;segment&gt;
+        ///		&lt;part&gt;&lt;/part&gt;
+        ///	&lt;/segment&gt;
+        ///	&lt;segment&gt;
+        ///		&lt;part&gt;&lt;/part&gt;
+        ///	&lt;/segme [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string TheVeldt {
+            get {
+                return ResourceManager.GetString("TheVeldt", resourceCulture);
             }
         }
     }

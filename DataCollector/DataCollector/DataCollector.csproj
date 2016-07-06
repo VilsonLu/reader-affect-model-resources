@@ -139,10 +139,8 @@
     <Content Include="Resources\Emotiv SDK\Old\edk.dll" />
     <Content Include="Resources\Emotiv SDK\Old\edk_utils.dll" />
     <Content Include="Resources\Images\Emojis\happy.png" />
-    <Content Include="Resources\Images\Icons\Add.png" />
-    <Content Include="Resources\Images\Icons\LoadStory.png" />
-    <Content Include="Resources\Images\Icons\Next.png" />
-    <Content Include="Resources\Images\Icons\Remove.png" />
+    <Content Include="Resources\Images\Icons\IMG_Play.png" />
+    <Content Include="Resources\Images\Icons\IMG_Stop.png" />
     <EmbeddedResource Include="Resources\Stories\ManFromTheSouth.xml" />
     <EmbeddedResource Include="Resources\Stories\Test.xml">
       <SubType>Designer</SubType>

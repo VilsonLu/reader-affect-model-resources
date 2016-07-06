@@ -63,16 +63,6 @@ namespace DataCollector.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Add {
-            get {
-                object obj = ResourceManager.GetObject("Add", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         public static System.Drawing.Bitmap happy {
             get {
                 object obj = ResourceManager.GetObject("happy", resourceCulture);
@@ -83,9 +73,29 @@ namespace DataCollector.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap LoadStory {
+        public static System.Drawing.Bitmap IMG_Play {
             get {
-                object obj = ResourceManager.GetObject("LoadStory", resourceCulture);
+                object obj = ResourceManager.GetObject("IMG_Play", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap IMG_Resize {
+            get {
+                object obj = ResourceManager.GetObject("IMG_Resize", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap IMG_Stop {
+            get {
+                object obj = ResourceManager.GetObject("IMG_Stop", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -94,7 +104,7 @@ namespace DataCollector.Properties {
         ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
         ///&lt;story title=&quot;Man from the South&quot; author=&quot;Roald Dahl&quot;&gt;
         ///	&lt;segment&gt;
-        ///		&lt;part&gt;It was getting on towards six o’clock so I thought I&apos;d buy myself a beer and go out and sit in a deckchair by the swimming pool and have a little evening sun.&lt;/part&gt;
+        ///		&lt;part&gt;It was getting on towards six o&apos;clock so I thought I&apos;d buy myself a beer and go out and sit in a deckchair by the swimming pool and have a little evening sun.&lt;/part&gt;
         ///		&lt;part&gt;I went to the bar and got the beer and carried it outside and wandered down the garden towards the pool.&lt;/part&gt;
         ///	&lt;/segment&gt;
         ///	&lt;segment&gt;
@@ -103,26 +113,6 @@ namespace DataCollector.Properties {
         public static string ManFromTheSouth {
             get {
                 return ResourceManager.GetString("ManFromTheSouth", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap Next {
-            get {
-                object obj = ResourceManager.GetObject("Next", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap Remove {
-            get {
-                object obj = ResourceManager.GetObject("Remove", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -191,35 +181,13 @@ namespace DataCollector.Properties {
         ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
         ///&lt;story title=&quot;Man from the South&quot; author=&quot;Roald Dahl&quot;&gt;
         ///	&lt;segment&gt;
-        ///		&lt;part&gt;&lt;/part&gt;
-        ///	&lt;/segment&gt;
-        ///	&lt;segment&gt;
-        ///		&lt;part&gt;&lt;/part&gt;
-        ///	&lt;/segment&gt;
-        ///	&lt;segment&gt;
-        ///		&lt;part&gt;&lt;/part&gt;
-        ///	&lt;/segment&gt;
-        ///	&lt;segment&gt;
-        ///		&lt;part&gt;&lt;/part&gt;
-        ///	&lt;/segment&gt;
-        ///	&lt;segment&gt;
-        ///		&lt;part&gt;&lt;/part&gt;
-        ///	&lt;/segment&gt;
-        ///	&lt;segment&gt;
-        ///		&lt;part&gt;&lt;/part&gt;
-        ///	&lt;/segment&gt;
-        ///	&lt;segment&gt;
-        ///		&lt;part&gt;&lt;/part&gt;
-        ///	&lt;/segment&gt;
-        ///	&lt;segment&gt;
-        ///		&lt;part&gt;&lt;/part&gt;
-        ///	&lt;/segment&gt;
-        ///	&lt;segment&gt;
-        ///		&lt;part&gt;&lt;/part&gt;
-        ///	&lt;/segment&gt;
-        ///	&lt;segment&gt;
-        ///		&lt;part&gt;&lt;/part&gt;
-        ///	&lt;/segme [rest of string was truncated]&quot;;.
+        ///		&lt;part&gt;&quot;George, I wish you&apos;d look at the nursery.&quot;&lt;/part&gt;
+        ///		&lt;part&gt;&quot;What&apos;s wrong with it?&quot;&lt;/part&gt;
+        ///		&lt;part&gt;&quot;I don&apos;t know.&quot;&lt;/part&gt;
+        ///		&lt;part&gt;&quot;Well, then.&quot;&lt;/part&gt;
+        ///		&lt;part&gt;&quot;I just want you to look at it, is all, or call a psychologist in to look at it.&quot;&lt;/part&gt;
+        ///		&lt;part&gt;&quot;What would a psychologist want with a nursery?&quot;&lt;/part&gt;
+        ///		&lt;part&gt;&quot;You know very well what he&apos;d want.&quot; His wife paused in the middle of  [rest of string was truncated]&quot;;.
         /// </summary>
         public static string TheVeldt {
             get {

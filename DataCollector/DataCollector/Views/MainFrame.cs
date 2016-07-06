@@ -122,7 +122,7 @@ namespace DataCollector.Views {
         /// Starts the EEG recording.
         /// </summary>
         private void StartEegComponent() {
-            tBtnRecord.Image = Properties.Resources.Remove;
+            tBtnRecord.Image = Properties.Resources.IMG_Stop;
             tBtnRecord.Text = "Stop";
             lblEegStatus.Text = "EEG is recording";
             lblEegStatus.ForeColor = Color.Green;
@@ -138,7 +138,7 @@ namespace DataCollector.Views {
         /// Stops the EEG recording.
         /// </summary>
         private void StopEegComponent() {
-            tBtnRecord.Image = Properties.Resources.LoadStory;
+            tBtnRecord.Image = Properties.Resources.IMG_Play;
             tBtnRecord.Text = "Start";
             lblEegStatus.Text = "EEG is not recording";
             lblEegStatus.ForeColor = Color.Red;

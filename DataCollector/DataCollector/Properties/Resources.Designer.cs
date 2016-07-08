@@ -73,6 +73,16 @@ namespace DataCollector.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap IMG_Baseline {
+            get {
+                object obj = ResourceManager.GetObject("IMG_Baseline", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap IMG_Play {
             get {
                 object obj = ResourceManager.GetObject("IMG_Play", resourceCulture);
@@ -141,35 +151,10 @@ namespace DataCollector.Properties {
         ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
         ///&lt;story title=&quot;Man from the South&quot; author=&quot;Roald Dahl&quot;&gt;
         ///	&lt;segment&gt;
-        ///		&lt;part&gt;&lt;/part&gt;
+        ///		&lt;part&gt;It is said, oh wise and happy King, that a very poor fisherman who swore by Almighty God that he would only cast his net three times each day, went down to the sea late one afternoon as usual, waited until he saw the moon shining above him, and then threw his net very carefully into the water.&lt;/part&gt;
         ///	&lt;/segment&gt;
         ///	&lt;segment&gt;
-        ///		&lt;part&gt;&lt;/part&gt;
-        ///	&lt;/segment&gt;
-        ///	&lt;segment&gt;
-        ///		&lt;part&gt;&lt;/part&gt;
-        ///	&lt;/segment&gt;
-        ///	&lt;segment&gt;
-        ///		&lt;part&gt;&lt;/part&gt;
-        ///	&lt;/segment&gt;
-        ///	&lt;segment&gt;
-        ///		&lt;part&gt;&lt;/part&gt;
-        ///	&lt;/segment&gt;
-        ///	&lt;segment&gt;
-        ///		&lt;part&gt;&lt;/part&gt;
-        ///	&lt;/segment&gt;
-        ///	&lt;segment&gt;
-        ///		&lt;part&gt;&lt;/part&gt;
-        ///	&lt;/segment&gt;
-        ///	&lt;segment&gt;
-        ///		&lt;part&gt;&lt;/part&gt;
-        ///	&lt;/segment&gt;
-        ///	&lt;segment&gt;
-        ///		&lt;part&gt;&lt;/part&gt;
-        ///	&lt;/segment&gt;
-        ///	&lt;segment&gt;
-        ///		&lt;part&gt;&lt;/part&gt;
-        ///	&lt;/segme [rest of string was truncated]&quot;;.
+        ///		&lt;part&gt;He sat there for a time, and then, when he pulled on his ne [rest of string was truncated]&quot;;.
         /// </summary>
         public static string TheFishermanAndTheJinni {
             get {

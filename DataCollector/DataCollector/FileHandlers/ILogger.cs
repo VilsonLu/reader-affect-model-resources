@@ -9,16 +9,11 @@ namespace DataCollector.FileHandlers {
         /// <summary>
         /// Initializes the Writer and the corresponding output file.
         /// </summary>
-        /// <param name="filename"></param>
-        void Initialize(String filename);
+        void Initialize();
         /// <summary>
         /// Logs the data to the output file.
         /// </summary>
         /// <param name="data"></param>
         void Log(params Object[] data);
-        /// <summary>
-        /// Closes the Logger.
-        /// </summary>
-        void CloseLogger();
     }
 }

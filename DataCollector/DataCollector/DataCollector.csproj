@@ -113,6 +113,9 @@
     <EmbeddedResource Include="Views\PromptFrame.resx">
       <DependentUpon>PromptFrame.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Logs\.gitignore">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -141,6 +144,7 @@
     <Content Include="Resources\Emotiv SDK\Old\edk.dll" />
     <Content Include="Resources\Emotiv SDK\Old\edk_utils.dll" />
     <Content Include="Resources\Images\Emojis\happy.png" />
+    <EmbeddedResource Include="Resources\Images\Icons\IMG_Baseline.png" />
     <EmbeddedResource Include="Resources\Images\Icons\IMG_Play.png" />
     <EmbeddedResource Include="Resources\Images\Icons\IMG_Stop.png" />
     <EmbeddedResource Include="Resources\Stories\ManFromTheSouth.xml" />

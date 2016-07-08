@@ -8,16 +8,18 @@ using System.Threading.Tasks;
 namespace DataCollector.FileHandlers {
     public class EegLogger : ILogger {
         private string header = "TIMESTAMP, AF3, T7, Pz, T8, AF4";
-        private StreamWriter writer;
+        private String filename;
 
         public EegLogger(String filename) {
-            Initialize(filename);
+            ProgramLogger.Log("[EegLogger()] Created EegLogger instance");
+            this.filename = filename;
+            Initialize();
         }
 
-        public void Initialize(String filename) {
-            writer = new StreamWriter(filename);
-            writer.AutoFlush = true;
+        public void Initialize() {
+            StreamWriter writer = new StreamWriter(filename, false);
             writer.WriteLine(header);
+            writer.Close();
         }
 
         /// <summary>
@@ -25,13 +27,12 @@ namespace DataCollector.FileHandlers {
         /// </summary>
         /// <param name="data"></param>
         public void Log(params object[] data) {
+            StreamWriter writer = new StreamWriter(filename, true);
+
             foreach(object d in data)
                 writer.Write(d.ToString() + ",");
             writer.WriteLine("");
-        }
 
-        public void CloseLogger() {
-            writer.Flush();
             writer.Close();
         }
     }

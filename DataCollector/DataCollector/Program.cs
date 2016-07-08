@@ -1,4 +1,5 @@
-﻿using DataCollector.Views;
+﻿using DataCollector.FileHandlers;
+using DataCollector.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,8 @@ namespace DataCollector {
         /// </summary>
         [STAThread]
         static void Main() {
+            ProgramLogger.Initialize();
+
             try {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);

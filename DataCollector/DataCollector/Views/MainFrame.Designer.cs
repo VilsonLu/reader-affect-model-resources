@@ -30,6 +30,7 @@ namespace DataCollector.Views
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblStatus = new System.Windows.Forms.ToolStripStatusLabel();
@@ -39,18 +40,21 @@ namespace DataCollector.Views
             this.lblProgress3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.btnGetBaseline = new System.Windows.Forms.ToolStripButton();
+            this.lblTime = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.cbStoryList = new System.Windows.Forms.ToolStripComboBox();
             this.tBtnRecord = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.lblEegRecording = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.lblEegRecording = new System.Windows.Forms.ToolStripLabel();
             this.lblPrev = new System.Windows.Forms.Label();
             this.lblSpace = new System.Windows.Forms.Label();
             this.lblCurr = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnNext = new System.Windows.Forms.Button();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.timer = new System.Windows.Forms.Timer(this.components);
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripContainer1.BottomToolStripPanel.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -151,11 +155,13 @@ namespace DataCollector.Views
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
+            this.btnGetBaseline,
             this.toolStripSeparator1,
+            this.lblTime,
+            this.toolStripSeparator2,
             this.cbStoryList,
             this.tBtnRecord,
-            this.toolStripSeparator2,
+            this.toolStripSeparator3,
             this.lblEegRecording});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
@@ -163,6 +169,29 @@ namespace DataCollector.Views
             this.toolStrip1.Size = new System.Drawing.Size(776, 47);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
+            // 
+            // btnGetBaseline
+            // 
+            this.btnGetBaseline.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGetBaseline.Image = global::DataCollector.Properties.Resources.IMG_Baseline;
+            this.btnGetBaseline.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnGetBaseline.Name = "btnGetBaseline";
+            this.btnGetBaseline.Size = new System.Drawing.Size(95, 44);
+            this.btnGetBaseline.Text = "Get Baseline";
+            this.btnGetBaseline.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnGetBaseline.Click += new System.EventHandler(this.btnGetBaseline_Click);
+            // 
+            // lblTime
+            // 
+            this.lblTime.AutoSize = false;
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(73, 44);
+            this.lblTime.Text = "(00m:00s)";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 47);
             // 
             // cbStoryList
             // 
@@ -188,10 +217,10 @@ namespace DataCollector.Views
             this.tBtnRecord.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tBtnRecord.Click += new System.EventHandler(this.tBtnRecord_Click);
             // 
-            // toolStripSeparator1
+            // toolStripSeparator2
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 47);
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 47);
             // 
             // lblEegRecording
             // 
@@ -202,11 +231,6 @@ namespace DataCollector.Views
             this.lblEegRecording.Size = new System.Drawing.Size(150, 44);
             this.lblEegRecording.Text = "EEG is not recording";
             this.lblEegRecording.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 47);
             // 
             // lblPrev
             // 
@@ -275,15 +299,15 @@ namespace DataCollector.Views
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(151, 20);
             this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
             // 
-            // toolStripButton1
+            // timer
             // 
-            this.toolStripButton1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripButton1.Image = global::DataCollector.Properties.Resources.IMG_Play;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(95, 44);
-            this.toolStripButton1.Text = "Get Baseline";
-            this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.timer.Interval = 1000;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 47);
             // 
             // MainFrame
             // 
@@ -333,7 +357,10 @@ namespace DataCollector.Views
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripStatusLabel toolStripStatusLabel1;
         private ToolStripSeparator toolStripSeparator2;
-        private ToolStripButton toolStripButton1;
+        private ToolStripButton btnGetBaseline;
+        private ToolStripLabel lblTime;
+        private Timer timer;
+        private ToolStripSeparator toolStripSeparator3;
     }
 }
 

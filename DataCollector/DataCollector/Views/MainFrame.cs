@@ -17,7 +17,7 @@ namespace DataCollector.Views {
         #endregion
         private static String user = "TINTIN";
         private static Stories selectedStory;
-        private static int clickCtr;        
+        private static int clickCtr = 0;        
 
         /// <summary>
         /// Creates an instance of the MainFrame.
@@ -29,7 +29,7 @@ namespace DataCollector.Views {
             InitializeComponent();
             cbStoryList.SelectedIndex = 0;
             GetStory();
-            clickCtr = 0;
+            connector = new EmotivConnector(this);
         }
 
         /*public void UpdateEegBatteryStatus(String newText) {
@@ -120,7 +120,8 @@ namespace DataCollector.Views {
 
             ProgramLogger.Log("[MainFrame.CreateOutputFiles()] Created EegData.csv");
             String outputEegFilename =  template + "EegData.csv";
-            connector = new EmotivConnector(this, outputEegFilename);
+            //connector = new EmotivConnector(this, outputEegFilename);
+            connector.CreateOutputFile(outputEegFilename);
 
             ProgramLogger.Log("[MainFrame.CreateOutputFiles()] Created EmoAnno.csv");
             String outputEmoAnnoFilename = template + "EmoAnno.csv";
@@ -253,6 +254,32 @@ namespace DataCollector.Views {
 
             lblCurr.Text = current;
             lblPrev.Text = previous;
+        }
+        #endregion
+
+        #region GET BASELINE BUTTON ACTION
+        private void btnGetBaseline_Click(object sender, EventArgs e) {
+            // Create output file
+            String filename = "./Results/" + user + "_baseline_" + Utilities.GetTimestamp() + ".csv";
+            connector.CreateOutputFile(filename);
+
+            ProgramLogger.Log("[MainFrame.Reset()] Reset EmotivConnector");
+            connector.Reset();
+
+            // Create the thread object. This does not start the thread.
+            thdEmotivConnector = new Thread(connector.StartRecording);
+            // Start the worker thread.
+            ProgramLogger.Log("[MainFrame.StartEegComponent()] Starting thread for EmotivConnector");
+            thdEmotivConnector.Start();
+            Console.WriteLine("main thread: Starting worker thread...");
+
+            // Request that the worker thread stop itself:
+            connector.StopRecording();
+
+            // Use the Join method to block the current thread until the object's thread terminates.
+            ProgramLogger.Log("[MainFrame.StopEegComponent()] Stopping thread for EmotivConnector");
+            thdEmotivConnector.Join();
+            Console.WriteLine("main thread: Worker thread has terminated.");
         }
         #endregion
     }

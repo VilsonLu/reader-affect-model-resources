@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataCollector", "DataCollec
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Observatory", "..\Observatory Mod (FINAL) - Test\Observatory\Observatory.csproj", "{6E4E3D5C-6442-4D74-B511-43CDE3938850}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApplication1", "WindowsFormsApplication1\WindowsFormsApplication1.csproj", "{C11D87E8-C1AB-4D72-A933-80E065458DFF}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{6E4E3D5C-6442-4D74-B511-43CDE3938850}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E4E3D5C-6442-4D74-B511-43CDE3938850}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E4E3D5C-6442-4D74-B511-43CDE3938850}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C11D87E8-C1AB-4D72-A933-80E065458DFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C11D87E8-C1AB-4D72-A933-80E065458DFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C11D87E8-C1AB-4D72-A933-80E065458DFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C11D87E8-C1AB-4D72-A933-80E065458DFF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

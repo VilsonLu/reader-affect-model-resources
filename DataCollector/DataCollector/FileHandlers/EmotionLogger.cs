@@ -4,38 +4,33 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace DataCollector.FileHandlers {
-    public class EmotionLogger {
-        private StreamWriter writer;
+    public class EmotionLogger : ILogger {
         private string header = "START_TIME, EMOTION, INTENSITY, END_TIME";
+        private StreamWriter writer;
 
-        /// <summary>
-        /// Creates an instance of the EmotionLogger and corresponding output file.
-        /// </summary>
-        /// <param name="filename"></param>
         public EmotionLogger(String filename) {
+            Initialize(filename);
+        }
+
+        public void Initialize(String filename) {
             writer = new StreamWriter(filename);
             writer.AutoFlush = true;
             writer.WriteLine(header);
         }
 
         /// <summary>
-        /// Appends the paramerter values to the EmotionAnnotation.csv file.
+        /// START_TIME, STORY, SEGMENT, EMOTION, INTENSITY, END_TIME
         /// </summary>
-        /// <param name="startTime"></param>
-        /// <param name="emotion"></param>
-        /// <param name="intensity"></param>
-        /// <param name="endTime"></param>
-        public void LogValues(String startTime, String emotion, int intensity, String endTime) {
-            writer.WriteLine(startTime + "," + emotion + "," + intensity.ToString() + "," + endTime);
+        /// <param name="data"></param>
+        public void Log(params object[] data) {
+            foreach(object d in data)
+                writer.Write(d.ToString() + ",");
+            writer.WriteLine("");
         }
 
-        /// <summary>
-        /// Closes the writer.
-        /// </summary>
-        public void Close() {
+        public void CloseLogger() {
             writer.Flush();
             writer.Close();
         }

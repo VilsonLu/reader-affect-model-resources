@@ -65,9 +65,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App\Utilities.cs" />
+    <Compile Include="FileHandlers\EmotionLogger.cs" />
     <Compile Include="FileHandlers\EmotivLogger.cs" />
+    <Compile Include="FileHandlers\ILogger.cs" />
     <Compile Include="FileHandlers\ProgramLogger.cs" />
-    <Compile Include="Models\Enums.cs" />
+    <Compile Include="Models\Constants.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -79,7 +81,7 @@
     <Compile Include="Views\AnnotatorFrame.Designer.cs">
       <DependentUpon>AnnotatorFrame.cs</DependentUpon>
     </Compile>
-    <Compile Include="FileHandlers\EmotionLogger.cs" />
+    <Compile Include="FileHandlers\EmotionLogger2.cs" />
     <Compile Include="App\StoryNavigator.cs" />
     <Compile Include="Views\MainFrame.cs">
       <SubType>Form</SubType>
@@ -139,8 +141,8 @@
     <Content Include="Resources\Emotiv SDK\Old\edk.dll" />
     <Content Include="Resources\Emotiv SDK\Old\edk_utils.dll" />
     <Content Include="Resources\Images\Emojis\happy.png" />
-    <Content Include="Resources\Images\Icons\IMG_Play.png" />
-    <Content Include="Resources\Images\Icons\IMG_Stop.png" />
+    <EmbeddedResource Include="Resources\Images\Icons\IMG_Play.png" />
+    <EmbeddedResource Include="Resources\Images\Icons\IMG_Stop.png" />
     <EmbeddedResource Include="Resources\Stories\ManFromTheSouth.xml" />
     <EmbeddedResource Include="Resources\Stories\Test.xml">
       <SubType>Designer</SubType>

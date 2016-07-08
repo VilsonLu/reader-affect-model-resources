@@ -45,7 +45,7 @@ namespace DataCollector.Views {
         private void btnSubmit_Click(object sender, EventArgs e) {
             intensity = trackBar1.Value;
             endTime = Utilities.GetCsvTimestamp();
-            log.LogValues(startTime.ToString(), selectedEmotion, intensity, endTime.ToString());
+            log.Log(startTime, selectedEmotion, intensity, endTime);
             CloseAnnotatorFrame();
         }
 
@@ -54,7 +54,7 @@ namespace DataCollector.Views {
         /// </summary>
         private void CloseAnnotatorFrame() {
             if(StoryNavigator.IsLastSegmentIndexBased())
-                log.Close();
+                log.CloseLogger();
 
             Close();
             parent.Enabled = true;
@@ -65,7 +65,7 @@ namespace DataCollector.Views {
         /// Closes the EmotionLogger stream.
         /// </summary>
         public void CloseLogger() {
-            log.Close();
+            log.CloseLogger();
         }
 
         /// <summary>

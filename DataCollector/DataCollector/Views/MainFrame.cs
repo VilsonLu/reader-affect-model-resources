@@ -92,9 +92,6 @@ namespace DataCollector.Views {
         /// Creates the output files.
         /// </summary>
         private void CreateOutputFiles() {
-            // Create directory if it does not exists
-            System.IO.Directory.CreateDirectory("./Results/");
-
             String template = "./Results/" + user + "_" + selectedStory.ToString() + "_" + Utilities.GetTimestamp() + "_";
 
             String outputEegFilename =  template + "EegData.csv";
@@ -162,7 +159,7 @@ namespace DataCollector.Views {
             if(Story.IsEmpty()) {
                 MessageBox.Show("Please load story first.", "ERROR!");
             } else {
-                //ShowAnnotatorFrame();
+                ShowAnnotatorFrame();
                 UpdateSegments();
             }
         }

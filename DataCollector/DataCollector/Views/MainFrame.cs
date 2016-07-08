@@ -15,12 +15,14 @@ namespace DataCollector.Views {
         private static EmotivConnector connector;
         private Thread thdEmotivConnector;
         #endregion
+        #region Timer-related Variables
+        private const int duration = 10; // 10 seconds
+        private static int timeLeft = duration;
+        #endregion
         private static String user = "TINTIN";
         private static Stories selectedStory;
         private static int clickCtr = 0;
-        private const int duration = 10; // 10 seconds
-        private static int timeLeft = duration;
-
+        
         /// <summary>
         /// Creates an instance of the MainFrame.
         /// </summary>
@@ -59,7 +61,7 @@ namespace DataCollector.Views {
             connector.CreateOutputFile(filename);
 
             // Start recording
-            connector.Reset();
+            connector.Connect();
             StartEegComponent(true);
 
             // Start timer
@@ -122,7 +124,7 @@ namespace DataCollector.Views {
             lblProgress3.Visible = false;
 
             ProgramLogger.Log("[MainFrame.Reset()] Reset EmotivConnector");
-            connector.Reset();
+            connector.Connect();
         }
 
         /// <summary>

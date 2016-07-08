@@ -6,11 +6,23 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace DataCollector.FileHandlers {
-    static class ProgramLogger {
+    class ProgramLogger : ILogger {
         private static StreamWriter writer;
         private static Boolean isOpen = false;
-        static ProgramLogger() {
+        public ProgramLogger() {
 
+        }
+
+        public void Initialize(string filename) {
+            throw new NotImplementedException();
+        }
+
+        public void Log(params object[] data) {
+            throw new NotImplementedException();
+        }
+
+        public void CloseLogger() {
+            throw new NotImplementedException();
         }
     }
 }

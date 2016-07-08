@@ -43,32 +43,34 @@ namespace DataCollector.Views {
             }
         }*/
 
-        #region STORY LIST COMBOBOX ACTION
-        private void cbStoryList_SelectedIndexChanged(object sender, EventArgs e) {
-            ProgramLogger.Log("[MainFrame.cbStoryList_SelectedIndexChanged()] Selected index change event");
-            GetStory();
+        #region GET BASELINE BUTTON ACTION
+        private void btnGetBaseline_Click(object sender, EventArgs e) {
+            btnGetBaseline.Enabled = false;
+
+            // Create output file
+            String filename = "./Results/" + user + "_baseline_" + Utilities.GetTimestamp() + ".csv";
+            connector.CreateOutputFile(filename);
+
+            ProgramLogger.Log("[MainFrame.Reset()] Reset EmotivConnector");
+            connector.Reset();
+
+            StartEegComponent(true);
+            // Start timer
+            timer.Start();
         }
+        #endregion
 
-        /// <summary>
-        /// Gets the corresponding Stories enum based on the index of cbStoryList.
-        /// </summary>
-        private void GetStory() {
-            switch(cbStoryList.SelectedIndex) {
-                case 0:
-                    selectedStory = Stories.TEST;
-                    break;
-                case 1:
-                    selectedStory = Stories.MFTS;
-                    break;
-                case 2:
-                    selectedStory = Stories.TFATJ;
-                    break;
-                case 3:
-                    selectedStory = Stories.TV;
-                    break;
+        #region TIMER EVENT
+        private void timer1_Tick(object sender, EventArgs e) {
+            if(timeLeft > 0) {
+                timeLeft = timeLeft - 1;
+                lblTime.Text = timeLeft.ToString();
+            } else {
+                timer.Stop();
+                StopEegComponent(true);
+                MessageBox.Show("You didn't finish in time.", "Sorry!");
+                timeLeft = 10;
             }
-
-            ProgramLogger.Log("[MainFrame.GetStory()] selectedStory = " + selectedStory.ToString());
         }
         #endregion
 
@@ -78,7 +80,7 @@ namespace DataCollector.Views {
 
             clickCtr++;
             if(clickCtr % 2 == 0) {
-                StopEegComponent();
+                StopEegComponent(false);
             } else {
                 CreateOutputFiles();
                 Reset();
@@ -87,7 +89,7 @@ namespace DataCollector.Views {
                 LoadStory();
 
                 // Emotiv-related
-                StartEegComponent();
+                StartEegComponent(false);
             }
         }
 
@@ -144,16 +146,25 @@ namespace DataCollector.Views {
                 lblStatus.Text = "Error in loading story XML";
             }
         }
+        #endregion        
 
+        #region EEG COMPONENTS
         /// <summary>
         /// Starts the EEG recording.
         /// </summary>
-        private void StartEegComponent() {
+        private void StartEegComponent(Boolean isBaseline) {
             ProgramLogger.Log("[MainFrame.StartEegComponent()] Starts the EEG Components");
-            tBtnRecord.Image = Properties.Resources.IMG_Stop;
-            tBtnRecord.Text = "Stop";
             lblEegRecording.Text = "EEG is recording";
             lblEegRecording.ForeColor = Color.Green;
+            btnGetBaseline.Enabled = false;
+            if(isBaseline) {
+                tBtnRecord.Enabled = false;
+                cbStoryList.Enabled = false;
+                btnNext.Enabled = false;
+            } else {
+                tBtnRecord.Image = Properties.Resources.IMG_Stop;
+                tBtnRecord.Text = "Stop";
+            }
 
             // Create the thread object. This does not start the thread.
             thdEmotivConnector = new Thread(connector.StartRecording);
@@ -166,12 +177,19 @@ namespace DataCollector.Views {
         /// <summary>
         /// Stops the EEG recording.
         /// </summary>
-        private void StopEegComponent() {
+        private void StopEegComponent(Boolean isBaseline) {
             ProgramLogger.Log("[MainFrame.StopEegComponent()] Stops the EEG Component");
-            tBtnRecord.Image = Properties.Resources.IMG_Play;
-            tBtnRecord.Text = "Start";
             lblEegRecording.Text = "EEG is not recording";
             lblEegRecording.ForeColor = Color.Red;
+            btnGetBaseline.Enabled = true;
+            if(isBaseline) {
+                tBtnRecord.Enabled = true;
+                cbStoryList.Enabled = true;
+                btnNext.Enabled = true;
+            } else {
+                tBtnRecord.Image = Properties.Resources.IMG_Play;
+                tBtnRecord.Text = "Start";
+            }
 
             // Request that the worker thread stop itself:
             connector.StopRecording();
@@ -181,7 +199,7 @@ namespace DataCollector.Views {
             thdEmotivConnector.Join();
             Console.WriteLine("main thread: Worker thread has terminated.");
         }
-        #endregion
+        #endregion        
 
         #region NEXT BUTTON ACTION
         /// <summary>
@@ -241,7 +259,7 @@ namespace DataCollector.Views {
                 lblStatus.Text = "End of '" + Story.Title + "' reached";
 
                 clickCtr++;
-                StopEegComponent();
+                StopEegComponent(false);
                 ProgramLogger.Log("[MainFrame.UpdateSegments()] Last segment");
             } else {
                 current = StoryNavigator.ParagraphBuilder(Story.SegmentList[StoryNavigator.segCurr].PartList);
@@ -250,7 +268,7 @@ namespace DataCollector.Views {
                 lblPrev.TextAlign = ContentAlignment.BottomLeft;
                 lblProgress1.Text = Story.SegmentList[StoryNavigator.segCurr].Id.ToString();
 
-                ProgramLogger.Log("[MainFrame.UpdateSegments()] Current segment = "+ StoryNavigator.segCurr+"; Previous segment = "+ StoryNavigator.segPrev);
+                ProgramLogger.Log("[MainFrame.UpdateSegments()] Current segment = " + StoryNavigator.segCurr + "; Previous segment = " + StoryNavigator.segPrev);
             }
 
             lblCurr.Text = current;
@@ -258,54 +276,34 @@ namespace DataCollector.Views {
         }
         #endregion
 
-        #region GET BASELINE BUTTON ACTION
-        private void btnGetBaseline_Click(object sender, EventArgs e) {
-            btnGetBaseline.Enabled = false;
-            
-            // Create output file
-            String filename = "./Results/" + user + "_baseline_" + Utilities.GetTimestamp() + ".csv";
-            connector.CreateOutputFile(filename);
+        #region STORY LIST COMBOBOX ACTION
+        private void cbStoryList_SelectedIndexChanged(object sender, EventArgs e) {
+            ProgramLogger.Log("[MainFrame.cbStoryList_SelectedIndexChanged()] Selected index change event");
+            GetStory();
+        }
 
-            ProgramLogger.Log("[MainFrame.Reset()] Reset EmotivConnector");
-            connector.Reset();
+        /// <summary>
+        /// Gets the corresponding Stories enum based on the index of cbStoryList.
+        /// </summary>
+        private void GetStory() {
+            switch(cbStoryList.SelectedIndex) {
+                case 0:
+                    selectedStory = Stories.TEST;
+                    break;
+                case 1:
+                    selectedStory = Stories.MFTS;
+                    break;
+                case 2:
+                    selectedStory = Stories.TFATJ;
+                    break;
+                case 3:
+                    selectedStory = Stories.TV;
+                    break;
+            }
 
-            // Create the thread object. This does not start the thread.
-            thdEmotivConnector = new Thread(connector.StartRecording);
-            // Start the worker thread.
-            ProgramLogger.Log("[MainFrame.StartEegComponent()] Starting thread for EmotivConnector");
-            thdEmotivConnector.Start();
-            Console.WriteLine("main thread: Starting worker thread...");
-
-            // Start timer
-            timer.Start();
-
-            
+            ProgramLogger.Log("[MainFrame.GetStory()] selectedStory = " + selectedStory.ToString());
         }
         #endregion
-
-        private void timer1_Tick(object sender, EventArgs e) {
-            if(timeLeft > 0) {
-                // Display the new time left
-                // by updating the Time Left label.
-                timeLeft = timeLeft - 1;
-                lblTime.Text = timeLeft.ToString();
-            } else {
-                // If the user ran out of time, stop the timer, show
-                // a MessageBox, and fill in the answers.
-                timer.Stop();
-                MessageBox.Show("You didn't finish in time.", "Sorry!");
-                btnGetBaseline.Enabled = true;
-                timeLeft = 10;
-
-                // Request that the worker thread stop itself:
-                connector.StopRecording();
-
-                // Use the Join method to block the current thread until the object's thread terminates.
-                ProgramLogger.Log("[MainFrame.StopEegComponent()] Stopping thread for EmotivConnector");
-                thdEmotivConnector.Join();
-                Console.WriteLine("main thread: Worker thread has terminated.");
-            }
-        }
     }
 
 }

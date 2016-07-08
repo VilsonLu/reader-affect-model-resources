@@ -23,6 +23,7 @@ namespace DataCollector.Views {
         /// Creates an instance of the MainFrame.
         /// </summary>
         public MainFrame() {
+            ProgramLogger.Log("[MainFrame()] Created MainFrame instance");
             //user = new PromptFrame().ShowPromptFrame();
             ProgramLogger.Log("[MainFrame()] user = " + user);
             InitializeComponent();

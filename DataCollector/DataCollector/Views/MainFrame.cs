@@ -9,11 +9,13 @@ using System.Threading;
 namespace DataCollector.Views {
     public partial class MainFrame : Form {
         private static AnnotatorFrame annotator;
-        private static EegLogger emotivLog;
+        //private static EegLogger emotivLog;
         private static String user = "TINTIN";
         private static Stories selectedStory;
         private Thread thdEmotivLogger;
         private static int clickCtr;
+
+        private static EmotivConnector connector;
 
         /// <summary>
         /// Creates an instance of the MainFrame.
@@ -24,16 +26,18 @@ namespace DataCollector.Views {
             cbStoryList.SelectedIndex = 0;
             GetStory();
             clickCtr = 0;
-            Visible = true;
+            //connector = new EmotivConnector(this, "hello");
+            //connector.Run();
+            //Visible = true;
         }
 
-        public void UpdateTitle(string newTitle) {
+        public void UpdateEegBatteryStatus(String newText) {
             if(this.InvokeRequired)
                 this.Invoke(new MethodInvoker(delegate () {
-                    lblHeadsetStatus.Text = newTitle;
+                    lblEegCharge.Text = newText;
                 }));
             else {
-                lblHeadsetStatus.Text = newTitle;
+                lblEegCharge.Text = newText;
             }
         }
 
@@ -95,7 +99,8 @@ namespace DataCollector.Views {
             lblProgress2.Visible = false;
             lblProgress3.Visible = false;
 
-            emotivLog.Reset();
+            //emotivLog.Reset();
+            connector.Reset();
         }
 
         /// <summary>
@@ -105,7 +110,8 @@ namespace DataCollector.Views {
             String template = "./Results/" + user + "_" + selectedStory.ToString() + "_" + Utilities.GetTimestamp() + "_";
 
             String outputEegFilename =  template + "EegData.csv";
-            emotivLog = new EegLogger(outputEegFilename, this);
+            //emotivLog = new EegLogger(outputEegFilename, this);
+            connector = new EmotivConnector(this, outputEegFilename);
 
             String outputEmoAnnoFilename = template + "EmoAnno.csv";
             annotator = new AnnotatorFrame(this, outputEmoAnnoFilename);
@@ -131,11 +137,12 @@ namespace DataCollector.Views {
         private void StartEegComponent() {
             tBtnRecord.Image = Properties.Resources.IMG_Stop;
             tBtnRecord.Text = "Stop";
-            lblEegStatus.Text = "EEG is recording";
-            lblEegStatus.ForeColor = Color.Green;
+            lblEegRecording.Text = "EEG is recording";
+            lblEegRecording.ForeColor = Color.Green;
 
             // Create the thread object. This does not start the thread.
-            thdEmotivLogger = new Thread(emotivLog.StartRecording);
+            //thdEmotivLogger = new Thread(emotivLog.StartRecording);
+            thdEmotivLogger = new Thread(connector.StartRecording);
             // Start the worker thread.
             thdEmotivLogger.Start();
             Console.WriteLine("main thread: Starting worker thread...");
@@ -147,11 +154,12 @@ namespace DataCollector.Views {
         private void StopEegComponent() {
             tBtnRecord.Image = Properties.Resources.IMG_Play;
             tBtnRecord.Text = "Start";
-            lblEegStatus.Text = "EEG is not recording";
-            lblEegStatus.ForeColor = Color.Red;
+            lblEegRecording.Text = "EEG is not recording";
+            lblEegRecording.ForeColor = Color.Red;
 
             // Request that the worker thread stop itself:
-            emotivLog.StopRecording();
+            //emotivLog.StopRecording();
+            connector.StopRecording();
 
             // Use the Join method to block the current thread until the object's thread terminates.
             thdEmotivLogger.Join();
@@ -169,7 +177,7 @@ namespace DataCollector.Views {
             if(Story.IsEmpty()) {
                 MessageBox.Show("Please load story first.", "ERROR!");
             } else {
-                ShowAnnotatorFrame();
+                //ShowAnnotatorFrame();
                 UpdateSegments();
             }
         }

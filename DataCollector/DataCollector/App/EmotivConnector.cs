@@ -1,78 +1,75 @@
-﻿using DataCollector.App;
+﻿using DataCollector.FileHandlers;
 using DataCollector.Views;
 using Emotiv;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace DataCollector.FileHandlers {
-    public class EegLogger {
+namespace DataCollector.App {
+    class EmotivConnector {
+        #region Emotiv-related Variables
         /// <summary>
         /// Access to the EDK is via the EmoEngine
         /// </summary>
         EmoEngine engine;
+        /// <summary>
+        /// Used to uniquely identify a user's headset.
+        /// </summary>
+        int userID;
+        #endregion
+        #region Threading-related Variables
         /// <summary>
         /// Flag for telling the thread to begin terminating.
         /// Volatile is used as hint to the compiler that this data member will be accessed by multiple threads.
         /// </summary>
         private volatile bool _shouldStop;
         /// <summary>
-        /// Used to uniquely identify a user's headset.
-        /// </summary>
-        int userID;
-        /// <summary>
-        /// Output file of the EmotivLogger.
-        /// </summary>
-        string filename;
-        /// <summary>
         /// Delay for Thread.Sleep(delay).
         /// </summary>
         int delay = 10;
-        int battery = 0;
-        string header = "TIMESTAMP, BATTERY_LEVEL, AF3, T7, Pz, T8, AF4";
-        MainFrame f;
-        /// <summary>
-        /// Creates an instance of the EmotivLogger.
-        /// </summary>
-        /// <param name="filename"></param>
-        public EegLogger(String filename, MainFrame frame) {
+        #endregion
+        #region EmotivLogger-related Variables
+        EmotivLogger log;
+        String filename;
+        #endregion
+        MainFrame frame;
+        
+
+        public EmotivConnector(MainFrame frame, String filename) {
+            this.frame = frame;
             this.filename = filename;
-            f = frame;
+
+            userID = -1;
+
+            // Create an instance of the EmoEngine
             Console.WriteLine("CREATE ENGINE");
             engine = EmoEngine.Instance;
+
+            // Add the event handlers
             engine.UserAdded += new EmoEngine.UserAddedEventHandler(engine_UserAdded_Event);
-            engine.UserRemoved += new EmoEngine.UserRemovedEventHandler(engine_UserRemoved_Event);
             engine.EmoStateUpdated += new EmoEngine.EmoStateUpdatedEventHandler(engine_EmoStateUpdated);
             engine.EmoEngineConnected += new EmoEngine.EmoEngineConnectedEventHandler(engine_Connected_Event);
             engine.EmoEngineDisconnected += new EmoEngine.EmoEngineDisconnectedEventHandler(engine_Disconnected_Event);
         }
 
         #region Emotiv Event Handlers
-        void engine_UserAdded_Event(object sender, EmoEngineEventArgs e) {
+        private void engine_UserAdded_Event(object sender, EmoEngineEventArgs e) {
             Console.WriteLine("User Added Event has occured");
 
-            // record the user 
+            // Record the user
             userID = (int)e.userId;
 
-            // enable data aquisition for this user.
+            // Enable data aquisition for this user.
             engine.DataAcquisitionEnable((uint)userID, true);
 
-            // ask for up to 1 second of buffered data
+            // Ask for up to 1 second of buffered data
             engine.EE_DataSetBufferSizeInSec(1);
-
         }
 
-        private void engine_UserRemoved_Event(object sender, EmoEngineEventArgs e) {
-            // Reset the userID
-            Console.WriteLine("USER REMOVED");
-            userID = -1;
-        }
-
-        void engine_EmoStateUpdated(object sender, EmoStateUpdatedEventArgs e) {
+        private void engine_EmoStateUpdated(object sender, EmoStateUpdatedEventArgs e) {
             EmoState es = e.emoState;
 
             // Get info from UserID 0
@@ -82,25 +79,20 @@ namespace DataCollector.FileHandlers {
             Int32 chargeLevel = 0;
             Int32 maxChargeLevel = 0;
             es.GetBatteryChargeLevel(out chargeLevel, out maxChargeLevel);
-            f.UpdateEegBatteryStatus("(Battery: " + chargeLevel + "/" + maxChargeLevel + ")");
+            frame.UpdateEegBatteryStatus("(Battery: " + chargeLevel + "/" + maxChargeLevel + ")");
         }
 
         private void engine_Connected_Event(object sender, EmoEngineEventArgs e) {
             // Update the UI
             Console.WriteLine("STATUS CONNECT");
-            //frame.UpdateEegHeadsetStatus("Headset is connected", true);
         }
 
         private void engine_Disconnected_Event(object sender, EmoEngineEventArgs e) {
             // Update the UI
             Console.WriteLine("STATUS DISCONNECT");
-            //frame.UpdateEegHeadsetStatus("No headset detected", false);
         }
         #endregion
 
-        /// <summary>
-        /// Resets the class to its initial state.
-        /// </summary>
         public void Reset() {
             _shouldStop = false;
             userID = -1;
@@ -110,18 +102,9 @@ namespace DataCollector.FileHandlers {
             engine.Connect();
 
             // create a header for our output file
-            WriteHeader();
+            log = new EmotivLogger(filename);
         }
 
-        /// <summary>
-        /// Creates the output CSV file and writes the header.
-        /// </summary>
-        private void WriteHeader() {
-            TextWriter file = new StreamWriter(filename, false);
-            file.WriteLine(header);
-            file.Close();
-        }
-        
         /// <summary>
         /// Logs the values captured from the device to the output CSV file.
         /// </summary>
@@ -141,23 +124,10 @@ namespace DataCollector.FileHandlers {
 
             int _bufferSize = data[EdkDll.EE_DataChannel_t.ES_TIMESTAMP].Length;
 
-            Console.WriteLine("Writing " + _bufferSize.ToString() + " sample of data ");
-
             // Write the data to a file
-            TextWriter file = new StreamWriter(filename, true);
-
-            for(int i = 0; i < _bufferSize; i++) {
-                // now write the data
-                //file.Write(data[EdkDll.EE_DataChannel_t.TIMESTAMP][i] + ",");
-                file.Write(Utilities.GetCsvTimestamp());
-                file.Write(battery + ",");
-                file.Write(data[EdkDll.EE_DataChannel_t.AF3][i] + ",");
-                file.Write(data[EdkDll.EE_DataChannel_t.T7][i] + ",");
-                file.Write(data[EdkDll.EE_DataChannel_t.O1][i] + ",");
-                file.Write(data[EdkDll.EE_DataChannel_t.T8][i] + ",");
-                file.WriteLine(data[EdkDll.EE_DataChannel_t.AF4][i]);
-            }
-            file.Close();
+            Console.WriteLine("Writing " + _bufferSize.ToString() + " sample of data ");
+            for(int i = 0; i < _bufferSize; i++)
+                log.Log(Utilities.GetCsvTimestamp(), data[EdkDll.EE_DataChannel_t.AF3][i], data[EdkDll.EE_DataChannel_t.T7][i], data[EdkDll.EE_DataChannel_t.O1][i], data[EdkDll.EE_DataChannel_t.T8][i], data[EdkDll.EE_DataChannel_t.AF4][i]);
         }
 
         #region Threading Methods

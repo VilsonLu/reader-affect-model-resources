@@ -30,6 +30,7 @@ namespace DataCollector.Views
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblStatus = new System.Windows.Forms.ToolStripStatusLabel();
@@ -51,6 +52,8 @@ namespace DataCollector.Views
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnNext = new System.Windows.Forms.Button();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lblTime = new System.Windows.Forms.ToolStripLabel();
+            this.timer = new System.Windows.Forms.Timer(this.components);
             this.toolStripContainer1.BottomToolStripPanel.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -72,7 +75,7 @@ namespace DataCollector.Views
             this.toolStripContainer1.ContentPanel.Controls.Add(this.panel1);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.btnNext);
             this.toolStripContainer1.ContentPanel.Margin = new System.Windows.Forms.Padding(4);
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(779, 803);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(779, 828);
             this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStripContainer1.Location = new System.Drawing.Point(0, 0);
             this.toolStripContainer1.Margin = new System.Windows.Forms.Padding(4);
@@ -143,7 +146,7 @@ namespace DataCollector.Views
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(779, 759);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(779, 784);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
             // toolStrip1
@@ -152,6 +155,7 @@ namespace DataCollector.Views
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnGetBaseline,
+            this.lblTime,
             this.toolStripSeparator1,
             this.cbStoryList,
             this.tBtnRecord,
@@ -271,7 +275,7 @@ namespace DataCollector.Views
             this.btnNext.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNext.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNext.Location = new System.Drawing.Point(0, 759);
+            this.btnNext.Location = new System.Drawing.Point(0, 784);
             this.btnNext.Margin = new System.Windows.Forms.Padding(4);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(779, 44);
@@ -285,6 +289,17 @@ namespace DataCollector.Views
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(151, 20);
             this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
+            // 
+            // lblTime
+            // 
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(67, 44);
+            this.lblTime.Text = "TimeLeft";
+            // 
+            // timer
+            // 
+            this.timer.Interval = 1000;
+            this.timer.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // MainFrame
             // 
@@ -335,6 +350,8 @@ namespace DataCollector.Views
         private ToolStripStatusLabel toolStripStatusLabel1;
         private ToolStripSeparator toolStripSeparator2;
         private ToolStripButton btnGetBaseline;
+        private ToolStripLabel lblTime;
+        private Timer timer;
     }
 }
 

@@ -17,7 +17,8 @@ namespace DataCollector.Views {
         #endregion
         private static String user = "TINTIN";
         private static Stories selectedStory;
-        private static int clickCtr = 0;        
+        private static int clickCtr = 0;
+        private static int timeLeft = 10; // 10 seconds
 
         /// <summary>
         /// Creates an instance of the MainFrame.
@@ -259,6 +260,8 @@ namespace DataCollector.Views {
 
         #region GET BASELINE BUTTON ACTION
         private void btnGetBaseline_Click(object sender, EventArgs e) {
+            btnGetBaseline.Enabled = false;
+            
             // Create output file
             String filename = "./Results/" + user + "_baseline_" + Utilities.GetTimestamp() + ".csv";
             connector.CreateOutputFile(filename);
@@ -273,15 +276,36 @@ namespace DataCollector.Views {
             thdEmotivConnector.Start();
             Console.WriteLine("main thread: Starting worker thread...");
 
-            // Request that the worker thread stop itself:
-            connector.StopRecording();
+            // Start timer
+            timer.Start();
 
-            // Use the Join method to block the current thread until the object's thread terminates.
-            ProgramLogger.Log("[MainFrame.StopEegComponent()] Stopping thread for EmotivConnector");
-            thdEmotivConnector.Join();
-            Console.WriteLine("main thread: Worker thread has terminated.");
+            
         }
         #endregion
+
+        private void timer1_Tick(object sender, EventArgs e) {
+            if(timeLeft > 0) {
+                // Display the new time left
+                // by updating the Time Left label.
+                timeLeft = timeLeft - 1;
+                lblTime.Text = timeLeft.ToString();
+            } else {
+                // If the user ran out of time, stop the timer, show
+                // a MessageBox, and fill in the answers.
+                timer.Stop();
+                MessageBox.Show("You didn't finish in time.", "Sorry!");
+                btnGetBaseline.Enabled = true;
+                timeLeft = 10;
+
+                // Request that the worker thread stop itself:
+                connector.StopRecording();
+
+                // Use the Join method to block the current thread until the object's thread terminates.
+                ProgramLogger.Log("[MainFrame.StopEegComponent()] Stopping thread for EmotivConnector");
+                thdEmotivConnector.Join();
+                Console.WriteLine("main thread: Worker thread has terminated.");
+            }
+        }
     }
 
 }

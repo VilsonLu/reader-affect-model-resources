@@ -64,6 +64,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App\EmotivConnector.cs" />
     <Compile Include="App\Utilities.cs" />
     <Compile Include="FileHandlers\EmotionLogger.cs" />
     <Compile Include="FileHandlers\EegLogger.cs" />

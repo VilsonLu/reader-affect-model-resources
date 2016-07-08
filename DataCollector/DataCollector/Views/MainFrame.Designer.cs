@@ -42,14 +42,15 @@ namespace DataCollector.Views
             this.cbStoryList = new System.Windows.Forms.ToolStripComboBox();
             this.tBtnRecord = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.lblEegStatus = new System.Windows.Forms.ToolStripLabel();
+            this.lblEegRecording = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.lblPrev = new System.Windows.Forms.Label();
             this.lblSpace = new System.Windows.Forms.Label();
             this.lblCurr = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnNext = new System.Windows.Forms.Button();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.lblHeadsetStatus = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripContainer1.BottomToolStripPanel.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -150,11 +151,12 @@ namespace DataCollector.Views
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton1,
+            this.toolStripSeparator1,
             this.cbStoryList,
             this.tBtnRecord,
-            this.toolStripSeparator1,
-            this.lblEegStatus,
-            this.lblHeadsetStatus});
+            this.toolStripSeparator2,
+            this.lblEegRecording});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
@@ -191,15 +193,20 @@ namespace DataCollector.Views
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 47);
             // 
-            // lblEegStatus
+            // lblEegRecording
             // 
-            this.lblEegStatus.AutoSize = false;
-            this.lblEegStatus.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEegStatus.ForeColor = System.Drawing.Color.Red;
-            this.lblEegStatus.Name = "lblEegStatus";
-            this.lblEegStatus.Size = new System.Drawing.Size(150, 44);
-            this.lblEegStatus.Text = "EEG is not recording";
-            this.lblEegStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblEegRecording.AutoSize = false;
+            this.lblEegRecording.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEegRecording.ForeColor = System.Drawing.Color.Red;
+            this.lblEegRecording.Name = "lblEegRecording";
+            this.lblEegRecording.Size = new System.Drawing.Size(150, 44);
+            this.lblEegRecording.Text = "EEG is not recording";
+            this.lblEegRecording.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 47);
             // 
             // lblPrev
             // 
@@ -268,11 +275,15 @@ namespace DataCollector.Views
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(151, 20);
             this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
             // 
-            // lblHeadsetStatus
+            // toolStripButton1
             // 
-            this.lblHeadsetStatus.Name = "lblHeadsetStatus";
-            this.lblHeadsetStatus.Size = new System.Drawing.Size(111, 44);
-            this.lblHeadsetStatus.Text = "toolStripLabel1";
+            this.toolStripButton1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripButton1.Image = global::DataCollector.Properties.Resources.IMG_Play;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(95, 44);
+            this.toolStripButton1.Text = "Get Baseline";
+            this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // MainFrame
             // 
@@ -317,11 +328,12 @@ namespace DataCollector.Views
         private System.Windows.Forms.ToolStripStatusLabel lblProgress1;
         private System.Windows.Forms.ToolStripStatusLabel lblProgress2;
         private System.Windows.Forms.ToolStripStatusLabel lblProgress3;
-        private ToolStripLabel lblEegStatus;
+        private ToolStripLabel lblEegRecording;
         private ToolStripButton tBtnRecord;
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripStatusLabel toolStripStatusLabel1;
-        private ToolStripLabel lblHeadsetStatus;
+        private ToolStripSeparator toolStripSeparator2;
+        private ToolStripButton toolStripButton1;
     }
 }
 

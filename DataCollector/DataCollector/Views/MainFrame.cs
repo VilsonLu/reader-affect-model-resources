@@ -76,7 +76,6 @@ namespace DataCollector.Views {
 
             clickCtr++;
             if(clickCtr % 2 == 0) {
-                annotator.CloseLogger();
                 StopEegComponent();
             } else {
                 CreateOutputFiles();
@@ -192,7 +191,7 @@ namespace DataCollector.Views {
             if(Story.IsEmpty()) {
                 MessageBox.Show("Please load story first.", "ERROR!");
             } else {
-                //ShowAnnotatorFrame();
+                ShowAnnotatorFrame();
                 UpdateSegments();
             }
         }

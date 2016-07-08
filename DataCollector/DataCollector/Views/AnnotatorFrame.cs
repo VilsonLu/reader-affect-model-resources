@@ -59,19 +59,9 @@ namespace DataCollector.Views {
         /// Hides the AnnotatorFrame.
         /// </summary>
         private void CloseAnnotatorFrame() {
-            if(StoryNavigator.IsLastSegmentIndexBased())
-                log.CloseLogger();
-
             Close();
             parent.Enabled = true;
 
-        }
-
-        /// <summary>
-        /// Closes the EmotionLogger stream.
-        /// </summary>
-        public void CloseLogger() {
-            log.CloseLogger();
         }
 
         /// <summary>

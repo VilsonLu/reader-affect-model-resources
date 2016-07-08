@@ -1,4 +1,5 @@
 ﻿using DataCollector.App;
+using DataCollector.Views;
 using Emotiv;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ using System.Threading;
 using System.Threading.Tasks;
 
 namespace DataCollector.FileHandlers {
-    public class EmotivLogger {
+    public class EegLogger {
         /// <summary>
         /// Access to the EDK is via the EmoEngine
         /// </summary>
@@ -33,14 +34,14 @@ namespace DataCollector.FileHandlers {
         int delay = 10;
         int battery = 0;
         string header = "TIMESTAMP, BATTERY_LEVEL, AF3, T7, Pz, T8, AF4";
-
+        MainFrame f;
         /// <summary>
         /// Creates an instance of the EmotivLogger.
         /// </summary>
         /// <param name="filename"></param>
-        public EmotivLogger(String filename) {
+        public EegLogger(String filename, MainFrame frame) {
             this.filename = filename;
-
+            f = frame;
             Console.WriteLine("CREATE ENGINE");
             engine = EmoEngine.Instance;
             engine.UserAdded += new EmoEngine.UserAddedEventHandler(engine_UserAdded_Event);
@@ -50,7 +51,7 @@ namespace DataCollector.FileHandlers {
         #region Emotiv Event Handlers
         void engine_UserAdded_Event(object sender, EmoEngineEventArgs e) {
             Console.WriteLine("User Added Event has occured");
-
+            f.UpdateTitle("YAAAYYY");
             // record the user 
             userID = (int)e.userId;
 

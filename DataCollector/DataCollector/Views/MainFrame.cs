@@ -9,7 +9,7 @@ using System.Threading;
 namespace DataCollector.Views {
     public partial class MainFrame : Form {
         private static AnnotatorFrame annotator;
-        private static EmotivLogger emotivLog;
+        private static EegLogger emotivLog;
         private static String user = "TINTIN";
         private static Stories selectedStory;
         private Thread thdEmotivLogger;
@@ -25,6 +25,16 @@ namespace DataCollector.Views {
             GetStory();
             clickCtr = 0;
             Visible = true;
+        }
+
+        public void UpdateTitle(string newTitle) {
+            if(this.InvokeRequired)
+                this.Invoke(new MethodInvoker(delegate () {
+                    lblHeadsetStatus.Text = newTitle;
+                }));
+            else {
+                lblHeadsetStatus.Text = newTitle;
+            }
         }
 
         #region STORY LIST COMBOBOX ACTION
@@ -95,7 +105,7 @@ namespace DataCollector.Views {
             String template = "./Results/" + user + "_" + selectedStory.ToString() + "_" + Utilities.GetTimestamp() + "_";
 
             String outputEegFilename =  template + "EegData.csv";
-            emotivLog = new EmotivLogger(outputEegFilename);
+            emotivLog = new EegLogger(outputEegFilename, this);
 
             String outputEmoAnnoFilename = template + "EmoAnno.csv";
             annotator = new AnnotatorFrame(this, outputEmoAnnoFilename);

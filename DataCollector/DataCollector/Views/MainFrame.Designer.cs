@@ -49,6 +49,7 @@ namespace DataCollector.Views
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnNext = new System.Windows.Forms.Button();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lblHeadsetStatus = new System.Windows.Forms.ToolStripLabel();
             this.toolStripContainer1.BottomToolStripPanel.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -152,7 +153,8 @@ namespace DataCollector.Views
             this.cbStoryList,
             this.tBtnRecord,
             this.toolStripSeparator1,
-            this.lblEegStatus});
+            this.lblEegStatus,
+            this.lblHeadsetStatus});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
@@ -266,6 +268,12 @@ namespace DataCollector.Views
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(151, 20);
             this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
             // 
+            // lblHeadsetStatus
+            // 
+            this.lblHeadsetStatus.Name = "lblHeadsetStatus";
+            this.lblHeadsetStatus.Size = new System.Drawing.Size(111, 44);
+            this.lblHeadsetStatus.Text = "toolStripLabel1";
+            // 
             // MainFrame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -313,6 +321,7 @@ namespace DataCollector.Views
         private ToolStripButton tBtnRecord;
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripStatusLabel toolStripStatusLabel1;
+        private ToolStripLabel lblHeadsetStatus;
     }
 }
 

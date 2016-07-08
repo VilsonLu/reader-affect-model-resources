@@ -12,15 +12,20 @@ using System.Windows.Forms;
 
 namespace DataCollector.Views {
     public partial class AnnotatorFrame : Form {
-        private Form parent;
+        #region EmotionLogger-related Variables
         private EmotionLogger log;
-        public static String filename;
+        private String filename;
+        #endregion
+        #region EmotionLogger Elements
         private double startTime;
         private double endTime;
         private String selectedEmotion;
         private int intensity;
+        #endregion
+        private Form parent;       
 
         public AnnotatorFrame(Form parent, String filename) {
+            ProgramLogger.Log("[AnnotatorFrame()] Created AnnotatorFrame instance");
             InitializeComponent();
             this.parent = parent;
             log = new EmotionLogger(filename);
@@ -43,6 +48,7 @@ namespace DataCollector.Views {
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void btnSubmit_Click(object sender, EventArgs e) {
+            ProgramLogger.Log("[AnnotatorFrame.btnSubmit_Click()] btnSubmit click event");
             intensity = trackBar1.Value;
             endTime = Utilities.GetCsvTimestamp();
             log.Log(startTime, selectedEmotion, intensity, endTime);
@@ -75,6 +81,8 @@ namespace DataCollector.Views {
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void AllCheckBoxes_CheckedChanged(Object sender, EventArgs e) {
+            ProgramLogger.Log("[AnnotatorFrame.AllCheckBoxes_CheckedChanged()] button group change event");
+
             // Check of the raiser of the event is a checked Checkbox.
             // Of course we also need to to cast it first.
             if(((RadioButton)sender).Checked) {

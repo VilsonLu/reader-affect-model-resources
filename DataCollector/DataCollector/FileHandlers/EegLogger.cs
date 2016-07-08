@@ -11,6 +11,7 @@ namespace DataCollector.FileHandlers {
         private String filename;
 
         public EegLogger(String filename) {
+            ProgramLogger.Log("[EegLogger()] Created EegLogger instance");
             this.filename = filename;
             Initialize();
         }

@@ -18,7 +18,7 @@ namespace DataCollector.App {
         /// <summary>
         /// Used to uniquely identify a user's headset.
         /// </summary>
-        int userID;
+        int userID = -1;
         #endregion
         #region Threading-related Variables
         /// <summary>
@@ -36,27 +36,24 @@ namespace DataCollector.App {
         String filename;
         #endregion
         MainFrame frame;
-        
 
-        public EmotivConnector(MainFrame frame, String filename) {
+        public EmotivConnector(MainFrame frame) {
+            ProgramLogger.Log("[EmotivConnector()] Created EmotivConnector instance");
             this.frame = frame;
-            this.filename = filename;
-
-            userID = -1;
 
             // Create an instance of the EmoEngine
-            Console.WriteLine("CREATE ENGINE");
+            ProgramLogger.Log("[EmotivConnector()] Created EmoEngine instance");
+            Console.WriteLine("EmoEngine CREATE");
             engine = EmoEngine.Instance;
 
             // Add the event handlers
             engine.UserAdded += new EmoEngine.UserAddedEventHandler(engine_UserAdded_Event);
             engine.EmoStateUpdated += new EmoEngine.EmoStateUpdatedEventHandler(engine_EmoStateUpdated);
-            engine.EmoEngineConnected += new EmoEngine.EmoEngineConnectedEventHandler(engine_Connected_Event);
-            engine.EmoEngineDisconnected += new EmoEngine.EmoEngineDisconnectedEventHandler(engine_Disconnected_Event);
         }
 
         #region Emotiv Event Handlers
         private void engine_UserAdded_Event(object sender, EmoEngineEventArgs e) {
+            ProgramLogger.Log("[EmotivConnector.engine_UserAdded_Event()] User Added Event has occured");
             Console.WriteLine("User Added Event has occured");
 
             // Record the user
@@ -81,25 +78,27 @@ namespace DataCollector.App {
             es.GetBatteryChargeLevel(out chargeLevel, out maxChargeLevel);
             //frame.UpdateEegBatteryStatus("(Battery: " + chargeLevel + "/" + maxChargeLevel + ")");
         }
-
-        private void engine_Connected_Event(object sender, EmoEngineEventArgs e) {
-            // Update the UI
-            Console.WriteLine("STATUS CONNECT");
-        }
-
-        private void engine_Disconnected_Event(object sender, EmoEngineEventArgs e) {
-            // Update the UI
-            Console.WriteLine("STATUS DISCONNECT");
-        }
         #endregion
 
-        public void Reset() {
+        /// <summary>
+        /// Connects the app to the headset.
+        /// </summary>
+        public void Connect() {
             _shouldStop = false;
             userID = -1;
 
             // connect to EmoEngine.
-            Console.WriteLine("CONNECT");
+            ProgramLogger.Log("[EmotivConnector.Connect()] Connected to the engine");
+            Console.WriteLine("EmoEngine CONNECT");
             engine.Connect();
+        }
+
+        /// <summary>
+        /// Creates the output csv files.
+        /// </summary>
+        /// <param name="filename"></param>
+        public void CreateOutputFile(String filename) {
+            this.filename = filename;
 
             // create a header for our output file
             log = new EegLogger(filename);
@@ -118,9 +117,8 @@ namespace DataCollector.App {
 
             Dictionary<EdkDll.EE_DataChannel_t, double[]> data = engine.GetData((uint)userID);
 
-            if(data == null) {
+            if(data == null)
                 return;
-            }
 
             int _bufferSize = data[EdkDll.EE_DataChannel_t.ES_TIMESTAMP].Length;
 
@@ -135,12 +133,16 @@ namespace DataCollector.App {
         /// Prompts the tool to start capturing data from the device. Will keep on recording until _shouldStop changes values.
         /// </summary>
         public void StartRecording() {
+            ProgramLogger.Log("[EmotivConnector.StartRecording()] Start recording");
+
             while(!_shouldStop) {
                 //Console.WriteLine("worker thread: working...");
                 Record();
                 Thread.Sleep(delay);
             }
-            Console.WriteLine("DISCONNECT");
+
+            ProgramLogger.Log("[EmotivConnector.StartRecording()] Disconnecting from the engine");
+            Console.WriteLine("EmoEngine DISCONNECT");
             engine.Disconnect();
         }
 
@@ -148,6 +150,7 @@ namespace DataCollector.App {
         /// Prompts the tool stop capturing data from the device. Changes the value of the _shouldStop flag.
         /// </summary>
         public void StopRecording() {
+            ProgramLogger.Log("[EmotivConnector.StartRecording()] Stop recording");
             _shouldStop = true;
         }
         #endregion

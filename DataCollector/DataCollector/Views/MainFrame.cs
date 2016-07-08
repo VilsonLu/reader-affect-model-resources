@@ -18,7 +18,8 @@ namespace DataCollector.Views {
         private static String user = "TINTIN";
         private static Stories selectedStory;
         private static int clickCtr = 0;
-        private static int timeLeft = 10; // 10 seconds
+        private const int duration = 10; // 10 seconds
+        private static int timeLeft = duration;
 
         /// <summary>
         /// Creates an instance of the MainFrame.
@@ -28,9 +29,14 @@ namespace DataCollector.Views {
             //user = new PromptFrame().ShowPromptFrame();
             ProgramLogger.Log("[MainFrame()] user = " + user);
             InitializeComponent();
-            cbStoryList.SelectedIndex = 0;
+            InitializeOtherComponents();
             GetStory();
             connector = new EmotivConnector(this);
+        }
+
+        private void InitializeOtherComponents() {
+            cbStoryList.SelectedIndex = 0;
+            lblTime.Text = Utilities.GetTimerFormat(duration);
         }
 
         /*public void UpdateEegBatteryStatus(String newText) {
@@ -45,31 +51,32 @@ namespace DataCollector.Views {
 
         #region GET BASELINE BUTTON ACTION
         private void btnGetBaseline_Click(object sender, EventArgs e) {
-            btnGetBaseline.Enabled = false;
+            ProgramLogger.Log("[MainFrame.btnGetBaseline_Click()] Started baseline recording");
+            lblTime.Text = Utilities.GetTimerFormat(duration);
 
             // Create output file
             String filename = "./Results/" + user + "_baseline_" + Utilities.GetTimestamp() + ".csv";
             connector.CreateOutputFile(filename);
 
-            ProgramLogger.Log("[MainFrame.Reset()] Reset EmotivConnector");
+            // Start recording
             connector.Reset();
-
             StartEegComponent(true);
+
             // Start timer
             timer.Start();
         }
         #endregion
 
         #region TIMER EVENT
-        private void timer1_Tick(object sender, EventArgs e) {
+        private void timer_Tick(object sender, EventArgs e) {
             if(timeLeft > 0) {
-                timeLeft = timeLeft - 1;
-                lblTime.Text = timeLeft.ToString();
+                timeLeft -= 1;
+                lblTime.Text = Utilities.GetTimerFormat(timeLeft);
             } else {
                 timer.Stop();
                 StopEegComponent(true);
-                MessageBox.Show("You didn't finish in time.", "Sorry!");
-                timeLeft = 10;
+                MessageBox.Show("Baseline EEG recorded!", "Update");
+                ProgramLogger.Log("[MainFrame.timer_Tick()] Stop baseline recording");
             }
         }
         #endregion
@@ -79,15 +86,18 @@ namespace DataCollector.Views {
             ProgramLogger.Log("[MainFrame.tBtnRecord_Click()] btnRecord click event");
 
             clickCtr++;
-            if(clickCtr % 2 == 0) {
+            if(clickCtr % 2 == 0) { // STOP
                 StopEegComponent(false);
-            } else {
+                lblProgress0.Visible = false;
+                lblProgress1.Visible = false;
+                lblProgress2.Visible = false;
+                lblProgress3.Visible = false;
+            } else { // START
                 CreateOutputFiles();
                 Reset();
 
                 // Story-related
                 LoadStory();
-
                 // Emotiv-related
                 StartEegComponent(false);
             }
@@ -161,6 +171,8 @@ namespace DataCollector.Views {
                 tBtnRecord.Enabled = false;
                 cbStoryList.Enabled = false;
                 btnNext.Enabled = false;
+                lblTime.Font = new Font(lblTime.Font, FontStyle.Bold);
+                lblStatus.Text = "Recording baseline EEG";
             } else {
                 tBtnRecord.Image = Properties.Resources.IMG_Stop;
                 tBtnRecord.Text = "Stop";
@@ -186,6 +198,9 @@ namespace DataCollector.Views {
                 tBtnRecord.Enabled = true;
                 cbStoryList.Enabled = true;
                 btnNext.Enabled = true;
+                lblTime.Font = new Font(lblTime.Font, FontStyle.Regular);
+                timeLeft = duration;
+                lblStatus.Text = "Finished recording baseline EEG";
             } else {
                 tBtnRecord.Image = Properties.Resources.IMG_Play;
                 tBtnRecord.Text = "Start";

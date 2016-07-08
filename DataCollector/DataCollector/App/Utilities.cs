@@ -37,5 +37,10 @@ namespace DataCollector.App {
 
             return stream;
         }
+
+        public static String GetTimerFormat(int seconds) {
+            TimeSpan t = TimeSpan.FromSeconds(seconds);
+            return String.Format("({0:D2}m:{1:D2}s)", t.Minutes, t.Seconds);
+        }
     }
 }

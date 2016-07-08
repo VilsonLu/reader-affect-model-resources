@@ -43,14 +43,14 @@ namespace DataCollector.Views
             this.tBtnRecord = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.lblEegRecording = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.lblPrev = new System.Windows.Forms.Label();
             this.lblSpace = new System.Windows.Forms.Label();
             this.lblCurr = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnNext = new System.Windows.Forms.Button();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.lblEegCharge = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripContainer1.BottomToolStripPanel.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -151,12 +151,12 @@ namespace DataCollector.Views
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton1,
+            this.toolStripSeparator1,
             this.cbStoryList,
             this.tBtnRecord,
-            this.toolStripSeparator1,
-            this.lblEegRecording,
             this.toolStripSeparator2,
-            this.lblEegCharge});
+            this.lblEegRecording});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
@@ -202,6 +202,11 @@ namespace DataCollector.Views
             this.lblEegRecording.Size = new System.Drawing.Size(150, 44);
             this.lblEegRecording.Text = "EEG is not recording";
             this.lblEegRecording.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 47);
             // 
             // lblPrev
             // 
@@ -270,19 +275,15 @@ namespace DataCollector.Views
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(151, 20);
             this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
             // 
-            // toolStripSeparator2
+            // toolStripButton1
             // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 47);
-            // 
-            // lblEegCharge
-            // 
-            this.lblEegCharge.AutoSize = false;
-            this.lblEegCharge.BackColor = System.Drawing.Color.Black;
-            this.lblEegCharge.Name = "lblEegCharge";
-            this.lblEegCharge.Size = new System.Drawing.Size(41, 44);
-            this.lblEegCharge.Text = "        ";
-            this.lblEegCharge.ToolTipText = "Battery Status";
+            this.toolStripButton1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripButton1.Image = global::DataCollector.Properties.Resources.IMG_Play;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(95, 44);
+            this.toolStripButton1.Text = "Get Baseline";
+            this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // MainFrame
             // 
@@ -332,7 +333,7 @@ namespace DataCollector.Views
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripStatusLabel toolStripStatusLabel1;
         private ToolStripSeparator toolStripSeparator2;
-        private ToolStripLabel lblEegCharge;
+        private ToolStripButton toolStripButton1;
     }
 }
 

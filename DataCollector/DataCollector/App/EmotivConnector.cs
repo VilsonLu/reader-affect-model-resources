@@ -32,7 +32,7 @@ namespace DataCollector.App {
         int delay = 10;
         #endregion
         #region EmotivLogger-related Variables
-        EmotivLogger log;
+        EegLogger log;
         String filename;
         #endregion
         MainFrame frame;
@@ -79,7 +79,7 @@ namespace DataCollector.App {
             Int32 chargeLevel = 0;
             Int32 maxChargeLevel = 0;
             es.GetBatteryChargeLevel(out chargeLevel, out maxChargeLevel);
-            frame.UpdateEegBatteryStatus("(Battery: " + chargeLevel + "/" + maxChargeLevel + ")");
+            //frame.UpdateEegBatteryStatus("(Battery: " + chargeLevel + "/" + maxChargeLevel + ")");
         }
 
         private void engine_Connected_Event(object sender, EmoEngineEventArgs e) {
@@ -102,7 +102,7 @@ namespace DataCollector.App {
             engine.Connect();
 
             // create a header for our output file
-            log = new EmotivLogger(filename);
+            log = new EegLogger(filename);
         }
 
         /// <summary>

@@ -8,14 +8,16 @@ using System.Threading;
 
 namespace DataCollector.Views {
     public partial class MainFrame : Form {
+        #region Story-related Variables
         private static AnnotatorFrame annotator;
-        //private static EegLogger emotivLog;
+        #endregion
+        #region Emotiv-related Variables
+        private static EmotivConnector connector;
+        private Thread thdEmotivLogger;
+        #endregion
         private static String user = "TINTIN";
         private static Stories selectedStory;
-        private Thread thdEmotivLogger;
-        private static int clickCtr;
-
-        private static EmotivConnector connector;
+        private static int clickCtr;        
 
         /// <summary>
         /// Creates an instance of the MainFrame.
@@ -26,12 +28,9 @@ namespace DataCollector.Views {
             cbStoryList.SelectedIndex = 0;
             GetStory();
             clickCtr = 0;
-            //connector = new EmotivConnector(this, "hello");
-            //connector.Run();
-            //Visible = true;
         }
 
-        public void UpdateEegBatteryStatus(String newText) {
+        /*public void UpdateEegBatteryStatus(String newText) {
             if(this.InvokeRequired)
                 this.Invoke(new MethodInvoker(delegate () {
                     lblEegCharge.Text = newText;
@@ -39,7 +38,7 @@ namespace DataCollector.Views {
             else {
                 lblEegCharge.Text = newText;
             }
-        }
+        }*/
 
         #region STORY LIST COMBOBOX ACTION
         private void cbStoryList_SelectedIndexChanged(object sender, EventArgs e) {
@@ -110,7 +109,6 @@ namespace DataCollector.Views {
             String template = "./Results/" + user + "_" + selectedStory.ToString() + "_" + Utilities.GetTimestamp() + "_";
 
             String outputEegFilename =  template + "EegData.csv";
-            //emotivLog = new EegLogger(outputEegFilename, this);
             connector = new EmotivConnector(this, outputEegFilename);
 
             String outputEmoAnnoFilename = template + "EmoAnno.csv";
@@ -141,7 +139,6 @@ namespace DataCollector.Views {
             lblEegRecording.ForeColor = Color.Green;
 
             // Create the thread object. This does not start the thread.
-            //thdEmotivLogger = new Thread(emotivLog.StartRecording);
             thdEmotivLogger = new Thread(connector.StartRecording);
             // Start the worker thread.
             thdEmotivLogger.Start();
@@ -158,7 +155,6 @@ namespace DataCollector.Views {
             lblEegRecording.ForeColor = Color.Red;
 
             // Request that the worker thread stop itself:
-            //emotivLog.StopRecording();
             connector.StopRecording();
 
             // Use the Join method to block the current thread until the object's thread terminates.

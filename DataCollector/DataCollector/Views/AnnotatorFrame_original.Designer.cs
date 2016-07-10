@@ -1,5 +1,5 @@
 ﻿namespace DataCollector.Views {
-    partial class AnnotatorFrame {
+    partial class AnnotatorFrame_original {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -58,7 +58,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(605, 502);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(605, 503);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // label1
@@ -98,7 +98,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(597, 343);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(597, 344);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // radioButton8
@@ -113,7 +113,7 @@
             this.radioButton8.Location = new System.Drawing.Point(452, 176);
             this.radioButton8.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(140, 162);
+            this.radioButton8.Size = new System.Drawing.Size(140, 163);
             this.radioButton8.TabIndex = 15;
             this.radioButton8.TabStop = true;
             this.radioButton8.Text = "Emotion8";
@@ -134,7 +134,7 @@
             this.radioButton7.Location = new System.Drawing.Point(303, 176);
             this.radioButton7.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(140, 162);
+            this.radioButton7.Size = new System.Drawing.Size(140, 163);
             this.radioButton7.TabIndex = 14;
             this.radioButton7.TabStop = true;
             this.radioButton7.Text = "Emotion7";
@@ -155,7 +155,7 @@
             this.radioButton6.Location = new System.Drawing.Point(154, 176);
             this.radioButton6.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(140, 162);
+            this.radioButton6.Size = new System.Drawing.Size(140, 163);
             this.radioButton6.TabIndex = 13;
             this.radioButton6.TabStop = true;
             this.radioButton6.Text = "Emotion6";
@@ -176,7 +176,7 @@
             this.radioButton5.Location = new System.Drawing.Point(5, 176);
             this.radioButton5.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(140, 162);
+            this.radioButton5.Size = new System.Drawing.Size(140, 163);
             this.radioButton5.TabIndex = 12;
             this.radioButton5.TabStop = true;
             this.radioButton5.Text = "Emotion5";
@@ -272,7 +272,7 @@
             // trackBar1
             // 
             this.trackBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.trackBar1.Location = new System.Drawing.Point(4, 405);
+            this.trackBar1.Location = new System.Drawing.Point(4, 406);
             this.trackBar1.Margin = new System.Windows.Forms.Padding(4);
             this.trackBar1.Name = "trackBar1";
             this.trackBar1.Size = new System.Drawing.Size(597, 42);
@@ -282,7 +282,7 @@
             // 
             this.btnSubmit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubmit.Location = new System.Drawing.Point(4, 455);
+            this.btnSubmit.Location = new System.Drawing.Point(4, 456);
             this.btnSubmit.Margin = new System.Windows.Forms.Padding(4);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(597, 43);
@@ -295,7 +295,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(605, 502);
+            this.ClientSize = new System.Drawing.Size(605, 503);
             this.ControlBox = false;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(4);

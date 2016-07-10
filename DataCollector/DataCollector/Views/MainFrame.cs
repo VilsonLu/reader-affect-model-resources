@@ -9,7 +9,7 @@ using System.Threading;
 namespace DataCollector.Views {
     public partial class MainFrame : Form {
         #region Story-related Variables
-        private static AnnotatorFrame annotator;
+        private static AnnotatorFrame_original annotator;
         #endregion
         #region Emotiv-related Variables
         private static EmotivConnector emoConnector;
@@ -161,7 +161,7 @@ namespace DataCollector.Views {
             // Story-related
             ProgramLogger.Log("[MainFrame.CreateOutputFiles()] Created EmoAnno.csv");
             String outputEmoAnnoFilename = template + "EmoAnno.csv";
-            annotator = new AnnotatorFrame(this, outputEmoAnnoFilename);
+            annotator = new AnnotatorFrame_original(this, outputEmoAnnoFilename);
             // Emotiv-related
             ProgramLogger.Log("[MainFrame.CreateOutputFiles()] Created EegData.csv");
             String outputEegFilename =  template + "EegData.csv";

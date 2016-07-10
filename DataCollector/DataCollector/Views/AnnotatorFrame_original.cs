@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DataCollector.Views {
-    public partial class AnnotatorFrame : Form {
+    public partial class AnnotatorFrame_original : Form {
         #region EmotionLogger-related Variables
         private EmotionLogger log;
         private String filename;
@@ -24,7 +24,7 @@ namespace DataCollector.Views {
         #endregion
         private Form parent;       
 
-        public AnnotatorFrame(Form parent, String filename) {
+        public AnnotatorFrame_original(Form parent, String filename) {
             ProgramLogger.Log("[AnnotatorFrame()] Created AnnotatorFrame instance");
             InitializeComponent();
             this.parent = parent;

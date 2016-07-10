@@ -12,6 +12,7 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -47,7 +47,46 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>DataCollector.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\AForge SDK\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\AForge SDK\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.FFMPEG, Version=2.2.5.0, Culture=neutral, PublicKeyToken=03563089b1be05dd, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\AForge SDK\AForge.Video.FFMPEG.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.VFW, Version=2.2.4.0, Culture=neutral, PublicKeyToken=a82f807c999637c8, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\AForge SDK\AForge.Video.VFW.dll</HintPath>
+    </Reference>
     <Reference Include="DotNetEmotivSDK">
       <HintPath>Resources\Emotiv SDK\Old\DotNetEmotivSDK.dll</HintPath>
     </Reference>
@@ -64,6 +103,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App\CameraConnector.cs" />
     <Compile Include="App\EmotivConnector.cs" />
     <Compile Include="App\Utilities.cs" />
     <Compile Include="FileHandlers\EmotionLogger.cs" />
@@ -133,17 +173,57 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="avcodec-53.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="avdevice-53.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="avfilter-2.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="avformat-53.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="avutil-51.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="edk.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="edk_utils.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="postproc-52.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\AForge SDK\AForge.Video.DirectShow.dll" />
+    <Content Include="Resources\AForge SDK\AForge.Video.DirectShow.xml" />
+    <Content Include="Resources\AForge SDK\AForge.Video.dll" />
+    <Content Include="Resources\AForge SDK\AForge.Video.FFMPEG.dll" />
+    <Content Include="Resources\AForge SDK\AForge.Video.FFMPEG.xml" />
+    <Content Include="Resources\AForge SDK\AForge.Video.VFW.dll" />
+    <Content Include="Resources\AForge SDK\AForge.Video.VFW.xml" />
+    <Content Include="Resources\AForge SDK\AForge.Video.xml" />
+    <Content Include="Resources\AForge SDK\avcodec-53.dll" />
+    <Content Include="Resources\AForge SDK\avdevice-53.dll" />
+    <Content Include="Resources\AForge SDK\avfilter-2.dll" />
+    <Content Include="Resources\AForge SDK\avformat-53.dll" />
+    <Content Include="Resources\AForge SDK\avutil-51.dll" />
+    <Content Include="Resources\AForge SDK\postproc-52.dll" />
+    <Content Include="Resources\AForge SDK\swresample-0.dll" />
+    <Content Include="Resources\AForge SDK\swscale-2.dll" />
     <Content Include="Resources\Emotiv SDK\New\DotNetEmotivSDK-vs2010.dll" />
     <Content Include="Resources\Emotiv SDK\Old\DotNetEmotivSDK.dll" />
     <Content Include="Resources\Emotiv SDK\Old\edk.dll" />
     <Content Include="Resources\Emotiv SDK\Old\edk_utils.dll" />
     <Content Include="Resources\Images\Emojis\happy.png" />
+    <Content Include="swresample-0.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="swscale-2.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <EmbeddedResource Include="Resources\Images\Icons\IMG_Baseline.png" />
     <EmbeddedResource Include="Resources\Images\Icons\IMG_Play.png" />
     <EmbeddedResource Include="Resources\Images\Icons\IMG_Stop.png" />

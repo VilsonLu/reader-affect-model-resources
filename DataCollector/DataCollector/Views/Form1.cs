@@ -11,6 +11,7 @@ using System.Windows.Forms;
 namespace DataCollector.Views {
     public partial class Form1 : Form {
         private Boolean isStriking = false;
+
         public Form1() {
             InitializeComponent();
         }
@@ -29,6 +30,10 @@ namespace DataCollector.Views {
             btnStrikeNo.Enabled = false;
             btnStrikeNo.BackColor = Color.Red;
             isStriking = false;
+        }
+
+        private void chkReaderResponse__SelectedIndexChanged(object sender, EventArgs e) {
+            chkReaderResponse.ClearSelected();
         }
     }
 }

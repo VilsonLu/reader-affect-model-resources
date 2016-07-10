@@ -18,9 +18,7 @@ namespace DataCollector {
             try {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                //Application.Run(new MainFrame());
-                Application.Run(new Form1());
-                //new Driver();
+                Application.Run(new MainFrame());
             } catch (Exception e) {
                 MessageBox.Show(e.Message + "\n" + e.StackTrace);
             }

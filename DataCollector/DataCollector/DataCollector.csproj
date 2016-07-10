@@ -116,12 +116,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Views\AnnotatorFrame_original.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\AnnotatorFrame_original.Designer.cs">
-      <DependentUpon>AnnotatorFrame_original.cs</DependentUpon>
-    </Compile>
     <Compile Include="App\StoryNavigator.cs" />
     <Compile Include="Views\EmotionPanel.cs">
       <SubType>UserControl</SubType>
@@ -129,11 +123,11 @@
     <Compile Include="Views\EmotionPanel.Designer.cs">
       <DependentUpon>EmotionPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Form1.cs">
+    <Compile Include="Views\AnnotatorFrame.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Views\AnnotatorFrame.Designer.cs">
+      <DependentUpon>AnnotatorFrame.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\MainFrame.cs">
       <SubType>Form</SubType>
@@ -151,14 +145,11 @@
     <Compile Include="Views\PromptFrame.Designer.cs">
       <DependentUpon>PromptFrame.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Views\AnnotatorFrame_original.resx">
-      <DependentUpon>AnnotatorFrame_original.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Views\EmotionPanel.resx">
       <DependentUpon>EmotionPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Views\AnnotatorFrame.resx">
+      <DependentUpon>AnnotatorFrame.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\MainFrame.resx">
       <DependentUpon>MainFrame.cs</DependentUpon>

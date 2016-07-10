@@ -1,5 +1,5 @@
 ﻿namespace DataCollector.Views {
-    partial class Form1 {
+    partial class AnnotatorFrame {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -112,6 +112,7 @@
             this.btnSubmit.TabIndex = 4;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // panel2
             // 
@@ -314,7 +315,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Reader Affect Model   |   Emotion Annotator";
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);

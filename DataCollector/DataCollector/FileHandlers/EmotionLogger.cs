@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataCollector.FileHandlers {
     public class EmotionLogger : ILogger {
-        private string header = "START_TIME, EMOTION, INTENSITY, END_TIME";
+        private string header = "START_TIME, END_TIME, PLEASANTNESS, ATTENTION, SENSITIVITY, APPTITUDE, IS_STRIKING, FROM_EVALUATIVE, FROM_NARRATIVE, FROM_AESTHETIC, FROM_OTHERS";
         private String filename;
 
         public EmotionLogger(String filename) {
@@ -23,7 +23,7 @@ namespace DataCollector.FileHandlers {
         }
 
         /// <summary>
-        /// START_TIME, STORY, SEGMENT, EMOTION, INTENSITY, END_TIME
+        /// START_TIME, END_TIME, PLEASANTNESS, ATTENTION, SENSITIVITY, APPTITUDE, IS_STRIKING, FROM_EVALUATIVE, FROM_NARRATIVE, FROM_AESTHETIC, FROM_OTHERS
         /// </summary>
         /// <param name="data"></param>
         public void Log(params object[] data) {

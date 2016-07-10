@@ -48,6 +48,8 @@ namespace DataCollector.Views
             this.tBtnRecord = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.lblEegRecording = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.lblCameraRecording = new System.Windows.Forms.ToolStripLabel();
             this.lblPrev = new System.Windows.Forms.Label();
             this.lblSpace = new System.Windows.Forms.Label();
             this.lblCurr = new System.Windows.Forms.Label();
@@ -55,8 +57,6 @@ namespace DataCollector.Views
             this.btnNext = new System.Windows.Forms.Button();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.lblCameraRecording = new System.Windows.Forms.ToolStripLabel();
             this.toolStripContainer1.BottomToolStripPanel.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -78,7 +78,7 @@ namespace DataCollector.Views
             this.toolStripContainer1.ContentPanel.Controls.Add(this.panel1);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.btnNext);
             this.toolStripContainer1.ContentPanel.Margin = new System.Windows.Forms.Padding(4);
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(802, 828);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(802, 803);
             this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStripContainer1.Location = new System.Drawing.Point(0, 0);
             this.toolStripContainer1.Margin = new System.Windows.Forms.Padding(4);
@@ -149,7 +149,7 @@ namespace DataCollector.Views
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(802, 784);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(802, 759);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
             // toolStrip1
@@ -240,6 +240,20 @@ namespace DataCollector.Views
             this.lblEegRecording.Text = "EEG is not recording";
             this.lblEegRecording.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 47);
+            // 
+            // lblCameraRecording
+            // 
+            this.lblCameraRecording.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCameraRecording.ForeColor = System.Drawing.Color.Red;
+            this.lblCameraRecording.Name = "lblCameraRecording";
+            this.lblCameraRecording.Size = new System.Drawing.Size(176, 44);
+            this.lblCameraRecording.Text = "Camera is not recording";
+            this.lblCameraRecording.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // lblPrev
             // 
             this.lblPrev.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -292,7 +306,7 @@ namespace DataCollector.Views
             this.btnNext.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNext.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNext.Location = new System.Drawing.Point(0, 784);
+            this.btnNext.Location = new System.Drawing.Point(0, 759);
             this.btnNext.Margin = new System.Windows.Forms.Padding(4);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(802, 44);
@@ -312,20 +326,6 @@ namespace DataCollector.Views
             this.timer.Interval = 1000;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 47);
-            // 
-            // lblCameraRecording
-            // 
-            this.lblCameraRecording.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCameraRecording.ForeColor = System.Drawing.Color.Red;
-            this.lblCameraRecording.Name = "lblCameraRecording";
-            this.lblCameraRecording.Size = new System.Drawing.Size(176, 44);
-            this.lblCameraRecording.Text = "Camera is not recording";
-            this.lblCameraRecording.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // MainFrame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -337,6 +337,7 @@ namespace DataCollector.Views
             this.Name = "MainFrame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reader Affect Model   |   Data Collector";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainFrame_FormClosed);
             this.toolStripContainer1.BottomToolStripPanel.ResumeLayout(false);
             this.toolStripContainer1.BottomToolStripPanel.PerformLayout();
             this.toolStripContainer1.ContentPanel.ResumeLayout(false);

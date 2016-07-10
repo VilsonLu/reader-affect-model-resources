@@ -48,6 +48,10 @@ namespace DataCollector.Views {
 
         public Int32 IntensityValue {
             get { return tbIntensity.Value; }
+            set {
+                tbIntensity.Value = value;
+                Invalidate();
+            }
         }
 
         public void Reset() {

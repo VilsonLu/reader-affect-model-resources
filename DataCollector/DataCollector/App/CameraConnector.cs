@@ -94,5 +94,12 @@ namespace DataCollector.App {
             // Close the video file stream.
             videoWriter.Close();
         }
+
+        public void CloseConnector() {
+            if(videoSource.IsRunning)
+                StopRecording();
+
+            videoSource = null;
+        }
     }
 }

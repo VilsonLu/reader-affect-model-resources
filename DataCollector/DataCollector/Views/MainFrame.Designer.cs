@@ -41,11 +41,12 @@ namespace DataCollector.Views
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnGetBaseline = new System.Windows.Forms.ToolStripButton();
-            this.lblTime = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.lblTime = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.cbStoryList = new System.Windows.Forms.ToolStripComboBox();
             this.tBtnRecord = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.lblEegRecording = new System.Windows.Forms.ToolStripLabel();
             this.lblPrev = new System.Windows.Forms.Label();
             this.lblSpace = new System.Windows.Forms.Label();
@@ -54,7 +55,8 @@ namespace DataCollector.Views
             this.btnNext = new System.Windows.Forms.Button();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.lblCameraRecording = new System.Windows.Forms.ToolStripLabel();
             this.toolStripContainer1.BottomToolStripPanel.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -76,12 +78,12 @@ namespace DataCollector.Views
             this.toolStripContainer1.ContentPanel.Controls.Add(this.panel1);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.btnNext);
             this.toolStripContainer1.ContentPanel.Margin = new System.Windows.Forms.Padding(4);
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(779, 828);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(802, 828);
             this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStripContainer1.Location = new System.Drawing.Point(0, 0);
             this.toolStripContainer1.Margin = new System.Windows.Forms.Padding(4);
             this.toolStripContainer1.Name = "toolStripContainer1";
-            this.toolStripContainer1.Size = new System.Drawing.Size(779, 853);
+            this.toolStripContainer1.Size = new System.Drawing.Size(802, 853);
             this.toolStripContainer1.TabIndex = 1;
             this.toolStripContainer1.Text = "toolStripContainer1";
             // 
@@ -97,7 +99,7 @@ namespace DataCollector.Views
             this.lblProgress3});
             this.statusStrip1.Location = new System.Drawing.Point(0, 0);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(779, 25);
+            this.statusStrip1.Size = new System.Drawing.Size(802, 25);
             this.statusStrip1.TabIndex = 0;
             // 
             // lblStatus
@@ -147,7 +149,7 @@ namespace DataCollector.Views
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(779, 784);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(802, 784);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
             // toolStrip1
@@ -162,11 +164,13 @@ namespace DataCollector.Views
             this.cbStoryList,
             this.tBtnRecord,
             this.toolStripSeparator3,
-            this.lblEegRecording});
+            this.lblEegRecording,
+            this.toolStripSeparator4,
+            this.lblCameraRecording});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip1.Size = new System.Drawing.Size(776, 47);
+            this.toolStrip1.Size = new System.Drawing.Size(800, 47);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -181,6 +185,11 @@ namespace DataCollector.Views
             this.btnGetBaseline.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnGetBaseline.Click += new System.EventHandler(this.btnGetBaseline_Click);
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 47);
+            // 
             // lblTime
             // 
             this.lblTime.AutoSize = false;
@@ -188,10 +197,10 @@ namespace DataCollector.Views
             this.lblTime.Size = new System.Drawing.Size(73, 44);
             this.lblTime.Text = "(00m:00s)";
             // 
-            // toolStripSeparator1
+            // toolStripSeparator2
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 47);
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 47);
             // 
             // cbStoryList
             // 
@@ -217,14 +226,13 @@ namespace DataCollector.Views
             this.tBtnRecord.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tBtnRecord.Click += new System.EventHandler(this.tBtnRecord_Click);
             // 
-            // toolStripSeparator2
+            // toolStripSeparator3
             // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 47);
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 47);
             // 
             // lblEegRecording
             // 
-            this.lblEegRecording.AutoSize = false;
             this.lblEegRecording.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEegRecording.ForeColor = System.Drawing.Color.Red;
             this.lblEegRecording.Name = "lblEegRecording";
@@ -242,7 +250,7 @@ namespace DataCollector.Views
             this.lblPrev.Location = new System.Drawing.Point(4, 78);
             this.lblPrev.Margin = new System.Windows.Forms.Padding(4, 31, 4, 0);
             this.lblPrev.Name = "lblPrev";
-            this.lblPrev.Size = new System.Drawing.Size(768, 22);
+            this.lblPrev.Size = new System.Drawing.Size(792, 22);
             this.lblPrev.TabIndex = 0;
             this.lblPrev.Text = "Previous Segment";
             this.lblPrev.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -254,7 +262,7 @@ namespace DataCollector.Views
             this.lblSpace.Location = new System.Drawing.Point(0, 112);
             this.lblSpace.Margin = new System.Windows.Forms.Padding(0, 12, 0, 12);
             this.lblSpace.Name = "lblSpace";
-            this.lblSpace.Size = new System.Drawing.Size(776, 2);
+            this.lblSpace.Size = new System.Drawing.Size(800, 2);
             this.lblSpace.TabIndex = 1;
             this.lblSpace.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -267,7 +275,7 @@ namespace DataCollector.Views
             this.lblCurr.Location = new System.Drawing.Point(4, 126);
             this.lblCurr.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCurr.Name = "lblCurr";
-            this.lblCurr.Size = new System.Drawing.Size(768, 34);
+            this.lblCurr.Size = new System.Drawing.Size(792, 34);
             this.lblCurr.TabIndex = 2;
             this.lblCurr.Text = "Current Segment";
             // 
@@ -287,7 +295,7 @@ namespace DataCollector.Views
             this.btnNext.Location = new System.Drawing.Point(0, 784);
             this.btnNext.Margin = new System.Windows.Forms.Padding(4);
             this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(779, 44);
+            this.btnNext.Size = new System.Drawing.Size(802, 44);
             this.btnNext.TabIndex = 4;
             this.btnNext.Text = "Next";
             this.btnNext.UseVisualStyleBackColor = true;
@@ -304,16 +312,25 @@ namespace DataCollector.Views
             this.timer.Interval = 1000;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
-            // toolStripSeparator3
+            // toolStripSeparator4
             // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 47);
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 47);
+            // 
+            // lblCameraRecording
+            // 
+            this.lblCameraRecording.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCameraRecording.ForeColor = System.Drawing.Color.Red;
+            this.lblCameraRecording.Name = "lblCameraRecording";
+            this.lblCameraRecording.Size = new System.Drawing.Size(176, 44);
+            this.lblCameraRecording.Text = "Camera is not recording";
+            this.lblCameraRecording.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // MainFrame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(779, 853);
+            this.ClientSize = new System.Drawing.Size(802, 853);
             this.Controls.Add(this.toolStripContainer1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
@@ -361,6 +378,8 @@ namespace DataCollector.Views
         private ToolStripLabel lblTime;
         private Timer timer;
         private ToolStripSeparator toolStripSeparator3;
+        private ToolStripSeparator toolStripSeparator4;
+        private ToolStripLabel lblCameraRecording;
     }
 }
 

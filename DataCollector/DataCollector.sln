@@ -5,10 +5,6 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataCollector", "DataCollector\DataCollector.csproj", "{99C02E46-7B35-4391-AC28-604FC842ADED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Observatory", "..\Observatory Mod (FINAL) - Test\Observatory\Observatory.csproj", "{6E4E3D5C-6442-4D74-B511-43CDE3938850}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApplication1", "WindowsFormsApplication1\WindowsFormsApplication1.csproj", "{2BB0E5E3-0255-49EA-A21F-F6C34FF9331B}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,22 +21,6 @@ Global
 		{99C02E46-7B35-4391-AC28-604FC842ADED}.Release|Any CPU.Build.0 = Release|Any CPU
 		{99C02E46-7B35-4391-AC28-604FC842ADED}.Release|x86.ActiveCfg = Release|Any CPU
 		{99C02E46-7B35-4391-AC28-604FC842ADED}.Release|x86.Build.0 = Release|Any CPU
-		{6E4E3D5C-6442-4D74-B511-43CDE3938850}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6E4E3D5C-6442-4D74-B511-43CDE3938850}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6E4E3D5C-6442-4D74-B511-43CDE3938850}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{6E4E3D5C-6442-4D74-B511-43CDE3938850}.Debug|x86.Build.0 = Debug|Any CPU
-		{6E4E3D5C-6442-4D74-B511-43CDE3938850}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6E4E3D5C-6442-4D74-B511-43CDE3938850}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6E4E3D5C-6442-4D74-B511-43CDE3938850}.Release|x86.ActiveCfg = Release|Any CPU
-		{6E4E3D5C-6442-4D74-B511-43CDE3938850}.Release|x86.Build.0 = Release|Any CPU
-		{2BB0E5E3-0255-49EA-A21F-F6C34FF9331B}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{2BB0E5E3-0255-49EA-A21F-F6C34FF9331B}.Debug|Any CPU.Build.0 = Debug|x86
-		{2BB0E5E3-0255-49EA-A21F-F6C34FF9331B}.Debug|x86.ActiveCfg = Debug|x86
-		{2BB0E5E3-0255-49EA-A21F-F6C34FF9331B}.Debug|x86.Build.0 = Debug|x86
-		{2BB0E5E3-0255-49EA-A21F-F6C34FF9331B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2BB0E5E3-0255-49EA-A21F-F6C34FF9331B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2BB0E5E3-0255-49EA-A21F-F6C34FF9331B}.Release|x86.ActiveCfg = Release|x86
-		{2BB0E5E3-0255-49EA-A21F-F6C34FF9331B}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

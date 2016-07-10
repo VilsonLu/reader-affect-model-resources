@@ -12,12 +12,15 @@ namespace DataCollector.Views {
         private static AnnotatorFrame annotator;
         #endregion
         #region Emotiv-related Variables
-        private static EmotivConnector connector;
+        private static EmotivConnector emoConnector;
         private Thread thdEmotivConnector;
         #endregion
         #region Timer-related Variables
         private const int duration = 10; // 10 seconds
         private static int timeLeft = duration;
+        #endregion
+        #region Camera-related Variables
+        private static CameraConnector camConnector;
         #endregion
         private static String user = "TINTIN";
         private static Stories selectedStory;
@@ -31,14 +34,25 @@ namespace DataCollector.Views {
             //user = new PromptFrame().ShowPromptFrame();
             ProgramLogger.Log("[MainFrame()] user = " + user);
             InitializeComponent();
-            InitializeOtherComponents();
-            GetStory();
-            connector = new EmotivConnector(this);
+            InitializeOtherFrameComponents();
+            InitializeComponentConnectors();
         }
 
-        private void InitializeOtherComponents() {
+        /// <summary>
+        /// Sets the dynamic UI components.
+        /// </summary>
+        private void InitializeOtherFrameComponents() {
             cbStoryList.SelectedIndex = 0;
             lblTime.Text = Utilities.GetTimerFormat(duration);
+            GetStory();
+        }
+
+        /// <summary>
+        /// Creates instances of the EmotiveConnector and CameraConnector.
+        /// </summary>
+        private void InitializeComponentConnectors() {
+            emoConnector = new EmotivConnector(this);
+            camConnector = new CameraConnector();
         }
 
         /*public void UpdateEegBatteryStatus(String newText) {
@@ -58,11 +72,12 @@ namespace DataCollector.Views {
 
             // Create output file
             String filename = "./Results/" + user + "_baseline_" + Utilities.GetTimestamp() + ".csv";
-            connector.CreateOutputFile(filename);
+            emoConnector.CreateOutputFile(filename);
 
             // Start recording
-            connector.Connect();
-            StartEegComponent(true);
+            emoConnector.Connect();
+            StartEegComponent();
+            StartUiComponents(true);
 
             // Start timer
             timer.Start();
@@ -76,7 +91,8 @@ namespace DataCollector.Views {
                 lblTime.Text = Utilities.GetTimerFormat(timeLeft);
             } else {
                 timer.Stop();
-                StopEegComponent(true);
+                StopEegComponent();
+                StopUiComponents(true);
                 MessageBox.Show("Baseline EEG recorded!", "Update");
                 ProgramLogger.Log("[MainFrame.timer_Tick()] Stop baseline recording");
             }
@@ -89,7 +105,12 @@ namespace DataCollector.Views {
 
             clickCtr++;
             if(clickCtr % 2 == 0) { // STOP
-                StopEegComponent(false);
+                // Emotiv-related
+                StopEegComponent();
+                // Camera-related
+                camConnector.StopRecording();
+                // UI-related
+                StopUiComponents(false);
                 lblProgress0.Visible = false;
                 lblProgress1.Visible = false;
                 lblProgress2.Visible = false;
@@ -101,7 +122,11 @@ namespace DataCollector.Views {
                 // Story-related
                 LoadStory();
                 // Emotiv-related
-                StartEegComponent(false);
+                StartEegComponent();
+                //Camera-related
+                camConnector.StartRecording();
+                // UI-related
+                StartUiComponents(false);
             }
         }
 
@@ -124,7 +149,7 @@ namespace DataCollector.Views {
             lblProgress3.Visible = false;
 
             ProgramLogger.Log("[MainFrame.Reset()] Reset EmotivConnector");
-            connector.Connect();
+            emoConnector.Connect();
         }
 
         /// <summary>
@@ -133,14 +158,19 @@ namespace DataCollector.Views {
         private void CreateOutputFiles() {
             String template = "./Results/" + user + "_" + selectedStory.ToString() + "_" + Utilities.GetTimestamp() + "_";
 
-            ProgramLogger.Log("[MainFrame.CreateOutputFiles()] Created EegData.csv");
-            String outputEegFilename =  template + "EegData.csv";
-            //connector = new EmotivConnector(this, outputEegFilename);
-            connector.CreateOutputFile(outputEegFilename);
-
+            // Story-related
             ProgramLogger.Log("[MainFrame.CreateOutputFiles()] Created EmoAnno.csv");
             String outputEmoAnnoFilename = template + "EmoAnno.csv";
             annotator = new AnnotatorFrame(this, outputEmoAnnoFilename);
+            // Emotiv-related
+            ProgramLogger.Log("[MainFrame.CreateOutputFiles()] Created EegData.csv");
+            String outputEegFilename =  template + "EegData.csv";
+            emoConnector.CreateOutputFile(outputEegFilename);
+            // Camera-related
+            ProgramLogger.Log("[MainFrame.CreateOutputFiles()] Created Video.mp4");
+            emoConnector.CreateOutputFile(outputEegFilename);
+            String outputVideoFilename = template + "Video.mp4";
+            camConnector.CreateOutputFile(outputVideoFilename);
         }
 
         /// <summary>
@@ -164,24 +194,11 @@ namespace DataCollector.Views {
         /// <summary>
         /// Starts the EEG recording.
         /// </summary>
-        private void StartEegComponent(Boolean isBaseline) {
+        private void StartEegComponent() {
             ProgramLogger.Log("[MainFrame.StartEegComponent()] Starts the EEG Components");
-            lblEegRecording.Text = "EEG is recording";
-            lblEegRecording.ForeColor = Color.Green;
-            btnGetBaseline.Enabled = false;
-            if(isBaseline) {
-                tBtnRecord.Enabled = false;
-                cbStoryList.Enabled = false;
-                btnNext.Enabled = false;
-                lblTime.Font = new Font(lblTime.Font, FontStyle.Bold);
-                lblStatus.Text = "Recording baseline EEG";
-            } else {
-                tBtnRecord.Image = Properties.Resources.IMG_Stop;
-                tBtnRecord.Text = "Stop";
-            }
-
+            
             // Create the thread object. This does not start the thread.
-            thdEmotivConnector = new Thread(connector.StartRecording);
+            thdEmotivConnector = new Thread(emoConnector.StartRecording);
             // Start the worker thread.
             ProgramLogger.Log("[MainFrame.StartEegComponent()] Starting thread for EmotivConnector");
             thdEmotivConnector.Start();
@@ -191,10 +208,45 @@ namespace DataCollector.Views {
         /// <summary>
         /// Stops the EEG recording.
         /// </summary>
-        private void StopEegComponent(Boolean isBaseline) {
+        private void StopEegComponent() {
             ProgramLogger.Log("[MainFrame.StopEegComponent()] Stops the EEG Component");
+            
+            // Request that the worker thread stop itself:
+            emoConnector.StopRecording();
+
+            // Use the Join method to block the current thread until the object's thread terminates.
+            ProgramLogger.Log("[MainFrame.StopEegComponent()] Stopping thread for EmotivConnector");
+            thdEmotivConnector.Join();
+            Console.WriteLine("main thread: Worker thread has terminated.");
+        }
+        #endregion
+
+        #region START/STOP UI COMPONENTS
+        private void StartUiComponents(Boolean isBaseline) {
+            lblEegRecording.Text = "EEG is recording";
+            lblEegRecording.ForeColor = Color.Green;
+            btnGetBaseline.Enabled = false;
+            if(isBaseline) {
+                tBtnRecord.Enabled = false;
+                cbStoryList.Enabled = false;
+                btnNext.Enabled = false;
+                lblTime.Font = new Font(lblTime.Font, FontStyle.Bold);
+                lblStatus.Text = "Recording baseline EEG";
+                lblCameraRecording.Text = "Camera is not recording";
+                lblCameraRecording.ForeColor = Color.Red;
+            } else {
+                tBtnRecord.Image = Properties.Resources.IMG_Stop;
+                tBtnRecord.Text = "Stop";
+                lblCameraRecording.Text = "Camera is recording";
+                lblCameraRecording.ForeColor = Color.Green;
+            }
+        }
+
+        private void StopUiComponents(Boolean isBaseline) {
             lblEegRecording.Text = "EEG is not recording";
             lblEegRecording.ForeColor = Color.Red;
+            lblCameraRecording.Text = "Camera is not recording";
+            lblCameraRecording.ForeColor = Color.Red;
             btnGetBaseline.Enabled = true;
             if(isBaseline) {
                 tBtnRecord.Enabled = true;
@@ -207,16 +259,8 @@ namespace DataCollector.Views {
                 tBtnRecord.Image = Properties.Resources.IMG_Play;
                 tBtnRecord.Text = "Start";
             }
-
-            // Request that the worker thread stop itself:
-            connector.StopRecording();
-
-            // Use the Join method to block the current thread until the object's thread terminates.
-            ProgramLogger.Log("[MainFrame.StopEegComponent()] Stopping thread for EmotivConnector");
-            thdEmotivConnector.Join();
-            Console.WriteLine("main thread: Worker thread has terminated.");
         }
-        #endregion        
+        #endregion
 
         #region NEXT BUTTON ACTION
         /// <summary>
@@ -276,7 +320,9 @@ namespace DataCollector.Views {
                 lblStatus.Text = "End of '" + Story.Title + "' reached";
 
                 clickCtr++;
-                StopEegComponent(false);
+                StopEegComponent();
+                camConnector.StopRecording();
+                StopUiComponents(false);
                 ProgramLogger.Log("[MainFrame.UpdateSegments()] Last segment");
             } else {
                 current = StoryNavigator.ParagraphBuilder(Story.SegmentList[StoryNavigator.segCurr].PartList);

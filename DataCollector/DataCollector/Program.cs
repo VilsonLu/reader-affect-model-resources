@@ -13,8 +13,6 @@ namespace DataCollector {
         /// </summary>
         [STAThread]
         static void Main() {
-            ProgramLogger.Initialize();
-
             try {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);

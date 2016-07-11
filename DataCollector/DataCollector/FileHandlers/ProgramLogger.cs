@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 namespace DataCollector.FileHandlers {
     static class ProgramLogger {
         private static StreamWriter writer;
-        private static Boolean isOpen = false;
         private static String filename;
 
         public static void Initialize() {

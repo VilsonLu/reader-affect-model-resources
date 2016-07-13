@@ -34,7 +34,6 @@ namespace DataCollector.Views {
         /// <param name="parent"></param>
         /// <param name="filename"></param>
         public AnnotatorFrame(Form parent, String filename) {
-            ProgramLogger.Log("[AnnotatorFrame()] Created AnnotatorFrame instance");
             this.parent = parent;
             log = new EmotionLogger(filename);
             InitializeComponent();
@@ -99,7 +98,6 @@ namespace DataCollector.Views {
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void btnSubmit_Click(object sender, EventArgs e) {
-            ProgramLogger.Log("[AnnotatorFrame.btnSubmit_Click()] btnSubmit click event");
             endTime = Utilities.GetCsvTimestamp();
             SetIntensityValues();
             SetReaderResponseValues();

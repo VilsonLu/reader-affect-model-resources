@@ -53,7 +53,6 @@ namespace DataCollector.Views
             this.lblPrev = new System.Windows.Forms.Label();
             this.lblSpace = new System.Windows.Forms.Label();
             this.lblCurr = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.btnNext = new System.Windows.Forms.Button();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer = new System.Windows.Forms.Timer(this.components);
@@ -75,15 +74,14 @@ namespace DataCollector.Views
             // toolStripContainer1.ContentPanel
             // 
             this.toolStripContainer1.ContentPanel.Controls.Add(this.flowLayoutPanel1);
-            this.toolStripContainer1.ContentPanel.Controls.Add(this.panel1);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.btnNext);
             this.toolStripContainer1.ContentPanel.Margin = new System.Windows.Forms.Padding(4);
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(802, 803);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(802, 995);
             this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStripContainer1.Location = new System.Drawing.Point(0, 0);
             this.toolStripContainer1.Margin = new System.Windows.Forms.Padding(4);
             this.toolStripContainer1.Name = "toolStripContainer1";
-            this.toolStripContainer1.Size = new System.Drawing.Size(802, 853);
+            this.toolStripContainer1.Size = new System.Drawing.Size(802, 1045);
             this.toolStripContainer1.TabIndex = 1;
             this.toolStripContainer1.Text = "toolStripContainer1";
             // 
@@ -100,6 +98,7 @@ namespace DataCollector.Views
             this.statusStrip1.Location = new System.Drawing.Point(0, 0);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(802, 25);
+            this.statusStrip1.SizingGrip = false;
             this.statusStrip1.TabIndex = 0;
             // 
             // lblStatus
@@ -149,7 +148,7 @@ namespace DataCollector.Views
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(802, 759);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(802, 951);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
             // toolStrip1
@@ -180,8 +179,8 @@ namespace DataCollector.Views
             this.btnGetBaseline.Image = global::DataCollector.Properties.Resources.IMG_Baseline;
             this.btnGetBaseline.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnGetBaseline.Name = "btnGetBaseline";
-            this.btnGetBaseline.Size = new System.Drawing.Size(95, 44);
-            this.btnGetBaseline.Text = "Get Baseline";
+            this.btnGetBaseline.Size = new System.Drawing.Size(68, 44);
+            this.btnGetBaseline.Text = "Baseline";
             this.btnGetBaseline.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnGetBaseline.Click += new System.EventHandler(this.btnGetBaseline_Click);
             // 
@@ -293,20 +292,12 @@ namespace DataCollector.Views
             this.lblCurr.TabIndex = 2;
             this.lblCurr.Text = "Current Segment";
             // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(4, 4);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(575, 43);
-            this.panel1.TabIndex = 0;
-            // 
             // btnNext
             // 
             this.btnNext.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNext.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNext.Location = new System.Drawing.Point(0, 759);
+            this.btnNext.Location = new System.Drawing.Point(0, 951);
             this.btnNext.Margin = new System.Windows.Forms.Padding(4);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(802, 44);
@@ -330,11 +321,12 @@ namespace DataCollector.Views
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(802, 853);
+            this.ClientSize = new System.Drawing.Size(802, 1045);
             this.Controls.Add(this.toolStripContainer1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "MainFrame";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reader Affect Model   |   Data Collector";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainFrame_FormClosed);
@@ -356,7 +348,6 @@ namespace DataCollector.Views
         #endregion
 
         private System.Windows.Forms.ToolStripContainer toolStripContainer1;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripComboBox cbStoryList;

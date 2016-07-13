@@ -18,7 +18,6 @@ namespace DataCollector.App {
         /// Creates an instance of CameraConnector.
         /// </summary>
         public CameraConnector() {
-            ProgramLogger.Log("[CameraConnector()] Acquiring video source.");
             //List all available video sources. (That can be webcams as well as tv cards, etc)
             FilterInfoCollection videosources = new FilterInfoCollection(FilterCategory.VideoInputDevice);
 
@@ -77,7 +76,6 @@ namespace DataCollector.App {
         /// Starts the camera recording.
         /// </summary>
         public void StartRecording() {
-            ProgramLogger.Log("[CameraConnector.StartRecording()] Camera is recording.");
             tmspStartRecording = DateTime.Now.TimeOfDay;
             videoSource.Start();
         }
@@ -86,8 +84,6 @@ namespace DataCollector.App {
         /// Stops the camrea recording and closes the video file stream.
         /// </summary>
         public void StopRecording() {
-            ProgramLogger.Log("[CameraConnector.StopRecording()] Camera is not recording.");
-
             //Stop and free the webcam object.
             videoSource.SignalToStop();
 

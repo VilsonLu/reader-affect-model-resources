@@ -38,11 +38,9 @@ namespace DataCollector.App {
         MainFrame frame;
 
         public EmotivConnector(MainFrame frame) {
-            ProgramLogger.Log("[EmotivConnector()] Created EmotivConnector instance");
             this.frame = frame;
 
             // Create an instance of the EmoEngine
-            ProgramLogger.Log("[EmotivConnector()] Created EmoEngine instance");
             Console.WriteLine("EmoEngine CREATE");
             engine = EmoEngine.Instance;
 
@@ -53,7 +51,6 @@ namespace DataCollector.App {
 
         #region Emotiv Event Handlers
         private void engine_UserAdded_Event(object sender, EmoEngineEventArgs e) {
-            ProgramLogger.Log("[EmotivConnector.engine_UserAdded_Event()] User Added Event has occured");
             Console.WriteLine("User Added Event has occured");
 
             // Record the user
@@ -88,7 +85,6 @@ namespace DataCollector.App {
             userID = -1;
 
             // connect to EmoEngine.
-            ProgramLogger.Log("[EmotivConnector.Connect()] Connected to the engine");
             Console.WriteLine("EmoEngine CONNECT");
             engine.Connect();
         }
@@ -133,15 +129,12 @@ namespace DataCollector.App {
         /// Prompts the tool to start capturing data from the device. Will keep on recording until _shouldStop changes values.
         /// </summary>
         public void StartRecording() {
-            ProgramLogger.Log("[EmotivConnector.StartRecording()] Start recording");
-
             while(!_shouldStop) {
                 //Console.WriteLine("worker thread: working...");
                 Record();
                 Thread.Sleep(delay);
             }
 
-            ProgramLogger.Log("[EmotivConnector.StartRecording()] Disconnecting from the engine");
             Console.WriteLine("EmoEngine DISCONNECT");
             engine.Disconnect();
         }
@@ -150,7 +143,6 @@ namespace DataCollector.App {
         /// Prompts the tool stop capturing data from the device. Changes the value of the _shouldStop flag.
         /// </summary>
         public void StopRecording() {
-            ProgramLogger.Log("[EmotivConnector.StartRecording()] Stop recording");
             _shouldStop = true;
         }
         #endregion

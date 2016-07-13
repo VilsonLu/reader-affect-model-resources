@@ -11,7 +11,6 @@ namespace DataCollector.FileHandlers {
         private String filename;
 
         public EmotionLogger(String filename) {
-            ProgramLogger.Log("[EmotionLogger()] Created EmotionLogger instance");
             this.filename = filename;
             Initialize();
         }

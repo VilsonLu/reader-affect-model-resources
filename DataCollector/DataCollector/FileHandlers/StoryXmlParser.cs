@@ -21,17 +21,14 @@ namespace DataCollector.FileHandlers {
             int segmentCtr = 1;
 
             // Load the story
-            ProgramLogger.Log("[StoryXmlParser.ParseFile()] Getting stream of the story");
             xmlStory.Load(GetStoryStream(selectedStory));
 
             // Get the title and the author
-            ProgramLogger.Log("[StoryXmlParser.ParseFile()] Getting title and author");
             XmlAttributeCollection storyAttributes = xmlStory.SelectSingleNode("/story").Attributes;
             Story.Title = storyAttributes["title"].Value;
             Story.Author = storyAttributes["author"].Value;
 
             // Get all the 'segment' nodes
-            ProgramLogger.Log("[StoryXmlParser.ParseFile()] Getting the segments");
             XmlNodeList segmentNodeList = xmlStory.SelectNodes("/story/segment");
             foreach(XmlNode segment in segmentNodeList) {
                 Segment tempSegment = new Segment(segmentCtr);
@@ -47,8 +44,6 @@ namespace DataCollector.FileHandlers {
                 segmentCtr++;
                 parsedStory.Add(tempSegment);
             }
-
-            ProgramLogger.Log("[StoryXmlParser.ParseFile()] Updated Story data structure with parsed xml");
             Story.SegmentList = parsedStory;
         }
 

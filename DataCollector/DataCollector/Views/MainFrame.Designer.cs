@@ -76,7 +76,7 @@ namespace DataCollector.Views
             this.toolStripContainer1.ContentPanel.Controls.Add(this.flowLayoutPanel1);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.btnNext);
             this.toolStripContainer1.ContentPanel.Margin = new System.Windows.Forms.Padding(4);
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(802, 995);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(802, 1020);
             this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStripContainer1.Location = new System.Drawing.Point(0, 0);
             this.toolStripContainer1.Margin = new System.Windows.Forms.Padding(4);
@@ -148,11 +148,12 @@ namespace DataCollector.Views
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(802, 951);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(802, 976);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
             // toolStrip1
             // 
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -169,7 +170,7 @@ namespace DataCollector.Views
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip1.Size = new System.Drawing.Size(800, 47);
+            this.toolStrip1.Size = new System.Drawing.Size(700, 47);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -297,7 +298,7 @@ namespace DataCollector.Views
             this.btnNext.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNext.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNext.Location = new System.Drawing.Point(0, 951);
+            this.btnNext.Location = new System.Drawing.Point(0, 976);
             this.btnNext.Margin = new System.Windows.Forms.Padding(4);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(802, 44);

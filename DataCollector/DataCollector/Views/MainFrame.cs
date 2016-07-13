@@ -40,6 +40,7 @@ namespace DataCollector.Views {
         /// Sets the dynamic UI components.
         /// </summary>
         private void InitializeOtherFrameComponents() {
+            Size = new Size(Width, Screen.PrimaryScreen.WorkingArea.Height);
             cbStoryList.SelectedIndex = 0;
             lblTime.Text = Utilities.GetTimerFormat(duration);
             GetStory();

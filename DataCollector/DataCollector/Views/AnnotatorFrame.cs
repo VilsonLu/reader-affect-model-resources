@@ -101,8 +101,15 @@ namespace DataCollector.Views {
             endTime = Utilities.GetCsvTimestamp();
             SetIntensityValues();
             SetReaderResponseValues();
-            log.Log(startTime, endTime, intensity_PL, intensity_AT, intensity_SE, intensity_AP, isStriking, fromEvaluative, fromNarrative, fromAesthetic, fromOthers);
+            log.Log(startTime, endTime, intensity_PL, intensity_AT, intensity_SE, intensity_AP, GetBoolValue(isStriking), GetBoolValue(fromEvaluative), GetBoolValue(fromNarrative), GetBoolValue(fromAesthetic), GetBoolValue(fromOthers));
             CloseAnnotatorFrame();
+        }
+
+        private int GetBoolValue(Boolean value) {
+            if(value)
+                return 1;
+            else
+                return 0;
         }
 
         private void SetIntensityValues() {

@@ -1,0 +1,720 @@
+
+
+B:\DATA SET\Train Set (20) (FFT) (MOUSE) (C-Rating).arff	 k = 5
+Accuracy :	59.9713569638382 %
+Weighted F-Meausre :	0.660680620511144
+Weighted Recall :	0.599713569638382
+Weighted Precision :	0.834471481476765
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+ 1209  362  669 |    a = AVERAGE
+   11  423    0 |    b = HIGH
+   76    0   43 |    c = LOW
+
+
+
+B:\DATA SET\Train Set (20) (FFT) (MOUSE) (E-Rating).arff	 k = 5
+Accuracy :	39.563193698532 %
+Weighted F-Meausre :	0.447694095237095
+Weighted Recall :	0.39563193698532
+Weighted Precision :	0.525805025497365
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+ 1057  748  354 |    a = AVERAGE
+  203   43   63 |    b = LOW
+  316    4    5 |    c = HIGH
+
+
+
+B:\DATA SET\Train Set (20) (FFT) (MOUSE) (F-Rating).arff	 k = 5
+Accuracy :	33.4049409237379 %
+Weighted F-Meausre :	0.387088250752065
+Weighted Recall :	0.334049409237379
+Weighted Precision :	0.465720315988844
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 874 740 458 |   a = AVERAGE
+ 341   0   1 |   b = LOW
+ 225  95  59 |   c = HIGH
+
+
+
+B:\DATA SET\Train Set (20) (FFT) (MOUSE) (I-Rating).arff	 k = 5
+Accuracy :	51.4858575008951 %
+Weighted F-Meausre :	0.587661105154016
+Weighted Recall :	0.514858575008951
+Weighted Precision :	0.789843954618217
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 960 559 640 |   a = AVERAGE
+ 123 478  33 |   b = LOW
+   0   0   0 |   c = HIGH
+
+
+
+B:\DATA SET\Train Set (20) (FFT) (MOUSE) (C-Rating).arff	 k = 10
+Accuracy :	60.687432867884 %
+Weighted F-Meausre :	0.668836660664572
+Weighted Recall :	0.60687432867884
+Weighted Precision :	0.834882354386239
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+ 1234  339  667 |    a = AVERAGE
+   12  422    0 |    b = HIGH
+   80    0   39 |    c = LOW
+
+
+
+B:\DATA SET\Train Set (20) (FFT) (MOUSE) (E-Rating).arff	 k = 10
+Accuracy :	40.7089151450054 %
+Weighted F-Meausre :	0.456083948191766
+Weighted Recall :	0.407089151450054
+Weighted Precision :	0.527061699919868
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+ 1094  759  306 |    a = AVERAGE
+  214   39   56 |    b = LOW
+  317    4    4 |    c = HIGH
+
+
+
+B:\DATA SET\Train Set (20) (FFT) (MOUSE) (F-Rating).arff	 k = 10
+Accuracy :	33.1901181525242 %
+Weighted F-Meausre :	0.386078816284289
+Weighted Recall :	0.331901181525242
+Weighted Precision :	0.464521672164918
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 883 766 423 |   a = AVERAGE
+ 341   0   1 |   b = LOW
+ 226 109  44 |   c = HIGH
+
+
+
+B:\DATA SET\Train Set (20) (FFT) (MOUSE) (I-Rating).arff	 k = 10
+Accuracy :	51.843895452918 %
+Weighted F-Meausre :	0.591857210484932
+Weighted Recall :	0.51843895452918
+Weighted Precision :	0.79353072347999
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 968 550 641 |   a = AVERAGE
+ 120 480  34 |   b = LOW
+   0   0   0 |   c = HIGH
+
+
+
+B:\DATA SET\Train Set (20) (FFT) (MOUSE) (C-Rating).arff	 k = 15
+Accuracy :	60.9380594343 %
+Weighted F-Meausre :	0.671799687606224
+Weighted Recall :	0.609380594343
+Weighted Precision :	0.841459894489881
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+ 1233  324  683 |    a = AVERAGE
+   13  421    0 |    b = HIGH
+   71    0   48 |    c = LOW
+
+
+
+B:\DATA SET\Train Set (20) (FFT) (MOUSE) (E-Rating).arff	 k = 15
+Accuracy :	40.6015037593985 %
+Weighted F-Meausre :	0.456002316309653
+Weighted Recall :	0.406015037593985
+Weighted Precision :	0.530812138505381
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+ 1082  777  300 |    a = AVERAGE
+  200   46   63 |    b = LOW
+  318    1    6 |    c = HIGH
+
+
+
+B:\DATA SET\Train Set (20) (FFT) (MOUSE) (F-Rating).arff	 k = 15
+Accuracy :	32.3666308628715 %
+Weighted F-Meausre :	0.378695176001426
+Weighted Recall :	0.323666308628715
+Weighted Precision :	0.459332768701116
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 863 785 424 |   a = AVERAGE
+ 341   0   1 |   b = LOW
+ 227 111  41 |   c = HIGH
+
+
+
+B:\DATA SET\Train Set (20) (FFT) (MOUSE) (I-Rating).arff	 k = 15
+Accuracy :	52.2735409953455 %
+Weighted F-Meausre :	0.596746963610506
+Weighted Recall :	0.522735409953455
+Weighted Precision :	0.795854028927166
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 979 537 643 |   a = AVERAGE
+ 120 481  33 |   b = LOW
+   0   0   0 |   c = HIGH
+
+
+
+B:\DATA SET\Train Set (20) (FFT) (MOUSE) (C-Rating).arff	 k = 20
+Accuracy :	61.0096670247046 %
+Weighted F-Meausre :	0.6732928377096
+Weighted Recall :	0.610096670247046
+Weighted Precision :	0.838807680330853
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+ 1241  318  681 |    a = AVERAGE
+   12  422    0 |    b = HIGH
+   78    0   41 |    c = LOW
+
+
+
+B:\DATA SET\Train Set (20) (FFT) (MOUSE) (E-Rating).arff	 k = 20
+Accuracy :	40.4940923737916 %
+Weighted F-Meausre :	0.455052917733093
+Weighted Recall :	0.404940923737916
+Weighted Precision :	0.528580166919788
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+ 1085  776  298 |    a = AVERAGE
+  206   40   63 |    b = LOW
+  318    1    6 |    c = HIGH
+
+
+
+B:\DATA SET\Train Set (20) (FFT) (MOUSE) (F-Rating).arff	 k = 20
+Accuracy :	32.6530612244898 %
+Weighted F-Meausre :	0.381406217211592
+Weighted Recall :	0.326530612244898
+Weighted Precision :	0.461518386353811
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 871 774 427 |   a = AVERAGE
+ 341   0   1 |   b = LOW
+ 225 113  41 |   c = HIGH
+
+
+
+B:\DATA SET\Train Set (20) (FFT) (MOUSE) (I-Rating).arff	 k = 20
+Accuracy :	52.1303258145363 %
+Weighted F-Meausre :	0.595339890185343
+Weighted Recall :	0.521303258145363
+Weighted Precision :	0.79302949193332
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 978 536 645 |   a = AVERAGE
+ 124 478  32 |   b = LOW
+   0   0   0 |   c = HIGH
+
+
+
+B:\DATA SET\Train Set (20) (STAT) (MOUSE) (C-Rating).arff	 k = 5
+Accuracy :	44.5041174364483 %
+Weighted F-Meausre :	0.473369845271573
+Weighted Recall :	0.445041174364483
+Weighted Precision :	0.849742458665764
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 704 767 769 |   a = AVERAGE
+   0 432   2 |   b = HIGH
+  12   0 107 |   c = LOW
+
+
+
+B:\DATA SET\Train Set (20) (STAT) (MOUSE) (E-Rating).arff	 k = 5
+Accuracy :	36.3766559255281 %
+Weighted F-Meausre :	0.408331702584687
+Weighted Recall :	0.363766559255281
+Weighted Precision :	0.505536010902339
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 894 889 376 |   a = AVERAGE
+ 187 122   0 |   b = LOW
+ 323   2   0 |   c = HIGH
+
+
+
+B:\DATA SET\Train Set (20) (STAT) (MOUSE) (F-Rating).arff	 k = 5
+Accuracy :	19.906910132474 %
+Weighted F-Meausre :	0.262605527577972
+Weighted Recall :	0.19906910132474
+Weighted Precision :	0.403539436332234
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+  505 1157  410 |    a = AVERAGE
+  336    5    1 |    b = LOW
+  121  212   46 |    c = HIGH
+
+
+
+B:\DATA SET\Train Set (20) (STAT) (MOUSE) (I-Rating).arff	 k = 5
+Accuracy :	48.9437880415324 %
+Weighted F-Meausre :	0.561818950225537
+Weighted Recall :	0.489437880415324
+Weighted Precision :	0.803974531667646
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 871 601 687 |   a = AVERAGE
+  89 496  49 |   b = LOW
+   0   0   0 |   c = HIGH
+
+
+
+B:\DATA SET\Train Set (20) (STAT) (MOUSE) (C-Rating).arff	 k = 10
+Accuracy :	48.5857500895095 %
+Weighted F-Meausre :	0.54415294108595
+Weighted Recall :	0.485857500895095
+Weighted Precision :	0.872250050078488
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+  824  370 1046 |    a = AVERAGE
+    1  431    2 |    b = HIGH
+   17    0  102 |    c = LOW
+
+
+
+B:\DATA SET\Train Set (20) (STAT) (MOUSE) (E-Rating).arff	 k = 10
+Accuracy :	33.90619405657 %
+Weighted F-Meausre :	0.376407370690944
+Weighted Recall :	0.3390619405657
+Weighted Precision :	0.544656128639882
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+  723 1088  348 |    a = AVERAGE
+   85  224    0 |    b = LOW
+  253   72    0 |    c = HIGH
+
+
+
+B:\DATA SET\Train Set (20) (STAT) (MOUSE) (F-Rating).arff	 k = 10
+Accuracy :	20.3723594701038 %
+Weighted F-Meausre :	0.266698325143812
+Weighted Recall :	0.203723594701038
+Weighted Precision :	0.399903363483648
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+  520 1143  409 |    a = AVERAGE
+  339    2    1 |    b = LOW
+  141  191   47 |    c = HIGH
+
+
+
+B:\DATA SET\Train Set (20) (STAT) (MOUSE) (I-Rating).arff	 k = 10
+Accuracy :	49.874686716792 %
+Weighted F-Meausre :	0.568394867759107
+Weighted Recall :	0.49874686716792
+Weighted Precision :	0.792070998844305
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 897 599 663 |   a = AVERAGE
+ 109 496  29 |   b = LOW
+   0   0   0 |   c = HIGH
+
+
+
+B:\DATA SET\Train Set (20) (STAT) (MOUSE) (C-Rating).arff	 k = 15
+Accuracy :	48.4425349087003 %
+Weighted F-Meausre :	0.5410929856194
+Weighted Recall :	0.484425349087003
+Weighted Precision :	0.883542986216381
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+  809  363 1068 |    a = AVERAGE
+    1  431    2 |    b = HIGH
+    6    0  113 |    c = LOW
+
+
+
+B:\DATA SET\Train Set (20) (STAT) (MOUSE) (E-Rating).arff	 k = 15
+Accuracy :	32.9394915861081 %
+Weighted F-Meausre :	0.365899035372855
+Weighted Recall :	0.329394915861081
+Weighted Precision :	0.539269164613019
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+  694 1096  369 |    a = AVERAGE
+   83  226    0 |    b = LOW
+  252   73    0 |    c = HIGH
+
+
+
+B:\DATA SET\Train Set (20) (STAT) (MOUSE) (F-Rating).arff	 k = 15
+Accuracy :	18.6895810955961 %
+Weighted F-Meausre :	0.247826338738999
+Weighted Recall :	0.186895810955961
+Weighted Precision :	0.385281757895583
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+  471 1182  419 |    a = AVERAGE
+  339    2    1 |    b = LOW
+  132  198   49 |    c = HIGH
+
+
+
+B:\DATA SET\Train Set (20) (STAT) (MOUSE) (I-Rating).arff	 k = 15
+Accuracy :	50.125313283208 %
+Weighted F-Meausre :	0.570511135425908
+Weighted Recall :	0.50125313283208
+Weighted Precision :	0.790219050154603
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 904 596 659 |   a = AVERAGE
+ 113 496  25 |   b = LOW
+   0   0   0 |   c = HIGH
+
+
+
+B:\DATA SET\Train Set (20) (STAT) (MOUSE) (C-Rating).arff	 k = 20
+Accuracy :	47.905477980666 %
+Weighted F-Meausre :	0.53546407683565
+Weighted Recall :	0.47905477980666
+Weighted Precision :	0.886229648419075
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+  792  355 1093 |    a = AVERAGE
+    1  431    2 |    b = HIGH
+    4    0  115 |    c = LOW
+
+
+
+B:\DATA SET\Train Set (20) (STAT) (MOUSE) (E-Rating).arff	 k = 20
+Accuracy :	34.5864661654135 %
+Weighted F-Meausre :	0.382823332373017
+Weighted Recall :	0.345864661654135
+Weighted Precision :	0.549449799051177
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+  739 1093  327 |    a = AVERAGE
+   82  227    0 |    b = LOW
+  254   71    0 |    c = HIGH
+
+
+
+B:\DATA SET\Train Set (20) (STAT) (MOUSE) (F-Rating).arff	 k = 20
+Accuracy :	18.8327962764053 %
+Weighted F-Meausre :	0.249085359853304
+Weighted Recall :	0.188327962764053
+Weighted Precision :	0.383938866721619
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+  476 1174  422 |    a = AVERAGE
+  340    1    1 |    b = LOW
+  139  191   49 |    c = HIGH
+
+
+
+B:\DATA SET\Train Set (20) (STAT) (MOUSE) (I-Rating).arff	 k = 20
+Accuracy :	50.1611170784103 %
+Weighted F-Meausre :	0.570582184539032
+Weighted Recall :	0.501611170784103
+Weighted Precision :	0.788955971823856
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 905 596 658 |   a = AVERAGE
+ 115 496  23 |   b = LOW
+   0   0   0 |   c = HIGH
+
+
+
+B:\DATA SET\Train Set (20) (STAT) (MOUSE) (C-Rating).arff	 k = 5
+Accuracy :	44.5041174364483 %
+Weighted F-Meausre :	0.473369845271573
+Weighted Recall :	0.445041174364483
+Weighted Precision :	0.849742458665764
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 704 767 769 |   a = AVERAGE
+   0 432   2 |   b = HIGH
+  12   0 107 |   c = LOW
+
+
+
+B:\DATA SET\Train Set (20) (STAT) (MOUSE) (E-Rating).arff	 k = 5
+Accuracy :	36.3766559255281 %
+Weighted F-Meausre :	0.408331702584687
+Weighted Recall :	0.363766559255281
+Weighted Precision :	0.505536010902339
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 894 889 376 |   a = AVERAGE
+ 187 122   0 |   b = LOW
+ 323   2   0 |   c = HIGH
+
+
+
+B:\DATA SET\Train Set (20) (STAT) (MOUSE) (F-Rating).arff	 k = 5
+Accuracy :	19.906910132474 %
+Weighted F-Meausre :	0.262605527577972
+Weighted Recall :	0.19906910132474
+Weighted Precision :	0.403539436332234
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+  505 1157  410 |    a = AVERAGE
+  336    5    1 |    b = LOW
+  121  212   46 |    c = HIGH
+
+
+
+B:\DATA SET\Train Set (20) (STAT) (MOUSE) (I-Rating).arff	 k = 5
+Accuracy :	48.9437880415324 %
+Weighted F-Meausre :	0.561818950225537
+Weighted Recall :	0.489437880415324
+Weighted Precision :	0.803974531667646
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 871 601 687 |   a = AVERAGE
+  89 496  49 |   b = LOW
+   0   0   0 |   c = HIGH
+
+
+
+B:\DATA SET\Train Set (20) (STAT) (MOUSE) (C-Rating).arff	 k = 10
+Accuracy :	48.5857500895095 %
+Weighted F-Meausre :	0.54415294108595
+Weighted Recall :	0.485857500895095
+Weighted Precision :	0.872250050078488
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+  824  370 1046 |    a = AVERAGE
+    1  431    2 |    b = HIGH
+   17    0  102 |    c = LOW
+
+
+
+B:\DATA SET\Train Set (20) (STAT) (MOUSE) (E-Rating).arff	 k = 10
+Accuracy :	33.90619405657 %
+Weighted F-Meausre :	0.376407370690944
+Weighted Recall :	0.3390619405657
+Weighted Precision :	0.544656128639882
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+  723 1088  348 |    a = AVERAGE
+   85  224    0 |    b = LOW
+  253   72    0 |    c = HIGH
+
+
+
+B:\DATA SET\Train Set (20) (STAT) (MOUSE) (F-Rating).arff	 k = 10
+Accuracy :	20.3723594701038 %
+Weighted F-Meausre :	0.266698325143812
+Weighted Recall :	0.203723594701038
+Weighted Precision :	0.399903363483648
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+  520 1143  409 |    a = AVERAGE
+  339    2    1 |    b = LOW
+  141  191   47 |    c = HIGH
+
+
+
+B:\DATA SET\Train Set (20) (STAT) (MOUSE) (I-Rating).arff	 k = 10
+Accuracy :	49.874686716792 %
+Weighted F-Meausre :	0.568394867759107
+Weighted Recall :	0.49874686716792
+Weighted Precision :	0.792070998844305
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 897 599 663 |   a = AVERAGE
+ 109 496  29 |   b = LOW
+   0   0   0 |   c = HIGH
+
+
+
+B:\DATA SET\Train Set (20) (STAT) (MOUSE) (C-Rating).arff	 k = 15
+Accuracy :	48.4425349087003 %
+Weighted F-Meausre :	0.5410929856194
+Weighted Recall :	0.484425349087003
+Weighted Precision :	0.883542986216381
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+  809  363 1068 |    a = AVERAGE
+    1  431    2 |    b = HIGH
+    6    0  113 |    c = LOW
+
+
+
+B:\DATA SET\Train Set (20) (STAT) (MOUSE) (E-Rating).arff	 k = 15
+Accuracy :	32.9394915861081 %
+Weighted F-Meausre :	0.365899035372855
+Weighted Recall :	0.329394915861081
+Weighted Precision :	0.539269164613019
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+  694 1096  369 |    a = AVERAGE
+   83  226    0 |    b = LOW
+  252   73    0 |    c = HIGH
+
+
+
+B:\DATA SET\Train Set (20) (STAT) (MOUSE) (F-Rating).arff	 k = 15
+Accuracy :	18.6895810955961 %
+Weighted F-Meausre :	0.247826338738999
+Weighted Recall :	0.186895810955961
+Weighted Precision :	0.385281757895583
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+  471 1182  419 |    a = AVERAGE
+  339    2    1 |    b = LOW
+  132  198   49 |    c = HIGH
+
+
+
+B:\DATA SET\Train Set (20) (STAT) (MOUSE) (I-Rating).arff	 k = 15
+Accuracy :	50.125313283208 %
+Weighted F-Meausre :	0.570511135425908
+Weighted Recall :	0.50125313283208
+Weighted Precision :	0.790219050154603
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 904 596 659 |   a = AVERAGE
+ 113 496  25 |   b = LOW
+   0   0   0 |   c = HIGH
+
+
+
+B:\DATA SET\Train Set (20) (STAT) (MOUSE) (C-Rating).arff	 k = 20
+Accuracy :	47.905477980666 %
+Weighted F-Meausre :	0.53546407683565
+Weighted Recall :	0.47905477980666
+Weighted Precision :	0.886229648419075
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+  792  355 1093 |    a = AVERAGE
+    1  431    2 |    b = HIGH
+    4    0  115 |    c = LOW
+
+
+
+B:\DATA SET\Train Set (20) (STAT) (MOUSE) (E-Rating).arff	 k = 20
+Accuracy :	34.5864661654135 %
+Weighted F-Meausre :	0.382823332373017
+Weighted Recall :	0.345864661654135
+Weighted Precision :	0.549449799051177
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+  739 1093  327 |    a = AVERAGE
+   82  227    0 |    b = LOW
+  254   71    0 |    c = HIGH
+
+
+
+B:\DATA SET\Train Set (20) (STAT) (MOUSE) (F-Rating).arff	 k = 20
+Accuracy :	18.8327962764053 %
+Weighted F-Meausre :	0.249085359853304
+Weighted Recall :	0.188327962764053
+Weighted Precision :	0.383938866721619
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+  476 1174  422 |    a = AVERAGE
+  340    1    1 |    b = LOW
+  139  191   49 |    c = HIGH
+
+
+
+B:\DATA SET\Train Set (20) (STAT) (MOUSE) (I-Rating).arff	 k = 20
+Accuracy :	50.1611170784103 %
+Weighted F-Meausre :	0.570582184539032
+Weighted Recall :	0.501611170784103
+Weighted Precision :	0.788955971823856
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 905 596 658 |   a = AVERAGE
+ 115 496  23 |   b = LOW
+   0   0   0 |   c = HIGH
+

@@ -1,0 +1,300 @@
+Accuracy :	31.4715359828142 %
+Weighted F-Meausre :	0.312929973296284
+Weighted Recall :	0.314715359828142
+Weighted Precision :	0.691338115517569
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+  445 1788    7 |    a = AVERAGE
+   15  419    0 |    b = HIGH
+  104    0   15 |    c = LOW
+
+
+
+
+
+
+E:\DATA SET\ALPHA\Data Set (20) (C-Rating).arff	 k = 5
+Accuracy :	45.9720730397422 %
+Weighted F-Meausre :	0.495757343791979
+Weighted Recall :	0.459720730397422
+Weighted Precision :	0.830707922073802
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 766 737 737 |   a = AVERAGE
+   1 431   2 |   b = HIGH
+  32   0  87 |   c = LOW
+
+
+
+E:\DATA SET\ALPHA\Data Set (20) (C-Rating).arff	 k = 10
+Accuracy :	49.5524525599714 %
+Weighted F-Meausre :	0.556174851781448
+Weighted Recall :	0.495524525599714
+Weighted Precision :	0.861659407708739
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+  863  375 1002 |    a = AVERAGE
+    1  431    2 |    b = HIGH
+   29    0   90 |    c = LOW
+
+
+
+E:\DATA SET\ALPHA\Data Set (20) (C-Rating).arff	 k = 15
+Accuracy :	47.7264590046545 %
+Weighted F-Meausre :	0.536797208999543
+Weighted Recall :	0.477264590046545
+Weighted Precision :	0.866972514157495
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+  806  360 1074 |    a = AVERAGE
+    1  431    2 |    b = HIGH
+   23    0   96 |    c = LOW
+
+
+
+E:\DATA SET\ALPHA\Data Set (20) (C-Rating).arff	 k = 20
+Accuracy :	48.2635159326889 %
+Weighted F-Meausre :	0.544573560544158
+Weighted Recall :	0.482635159326889
+Weighted Precision :	0.864120106988057
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+  826  348 1066 |    a = AVERAGE
+    1  431    2 |    b = HIGH
+   28    0   91 |    c = LOW
+
+Accuracy :	22.5563909774436 %
+Weighted F-Meausre :	0.254347966529447
+Weighted Recall :	0.225563909774436
+Weighted Precision :	0.579394017203559
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+  360  347 1452 |    a = AVERAGE
+  125  114   70 |    b = LOW
+   23  146  156 |    c = HIGH
+
+
+
+
+
+
+E:\DATA SET\ALPHA\Data Set (20) (E-Rating).arff	 k = 5
+Accuracy :	36.3766559255281 %
+Weighted F-Meausre :	0.408474476185143
+Weighted Recall :	0.363766559255281
+Weighted Precision :	0.50505619842328
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 896 888 375 |   a = AVERAGE
+ 189 120   0 |   b = LOW
+ 323   2   0 |   c = HIGH
+
+
+
+E:\DATA SET\ALPHA\Data Set (20) (E-Rating).arff	 k = 10
+Accuracy :	33.0110991765127 %
+Weighted F-Meausre :	0.366849825155595
+Weighted Recall :	0.330110991765127
+Weighted Precision :	0.537736139793637
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+  698 1088  373 |    a = AVERAGE
+   85  224    0 |    b = LOW
+  255   70    0 |    c = HIGH
+
+
+
+E:\DATA SET\ALPHA\Data Set (20) (E-Rating).arff	 k = 15
+Accuracy :	32.6172574292875 %
+Weighted F-Meausre :	0.362660137771374
+Weighted Recall :	0.326172574292875
+Weighted Precision :	0.535011199875467
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+  687 1089  383 |    a = AVERAGE
+   85  224    0 |    b = LOW
+  255   70    0 |    c = HIGH
+
+
+
+E:\DATA SET\ALPHA\Data Set (20) (E-Rating).arff	 k = 20
+Accuracy :	33.3333333333333 %
+Weighted F-Meausre :	0.370086023736945
+Weighted Recall :	0.333333333333333
+Weighted Precision :	0.540238960836808
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+  706 1088  365 |    a = AVERAGE
+   84  225    0 |    b = LOW
+  255   70    0 |    c = HIGH
+
+Accuracy :	61.0454708199069 %
+Weighted F-Meausre :	0.671301295649954
+Weighted Recall :	0.610454708199069
+Weighted Precision :	0.787933776870169
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+ 1384  678   10 |    a = AVERAGE
+  110  162   70 |    b = LOW
+   19  201  159 |    c = HIGH
+
+
+
+
+
+
+E:\DATA SET\ALPHA\Data Set (20) (F-Rating).arff	 k = 5
+Accuracy :	18.6895810955961 %
+Weighted F-Meausre :	0.245458134736976
+Weighted Recall :	0.186895810955961
+Weighted Precision :	0.376857487759994
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+  468 1178  426 |    a = AVERAGE
+  337    5    0 |    b = LOW
+  153  177   49 |    c = HIGH
+
+
+
+E:\DATA SET\ALPHA\Data Set (20) (F-Rating).arff	 k = 10
+Accuracy :	19.7636949516649 %
+Weighted F-Meausre :	0.257347725190859
+Weighted Recall :	0.197636949516649
+Weighted Precision :	0.384979771495956
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+  498 1143  431 |    a = AVERAGE
+  340    2    0 |    b = LOW
+  160  167   52 |    c = HIGH
+
+
+
+E:\DATA SET\ALPHA\Data Set (20) (F-Rating).arff	 k = 15
+Accuracy :	17.6154672395274 %
+Weighted F-Meausre :	0.233419343938359
+Weighted Recall :	0.176154672395274
+Weighted Precision :	0.366241117466833
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+  437 1203  432 |    a = AVERAGE
+  340    2    0 |    b = LOW
+  146  180   53 |    c = HIGH
+
+
+
+E:\DATA SET\ALPHA\Data Set (20) (F-Rating).arff	 k = 20
+Accuracy :	17.9735051915503 %
+Weighted F-Meausre :	0.237545747895153
+Weighted Recall :	0.179735051915503
+Weighted Precision :	0.369115651966405
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+  448 1188  436 |    a = AVERAGE
+  341    1    0 |    b = LOW
+  149  177   53 |    c = HIGH
+
+Accuracy :	75.9040458288579 %
+Weighted F-Meausre :	0.79668899092915
+Weighted Recall :	0.759040458288579
+Weighted Precision :	0.887575310916205
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+ 1522  427  210 |    a = AVERAGE
+   36  598    0 |    b = LOW
+    0    0    0 |    c = HIGH
+
+
+
+
+
+
+E:\DATA SET\ALPHA\Data Set (20) (I-Rating).arff	 k = 5
+Accuracy :	49.3018259935553 %
+Weighted F-Meausre :	0.566593216976526
+Weighted Recall :	0.493018259935553
+Weighted Precision :	0.809553058296211
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 881 596 682 |   a = AVERAGE
+  83 496  55 |   b = LOW
+   0   0   0 |   c = HIGH
+
+
+
+E:\DATA SET\ALPHA\Data Set (20) (I-Rating).arff	 k = 10
+Accuracy :	49.6956677407805 %
+Weighted F-Meausre :	0.568583983012056
+Weighted Recall :	0.496956677407805
+Weighted Precision :	0.801423290678114
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 892 599 668 |   a = AVERAGE
+  95 496  43 |   b = LOW
+   0   0   0 |   c = HIGH
+
+
+
+E:\DATA SET\ALPHA\Data Set (20) (I-Rating).arff	 k = 15
+Accuracy :	49.8388829215897 %
+Weighted F-Meausre :	0.569102900296904
+Weighted Recall :	0.498388829215897
+Weighted Precision :	0.796409271883672
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 896 596 667 |   a = AVERAGE
+ 103 496  35 |   b = LOW
+   0   0   0 |   c = HIGH
+
+
+
+E:\DATA SET\ALPHA\Data Set (20) (I-Rating).arff	 k = 20
+Accuracy :	49.9462943071966 %
+Weighted F-Meausre :	0.569736967158108
+Weighted Recall :	0.499462943071966
+Weighted Precision :	0.794577612991451
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 899 596 664 |   a = AVERAGE
+ 106 496  32 |   b = LOW
+   0   0   0 |   c = HIGH
+

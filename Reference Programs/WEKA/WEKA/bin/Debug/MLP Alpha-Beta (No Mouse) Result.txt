@@ -1,0 +1,60 @@
+Accuracy :	42.6423200859291 %
+Weighted F-Meausre :	0.448165805337985
+Weighted Recall :	0.426423200859291
+Weighted Precision :	0.840530418740838
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+  670 1430  140 |    a = AVERAGE
+   11  423    0 |    b = HIGH
+    1   20   98 |    c = LOW
+
+
+
+
+Accuracy :	70.5334765485141 %
+Weighted F-Meausre :	0.689255768571891
+Weighted Recall :	0.705334765485141
+Weighted Precision :	0.712250686539733
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+ 1873    7  279 |    a = AVERAGE
+  190   92   27 |    b = LOW
+  320    0    5 |    c = HIGH
+
+
+
+
+Accuracy :	52.703186537773 %
+Weighted F-Meausre :	0.549350525894204
+Weighted Recall :	0.52703186537773
+Weighted Precision :	0.616839612221701
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+ 1149  541  382 |    a = AVERAGE
+   82  260    0 |    b = LOW
+  294   22   63 |    c = HIGH
+
+
+
+
+Accuracy :	39.3841747225206 %
+Weighted F-Meausre :	0.428620647305843
+Weighted Recall :	0.393841747225206
+Weighted Precision :	0.789548486452332
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+  621 1367  171 |    a = AVERAGE
+   36  479  119 |    b = LOW
+    0    0    0 |    c = HIGH
+
+
+
+

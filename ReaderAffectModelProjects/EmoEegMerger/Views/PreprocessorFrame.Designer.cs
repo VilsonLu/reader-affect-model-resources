@@ -1,4 +1,4 @@
-﻿namespace EmoEegMerger {
+﻿namespace DataPreprocessor.Views {
     partial class PreprocessorFrame {
         /// <summary>
         /// Required designer variable.
@@ -151,12 +151,12 @@
             // 
             // browseEmoLog
             // 
-            this.browseEmoLog.Title = "Select Emotion Log...";
+            this.browseEmoLog.Title = "Reader Affect Model   |   Select Emotion Log...";
             this.browseEmoLog.FileOk += new System.ComponentModel.CancelEventHandler(this.browseEegAnno_FileOk);
             // 
             // browseEegLog
             // 
-            this.browseEegLog.Title = "Select EEG Log...";
+            this.browseEegLog.Title = "Reader Affect Model   |   Select EEG Log...";
             this.browseEegLog.FileOk += new System.ComponentModel.CancelEventHandler(this.browseEegLog_FileOk);
             // 
             // lblSpace
@@ -231,6 +231,7 @@
             // 
             // browseMergedLog
             // 
+            this.browseMergedLog.Title = "Reader Affect Model   |   Select Merged Log...";
             this.browseMergedLog.FileOk += new System.ComponentModel.CancelEventHandler(this.browseMergedLog_FileOk);
             // 
             // PreprocessorFrame
@@ -245,7 +246,7 @@
             this.Controls.Add(this.btnProcess);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Name = "PreprocessorFrame";
-            this.Text = "Form1";
+            this.Text = "Reader Affect Model   |   Data Preprocessor";
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);

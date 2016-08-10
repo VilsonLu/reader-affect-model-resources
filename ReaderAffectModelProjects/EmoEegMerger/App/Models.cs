@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EmoEegMerger {
+namespace DataPreprocessor.App {
     public class Interval {
         public String csvStart { get; set; }
         public String csvEnd { get; set; }

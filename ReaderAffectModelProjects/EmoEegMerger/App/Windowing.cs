@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.IO;
 using System.Threading;
-using EmoEegMerger;
+using DataPreprocessor;
 
-namespace EmoEegMerger {
+namespace DataPreprocessor.App {
     /// <summary>
     /// This class outputs windowed csv's with a 50% overlap
     /// </summary>

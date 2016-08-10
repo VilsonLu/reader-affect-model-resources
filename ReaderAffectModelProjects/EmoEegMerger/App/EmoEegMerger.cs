@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EmoEegMerger {
+namespace DataPreprocessor.App {
     public class LogMerger {
         /// <summary>
         /// START_TIME, END_TIME, SEGMENT, PLEASANTNESS, ATTENTION, SENSITIVITY, APPTITUDE, IS_STRIKING, FROM_EVALUATIVE, FROM_NARRATIVE, FROM_AESTHETIC, FROM_OTHERS

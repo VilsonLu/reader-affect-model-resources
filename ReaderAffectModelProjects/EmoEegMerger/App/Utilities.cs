@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EmoEegMerger {
+namespace DataPreprocessor.App {
     public static class Utilities {
         /// <summary>
         /// Convert UNIX Time to DateTime object

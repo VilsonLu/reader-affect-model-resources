@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataPreprocessor.App;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace EmoEegMerger {
+namespace DataPreprocessor.Views {
     public partial class PreprocessorFrame : Form {
         public PreprocessorFrame() {
             InitializeComponent();

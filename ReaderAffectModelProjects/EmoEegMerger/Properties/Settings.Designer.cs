@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EmoEegMerger.Properties {
+namespace DataPreprocessor.Properties {
 
 
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

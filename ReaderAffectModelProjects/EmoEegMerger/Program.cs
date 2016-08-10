@@ -1,10 +1,11 @@
-﻿using System;
+﻿using DataPreprocessor.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace EmoEegMerger {
+namespace DataPreprocessor {
     static class Program {
         /// <summary>
         /// The main entry point for the application.

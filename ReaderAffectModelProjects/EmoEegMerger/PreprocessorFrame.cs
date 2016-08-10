@@ -13,8 +13,8 @@ namespace EmoEegMerger {
     public partial class PreprocessorFrame : Form {
         public PreprocessorFrame() {
             InitializeComponent();
-            txtEmoAnno.Text = @"C:\Users\ERDT\Documents\DATA\ANGELICA_TV_20160712-131220_EmoAnno.csv";
-            txtEegAnno.Text = @"C:\Users\ERDT\Documents\DATA\ANGELICA_TV_20160712-131220_EegData.csv";
+            txtEmoAnno.Text = @"C:\Users\ERDT\Documents\DATA\JULES_TV_20160808-124329_EmoAnno.csv";
+            txtEegAnno.Text = @"C:\Users\ERDT\Documents\DATA\JULES_TV_20160808-124329_EegData.csv";
         }
 
         #region LogMerger
@@ -50,8 +50,8 @@ namespace EmoEegMerger {
         }
 
         private void btnProcess_Click(object sender, EventArgs e) {
-            if(File.Exists(txtMergedLog.Text))
-                new Windowing(txtMergedLog.Text,1,2);
+            //if(File.Exists(txtMergedLog.Text))
+               // new Windowing(txtMergedLog.Text,1,2);
         }
         #endregion
     }

@@ -233,7 +233,7 @@
             // 
             this.browseMergedLog.FileOk += new System.ComponentModel.CancelEventHandler(this.browseMergedLog_FileOk);
             // 
-            // MergerFrame
+            // PreprocessorFrame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -244,7 +244,7 @@
             this.Controls.Add(this.flowLayoutPanel3);
             this.Controls.Add(this.btnProcess);
             this.Controls.Add(this.flowLayoutPanel2);
-            this.Name = "MergerFrame";
+            this.Name = "PreprocessorFrame";
             this.Text = "Form1";
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();

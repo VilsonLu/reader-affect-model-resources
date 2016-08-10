@@ -151,16 +151,4 @@ namespace EmoEegMerger {
             }
         }
     }
-
-    class Interval {
-        private DateTime start;
-        private DateTime end;
-
-        public DateTime StartTime { get { return start; } set { start = value; } }
-        public DateTime EndTime { get { return end; } set { end = value; } }
-        public Interval(DateTime s, DateTime e) {
-            start = s;
-            end = e;
-        }
-    }
 }

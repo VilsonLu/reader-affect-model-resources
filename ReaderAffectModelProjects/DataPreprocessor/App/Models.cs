@@ -11,5 +11,12 @@ namespace DataPreprocessor.App {
         public DateTime dtStart { get; set; }
         public DateTime dtEnd { get; set; }
         public String content { get; set; }
+
+        public Interval() { }
+
+        public Interval(DateTime s, DateTime e) {
+            dtStart = s;
+            dtEnd = e;
+        }
     }
 }

@@ -47,6 +47,7 @@
             this.btnBrowseSegmentLog = new System.Windows.Forms.Button();
             this.btnSegment = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.browseWindowLog = new System.Windows.Forms.FolderBrowserDialog();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
@@ -311,6 +312,13 @@
             this.label5.TabIndex = 9;
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // browseWindowLog
+            // 
+            this.browseWindowLog.Description = "Reader Affect Model   |   Select Segment Folder...";
+            this.browseWindowLog.SelectedPath = "C:\\Users\\ERDT\\Documents\\GitHub\\ReaderAffectModelRepo\\ReaderAffectModelProjects\\Da" +
+    "taPreprocessor\\bin\\Debug\\Results\\JULES_TV";
+            this.browseWindowLog.ShowNewFolderButton = false;
+            // 
             // PreprocessorFrame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -365,6 +373,7 @@
         private System.Windows.Forms.Button btnBrowseSegmentLog;
         private System.Windows.Forms.Button btnSegment;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.FolderBrowserDialog browseWindowLog;
     }
 }
 

@@ -11,11 +11,9 @@ namespace DataPreprocessor.App {
     /// This class outputs windowed csv's with a 50% overlap
     /// </summary>
     class Windowing {
-        //StreamReader eeg;
-        //StreamWriter write;
         String filename;
         String destinationPath;
-        List<Interval2> list = new List<Interval2>();
+        List<Interval> list = new List<Interval>();
         int skipTime;
         int windowInterval;
 
@@ -26,11 +24,12 @@ namespace DataPreprocessor.App {
         /// <param name="directory">Output directory</param>
         /// <param name="skip">Skip first n seconds</param>
         /// <param name="interval">Length of each window</param>
-        public Windowing(String source, int skip, int interval) {
+        public Windowing(String savePath, String source, int skip, int interval) {
             filename = source;
-            destinationPath = "./Results/";
+            destinationPath = savePath;
             skipTime = skip;
             windowInterval = interval;
+
             ThreadStart tsEven = new ThreadStart(doEven);
             Thread tEven = new Thread(tsEven);
             tEven.Start();
@@ -50,22 +49,20 @@ namespace DataPreprocessor.App {
             //skip column headers
             eeg.ReadLine();
             while(!eeg.EndOfStream) {
-
                 int name = (count * windowInterval);
-
-                write = new StreamWriter(destinationPath + name + ".csv"); //Console.WriteLine("create file {0}", count);
+                
+                String savefile = destinationPath + " \\ "+ Path.GetFileNameWithoutExtension(filename) + "_W"+name + ".csv";
+                write = new StreamWriter(savefile); //Console.WriteLine("create file {0}", count);
                                                                            //write.WriteLine(columnHeaders);     //write column headers
                 String line = eeg.ReadLine();
                 Console.Write("CHECK: " + line);
                 String[] temp = line.Split(',');
                 current = Utilities.UNIXTimetoDateTime(Double.Parse(temp[0]));
                 startTime = current;
-                //current = Utilities.toDateTime(line);
-                //startTime = Utilities.toDateTime(line);
                 endTime = startTime.AddSeconds(windowInterval / 2);
                 writeToFile = true;
                 count++;
-                list.Add(new Interval2(startTime, endTime));
+                list.Add(new Interval(startTime, endTime));
 
 
                 while(!eeg.EndOfStream && writeToFile) //append created file
@@ -112,11 +109,12 @@ namespace DataPreprocessor.App {
 
             for(int i = 0; i < list.Count; i++) {
                 //StreamReader read = new StreamReader(fileList[i].FullName);
-                Console.WriteLine("READING : " + list[i].StartTime);
-                StreamWriter write = new StreamWriter(destinationPath + (i * windowInterval + 1) + ".csv");
+                Console.WriteLine("READING : " + list[i].dtStart);
+                String savefile = destinationPath + " \\ " + Path.GetFileNameWithoutExtension(filename) + "_W" + (i * windowInterval + 1) + ".csv";
+                StreamWriter write = new StreamWriter(savefile);
                 DateTime current;
-                DateTime startTime = list[i].StartTime.AddSeconds(windowInterval / 2);
-                DateTime endTime = list[i].EndTime.AddSeconds(windowInterval / 2);
+                DateTime startTime = list[i].dtStart.AddSeconds(windowInterval / 2);
+                DateTime endTime = list[i].dtEnd.AddSeconds(windowInterval / 2);
                 bool end = false;
                 while(!read.EndOfStream && !end) {
                     String line = read.ReadLine(); //Console.WriteLine(line);
@@ -156,7 +154,7 @@ namespace DataPreprocessor.App {
         }
     }
 
-    class Interval2 {
+    /*class Interval2 {
         private DateTime start;
         private DateTime end;
 
@@ -166,5 +164,5 @@ namespace DataPreprocessor.App {
             start = s;
             end = e;
         }
-    }
+    }*/
 }

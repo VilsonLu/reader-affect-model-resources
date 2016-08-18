@@ -59,17 +59,20 @@ namespace DataPreprocessor.Views {
 
         #region Windowing
         private void btnBrowseWindow_Click(object sender, EventArgs e) {
-            //browseSegmentLog.ShowDialog();
+            DialogResult result = browseWindowLog.ShowDialog();
+            if(result == DialogResult.OK) {
+                txtWindowLog.Text = browseWindowLog.SelectedPath;
+            }            
         }
 
         
 
         private void btnWindow_Click(object sender, EventArgs e) {
-            if(File.Exists(txtWindowLog.Text))
-                new Windowing(txtWindowLog.Text,1,2);
+            if(Directory.Exists(txtWindowLog.Text))
+                foreach(String file in Directory.GetFiles(txtWindowLog.Text))
+                    new Windowing(txtWindowLog.Text, file, 1, 2);
         }
-        #endregion
 
-        
+        #endregion
     }
 }

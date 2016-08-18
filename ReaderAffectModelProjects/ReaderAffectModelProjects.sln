@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataCollector", "DataCollector\DataCollector.csproj", "{99C02E46-7B35-4391-AC28-604FC842ADED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataPreprocessor", "EmoEegMerger\DataPreprocessor.csproj", "{2706AB1B-46A6-4E2E-BC63-8C382225B706}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataPreprocessor", "DataPreprocessor\DataPreprocessor.csproj", "{2706AB1B-46A6-4E2E-BC63-8C382225B706}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

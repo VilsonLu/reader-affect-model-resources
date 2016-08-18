@@ -16,6 +16,7 @@ namespace DataPreprocessor.Views {
             InitializeComponent();
             txtEmoAnno.Text = @"C:\Users\ERDT\Documents\DATA\JULES_TV_20160808-124329_EmoAnno.csv";
             txtEegAnno.Text = @"C:\Users\ERDT\Documents\DATA\JULES_TV_20160808-124329_EegData.csv";
+            txtWindowLog.Text = @"C:\Users\ERDT\Documents\GitHub\ReaderAffectModelRepo\ReaderAffectModelProjects\DataPreprocessor\bin\Debug\Results\JULES_TV_20160808-124329_MergedEmoEeg.csv";
         }
 
         #region LogMerger
@@ -40,20 +41,35 @@ namespace DataPreprocessor.Views {
                 new LogMerger(txtEmoAnno.Text, txtEegAnno.Text);
         }
         #endregion
-
-        #region Windowing
-        private void btnBrowseMergedLog_Click(object sender, EventArgs e) {
-            browseMergedLog.ShowDialog();
+        
+        #region Segmenter
+        private void btnBrowseSegmentLog_Click(object sender, EventArgs e) {
+            browseSegmentLog.ShowDialog();
         }
 
         private void browseMergedLog_FileOk(object sender, CancelEventArgs e) {
-            txtMergedLog.Text = browseMergedLog.FileName;
+            txtSegmentLog.Text = browseSegmentLog.FileName;
         }
 
-        private void btnProcess_Click(object sender, EventArgs e) {
-            //if(File.Exists(txtMergedLog.Text))
-               // new Windowing(txtMergedLog.Text,1,2);
+        private void btnSegment_Click(object sender, EventArgs e) {
+            //if(File.Exists(txtSegmentLog.Text))
+              //  new Segmenter();
         }
         #endregion
+
+        #region Windowing
+        private void btnBrowseWindow_Click(object sender, EventArgs e) {
+            //browseSegmentLog.ShowDialog();
+        }
+
+        
+
+        private void btnWindow_Click(object sender, EventArgs e) {
+            if(File.Exists(txtWindowLog.Text))
+                new Windowing(txtWindowLog.Text,1,2);
+        }
+        #endregion
+
+        
     }
 }

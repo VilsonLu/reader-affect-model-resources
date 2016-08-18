@@ -15,7 +15,7 @@ namespace DataPreprocessor.App {
         //StreamWriter write;
         String filename;
         String destinationPath;
-        List<Interval> list = new List<Interval>();
+        List<Interval2> list = new List<Interval2>();
         int skipTime;
         int windowInterval;
 
@@ -23,11 +23,12 @@ namespace DataPreprocessor.App {
         /// Constructor
         /// </summary>
         /// <param name="source">Full name of path to be windowed</param>
+        /// <param name="directory">Output directory</param>
         /// <param name="skip">Skip first n seconds</param>
         /// <param name="interval">Length of each window</param>
         public Windowing(String source, int skip, int interval) {
             filename = source;
-            destinationPath = Path.GetDirectoryName("./Results/");
+            destinationPath = "./Results/";
             skipTime = skip;
             windowInterval = interval;
             ThreadStart tsEven = new ThreadStart(doEven);
@@ -55,20 +56,23 @@ namespace DataPreprocessor.App {
                 write = new StreamWriter(destinationPath + name + ".csv"); //Console.WriteLine("create file {0}", count);
                                                                            //write.WriteLine(columnHeaders);     //write column headers
                 String line = eeg.ReadLine();
+                Console.Write("CHECK: " + line);
                 String[] temp = line.Split(',');
-                current = Utilities.toDateTime(line);
-                startTime = Utilities.toDateTime(line);
+                current = Utilities.UNIXTimetoDateTime(Double.Parse(temp[0]));
+                startTime = current;
+                //current = Utilities.toDateTime(line);
+                //startTime = Utilities.toDateTime(line);
                 endTime = startTime.AddSeconds(windowInterval / 2);
                 writeToFile = true;
                 count++;
-                list.Add(new Interval(startTime, endTime));
+                list.Add(new Interval2(startTime, endTime));
 
 
                 while(!eeg.EndOfStream && writeToFile) //append created file
                 {
                     line = eeg.ReadLine();
                     temp = line.Split(',');
-                    current = Utilities.toDateTime(line);
+                    current = Utilities.UNIXTimetoDateTime(Double.Parse(temp[0]));
 
                     bool equalEndTime = current.CompareTo(endTime) == 0;
                     bool beforeEndTime = current.CompareTo(endTime) == -1;
@@ -117,7 +121,7 @@ namespace DataPreprocessor.App {
                 while(!read.EndOfStream && !end) {
                     String line = read.ReadLine(); //Console.WriteLine(line);
                     String[] temp = line.Split(',');
-                    current = Utilities.toDateTime(line);
+                    current = Utilities.UNIXTimetoDateTime(Double.Parse(temp[0]));
 
                     beforeEndTime = current.CompareTo(endTime) == -1;
                     equalEndTime = current.CompareTo(endTime) == 0;
@@ -149,6 +153,18 @@ namespace DataPreprocessor.App {
                     changes++;
                 }
             }
+        }
+    }
+
+    class Interval2 {
+        private DateTime start;
+        private DateTime end;
+
+        public DateTime StartTime { get { return start; } set { start = value; } }
+        public DateTime EndTime { get { return end; } set { end = value; } }
+        public Interval2(DateTime s, DateTime e) {
+            start = s;
+            end = e;
         }
     }
 }

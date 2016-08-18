@@ -37,13 +37,20 @@
             this.lblSpace = new System.Windows.Forms.Label();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtMergedLog = new System.Windows.Forms.TextBox();
-            this.btnBrowseMergedLog = new System.Windows.Forms.Button();
-            this.btnProcess = new System.Windows.Forms.Button();
-            this.browseMergedLog = new System.Windows.Forms.OpenFileDialog();
+            this.txtWindowLog = new System.Windows.Forms.TextBox();
+            this.btnBrowseWindow = new System.Windows.Forms.Button();
+            this.btnWindow = new System.Windows.Forms.Button();
+            this.browseSegmentLog = new System.Windows.Forms.OpenFileDialog();
+            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtSegmentLog = new System.Windows.Forms.TextBox();
+            this.btnBrowseSegmentLog = new System.Windows.Forms.Button();
+            this.btnSegment = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
+            this.flowLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -168,7 +175,7 @@
             this.lblSpace.Location = new System.Drawing.Point(12, 177);
             this.lblSpace.Margin = new System.Windows.Forms.Padding(0, 12, 0, 12);
             this.lblSpace.Name = "lblSpace";
-            this.lblSpace.Size = new System.Drawing.Size(541, 1);
+            this.lblSpace.Size = new System.Drawing.Size(541, 2);
             this.lblSpace.TabIndex = 5;
             this.lblSpace.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -177,9 +184,9 @@
             this.flowLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel3.Controls.Add(this.label3);
-            this.flowLayoutPanel3.Controls.Add(this.txtMergedLog);
-            this.flowLayoutPanel3.Controls.Add(this.btnBrowseMergedLog);
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(18, 196);
+            this.flowLayoutPanel3.Controls.Add(this.txtWindowLog);
+            this.flowLayoutPanel3.Controls.Add(this.btnBrowseWindow);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(12, 350);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
             this.flowLayoutPanel3.Size = new System.Drawing.Size(538, 44);
             this.flowLayoutPanel3.TabIndex = 5;
@@ -194,56 +201,129 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(100, 36);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Merged Log";
+            this.label3.Text = "Log";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // txtMergedLog
+            // txtWindowLog
             // 
-            this.txtMergedLog.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtMergedLog.Location = new System.Drawing.Point(109, 3);
-            this.txtMergedLog.Name = "txtMergedLog";
-            this.txtMergedLog.Size = new System.Drawing.Size(342, 22);
-            this.txtMergedLog.TabIndex = 1;
+            this.txtWindowLog.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtWindowLog.Location = new System.Drawing.Point(109, 3);
+            this.txtWindowLog.Name = "txtWindowLog";
+            this.txtWindowLog.Size = new System.Drawing.Size(342, 22);
+            this.txtWindowLog.TabIndex = 1;
             // 
-            // btnBrowseMergedLog
+            // btnBrowseWindow
             // 
-            this.btnBrowseMergedLog.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnBrowseMergedLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBrowseMergedLog.Location = new System.Drawing.Point(457, 3);
-            this.btnBrowseMergedLog.MinimumSize = new System.Drawing.Size(0, 30);
-            this.btnBrowseMergedLog.Name = "btnBrowseMergedLog";
-            this.btnBrowseMergedLog.Size = new System.Drawing.Size(75, 30);
-            this.btnBrowseMergedLog.TabIndex = 2;
-            this.btnBrowseMergedLog.Text = "Browse";
-            this.btnBrowseMergedLog.UseVisualStyleBackColor = true;
-            this.btnBrowseMergedLog.Click += new System.EventHandler(this.btnBrowseMergedLog_Click);
+            this.btnBrowseWindow.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnBrowseWindow.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBrowseWindow.Location = new System.Drawing.Point(457, 3);
+            this.btnBrowseWindow.MinimumSize = new System.Drawing.Size(0, 30);
+            this.btnBrowseWindow.Name = "btnBrowseWindow";
+            this.btnBrowseWindow.Size = new System.Drawing.Size(75, 30);
+            this.btnBrowseWindow.TabIndex = 2;
+            this.btnBrowseWindow.Text = "Browse";
+            this.btnBrowseWindow.UseVisualStyleBackColor = true;
+            this.btnBrowseWindow.Click += new System.EventHandler(this.btnBrowseWindow_Click);
             // 
-            // btnProcess
+            // btnWindow
             // 
-            this.btnProcess.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProcess.Location = new System.Drawing.Point(167, 246);
-            this.btnProcess.Name = "btnProcess";
-            this.btnProcess.Size = new System.Drawing.Size(222, 35);
-            this.btnProcess.TabIndex = 6;
-            this.btnProcess.Text = "Process";
-            this.btnProcess.UseVisualStyleBackColor = true;
-            this.btnProcess.Click += new System.EventHandler(this.btnProcess_Click);
+            this.btnWindow.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnWindow.Location = new System.Drawing.Point(161, 400);
+            this.btnWindow.Name = "btnWindow";
+            this.btnWindow.Size = new System.Drawing.Size(222, 35);
+            this.btnWindow.TabIndex = 6;
+            this.btnWindow.Text = "Window";
+            this.btnWindow.UseVisualStyleBackColor = true;
+            this.btnWindow.Click += new System.EventHandler(this.btnWindow_Click);
             // 
-            // browseMergedLog
+            // browseSegmentLog
             // 
-            this.browseMergedLog.Title = "Reader Affect Model   |   Select Merged Log...";
-            this.browseMergedLog.FileOk += new System.ComponentModel.CancelEventHandler(this.browseMergedLog_FileOk);
+            this.browseSegmentLog.Title = "Reader Affect Model   |   Select Merged Log...";
+            this.browseSegmentLog.FileOk += new System.ComponentModel.CancelEventHandler(this.browseMergedLog_FileOk);
+            // 
+            // flowLayoutPanel4
+            // 
+            this.flowLayoutPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel4.Controls.Add(this.label4);
+            this.flowLayoutPanel4.Controls.Add(this.txtSegmentLog);
+            this.flowLayoutPanel4.Controls.Add(this.btnBrowseSegmentLog);
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(11, 202);
+            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(538, 44);
+            this.flowLayoutPanel4.TabIndex = 7;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(3, 0);
+            this.label4.MinimumSize = new System.Drawing.Size(100, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(100, 36);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Merged Log";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtSegmentLog
+            // 
+            this.txtSegmentLog.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtSegmentLog.Location = new System.Drawing.Point(109, 3);
+            this.txtSegmentLog.Name = "txtSegmentLog";
+            this.txtSegmentLog.Size = new System.Drawing.Size(342, 22);
+            this.txtSegmentLog.TabIndex = 1;
+            // 
+            // btnBrowseSegmentLog
+            // 
+            this.btnBrowseSegmentLog.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnBrowseSegmentLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBrowseSegmentLog.Location = new System.Drawing.Point(457, 3);
+            this.btnBrowseSegmentLog.MinimumSize = new System.Drawing.Size(0, 30);
+            this.btnBrowseSegmentLog.Name = "btnBrowseSegmentLog";
+            this.btnBrowseSegmentLog.Size = new System.Drawing.Size(75, 30);
+            this.btnBrowseSegmentLog.TabIndex = 2;
+            this.btnBrowseSegmentLog.Text = "Browse";
+            this.btnBrowseSegmentLog.UseVisualStyleBackColor = true;
+            this.btnBrowseSegmentLog.Click += new System.EventHandler(this.btnBrowseSegmentLog_Click);
+            // 
+            // btnSegment
+            // 
+            this.btnSegment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSegment.Location = new System.Drawing.Point(160, 252);
+            this.btnSegment.Name = "btnSegment";
+            this.btnSegment.Size = new System.Drawing.Size(222, 35);
+            this.btnSegment.TabIndex = 8;
+            this.btnSegment.Text = "Segment";
+            this.btnSegment.UseVisualStyleBackColor = true;
+            this.btnSegment.Click += new System.EventHandler(this.btnSegment_Click);
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(11, 321);
+            this.label5.Margin = new System.Windows.Forms.Padding(0, 12, 0, 12);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(541, 2);
+            this.label5.TabIndex = 9;
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // PreprocessorFrame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(562, 308);
+            this.ClientSize = new System.Drawing.Size(562, 469);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.flowLayoutPanel4);
+            this.Controls.Add(this.btnSegment);
             this.Controls.Add(this.lblSpace);
             this.Controls.Add(this.btnMerge);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.flowLayoutPanel3);
-            this.Controls.Add(this.btnProcess);
+            this.Controls.Add(this.btnWindow);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Name = "PreprocessorFrame";
             this.Text = "Reader Affect Model   |   Data Preprocessor";
@@ -253,6 +333,8 @@
             this.flowLayoutPanel2.PerformLayout();
             this.flowLayoutPanel3.ResumeLayout(false);
             this.flowLayoutPanel3.PerformLayout();
+            this.flowLayoutPanel4.ResumeLayout(false);
+            this.flowLayoutPanel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -273,10 +355,16 @@
         private System.Windows.Forms.Label lblSpace;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtMergedLog;
-        private System.Windows.Forms.Button btnBrowseMergedLog;
-        private System.Windows.Forms.Button btnProcess;
-        private System.Windows.Forms.OpenFileDialog browseMergedLog;
+        private System.Windows.Forms.TextBox txtWindowLog;
+        private System.Windows.Forms.Button btnBrowseWindow;
+        private System.Windows.Forms.Button btnWindow;
+        private System.Windows.Forms.OpenFileDialog browseSegmentLog;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtSegmentLog;
+        private System.Windows.Forms.Button btnBrowseSegmentLog;
+        private System.Windows.Forms.Button btnSegment;
+        private System.Windows.Forms.Label label5;
     }
 }
 

@@ -26,7 +26,7 @@ namespace DataPreprocessor.App {
 
         public LogMerger(String emoAnnoPath, String eegAnnoPath) {
             String file = Path.GetFileName(eegAnnoPath);
-            IEnumerable<string> words = file.Split('_').Take(3);
+            IEnumerable<string> words = file.Split('_').Take(2);
             String filename = "";
             foreach(String word in words)
                 filename += word + "_";

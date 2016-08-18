@@ -16,7 +16,7 @@ namespace DataPreprocessor.Views {
             InitializeComponent();
             txtEmoAnno.Text = @"C:\Users\ERDT\Documents\DATA\JULES_TV_20160808-124329_EmoAnno.csv";
             txtEegAnno.Text = @"C:\Users\ERDT\Documents\DATA\JULES_TV_20160808-124329_EegData.csv";
-            txtWindowLog.Text = @"C:\Users\ERDT\Documents\GitHub\ReaderAffectModelRepo\ReaderAffectModelProjects\DataPreprocessor\bin\Debug\Results\JULES_TV_20160808-124329_MergedEmoEeg.csv";
+            txtSegmentLog.Text = @"C:\Users\ERDT\Documents\GitHub\ReaderAffectModelRepo\ReaderAffectModelProjects\DataPreprocessor\bin\Debug\Results\JULES_TV_MergedEmoEeg.csv";
         }
 
         #region LogMerger
@@ -52,8 +52,8 @@ namespace DataPreprocessor.Views {
         }
 
         private void btnSegment_Click(object sender, EventArgs e) {
-            //if(File.Exists(txtSegmentLog.Text))
-              //  new Segmenter();
+            if(File.Exists(txtSegmentLog.Text))
+                new Segmenter(txtSegmentLog.Text);
         }
         #endregion
 

@@ -17,7 +17,7 @@ namespace DataPreprocessor.App {
             // Create savePath
             String file = Path.GetFileName(mergedLogPath);
             String[] words = file.Split('_').Take(2).ToArray();
-            savePath = "./Results/" + words[0] + "_" + words[1] + "/";
+            savePath = "./Results/" + words[0] + "_" + words[1] + "/02 Segments/";
             Directory.CreateDirectory(savePath);
 
             mergedLog = new StreamReader(mergedLogPath);

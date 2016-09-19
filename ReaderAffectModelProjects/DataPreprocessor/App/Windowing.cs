@@ -26,7 +26,9 @@ namespace DataPreprocessor.App {
         /// <param name="interval">Length of each window</param>
         public Windowing(String savePath, String source, int skip, int interval) {
             filename = source;
-            destinationPath = savePath;
+            destinationPath = Directory.GetParent(savePath).FullName + "/03 Windows/";
+            Directory.CreateDirectory(destinationPath);
+
             skipTime = skip;
             windowInterval = interval;
 
@@ -47,13 +49,15 @@ namespace DataPreprocessor.App {
             int count = 0;
 
             //skip column headers
-            eeg.ReadLine();
+            String header = eeg.ReadLine();
+
             while(!eeg.EndOfStream) {
                 int name = (count * windowInterval);
                 
                 String savefile = destinationPath + " \\ "+ Path.GetFileNameWithoutExtension(filename) + "_W"+name + ".csv";
                 write = new StreamWriter(savefile); //Console.WriteLine("create file {0}", count);
-                                                                           //write.WriteLine(columnHeaders);     //write column headers
+                write.WriteLine(header);     //write column headers
+
                 String line = eeg.ReadLine();
                 Console.Write("CHECK: " + line);
                 String[] temp = line.Split(',');
@@ -97,8 +101,9 @@ namespace DataPreprocessor.App {
             StreamReader read = new StreamReader(filename);
 
             //skip column header
+            String header = "";
             if(!read.EndOfStream)
-                read.ReadLine();
+                header = read.ReadLine();
 
             bool equalEndTime = false;
             bool beforeEndTime = false;
@@ -112,6 +117,8 @@ namespace DataPreprocessor.App {
                 Console.WriteLine("READING : " + list[i].dtStart);
                 String savefile = destinationPath + " \\ " + Path.GetFileNameWithoutExtension(filename) + "_W" + (i * windowInterval + 1) + ".csv";
                 StreamWriter write = new StreamWriter(savefile);
+                write.WriteLine(header);
+
                 DateTime current;
                 DateTime startTime = list[i].dtStart.AddSeconds(windowInterval / 2);
                 DateTime endTime = list[i].dtEnd.AddSeconds(windowInterval / 2);

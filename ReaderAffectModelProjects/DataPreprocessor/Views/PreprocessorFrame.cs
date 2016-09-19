@@ -16,7 +16,7 @@ namespace DataPreprocessor.Views {
             InitializeComponent();
             txtEmoAnno.Text = @"C:\Users\ERDT\Documents\DATA\JULES_TV_20160808-124329_EmoAnno.csv";
             txtEegAnno.Text = @"C:\Users\ERDT\Documents\DATA\JULES_TV_20160808-124329_EegData.csv";
-            txtSegmentLog.Text = @"C:\Users\ERDT\Documents\GitHub\ReaderAffectModelRepo\ReaderAffectModelProjects\DataPreprocessor\bin\Debug\Results\JULES_TV_MergedEmoEeg.csv";
+            txtSegmentLog.Text = @"C:\Users\ERDT\Documents\GitHub\ReaderAffectModelRepo\ReaderAffectModelProjects\DataPreprocessor\bin\Debug\Results\JULES_TV\01 MergedEmoEeg\JULES_TV_MergedEmoEeg.csv";
         }
 
         #region LogMerger

@@ -42,7 +42,9 @@ namespace DataPreprocessor.App {
         /// </summary>
         /// <param name="filename"></param>
         private void CreateOutputFile(String filename) {
-            String output = "./Results/" + filename +"MergedEmoEeg.csv";
+            String savePath = "./Results/" + filename.Remove(filename.Length-1) + "/01 MergedEmoEeg/";
+            Directory.CreateDirectory(savePath);
+            String output = savePath+filename+"MergedEmoEeg.csv";
             mergedLog = new StreamWriter(output);
             if(!eegAnno.EndOfStream)
                 mergedLog.Write(eegAnno.ReadLine());

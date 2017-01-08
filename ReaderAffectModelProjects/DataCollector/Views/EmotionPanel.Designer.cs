@@ -120,10 +120,11 @@
             this.tbIntensity.LargeChange = 1;
             this.tbIntensity.Location = new System.Drawing.Point(3, 3);
             this.tbIntensity.Maximum = 3;
-            this.tbIntensity.Minimum = -3;
+            this.tbIntensity.Minimum = -2;
             this.tbIntensity.Name = "tbIntensity";
             this.tbIntensity.Size = new System.Drawing.Size(349, 33);
             this.tbIntensity.TabIndex = 3;
+            this.tbIntensity.Value = 1;
             // 
             // tableLayoutPanel4
             // 

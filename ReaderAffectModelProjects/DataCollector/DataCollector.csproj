@@ -100,6 +100,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="App\StoryNavigator.cs" />
+    <Compile Include="Views\AnnotatorFrame2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AnnotatorFrame2.Designer.cs">
+      <DependentUpon>AnnotatorFrame2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\EmotionPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -134,6 +140,9 @@
     <Compile Include="Views\PromptFrame.Designer.cs">
       <DependentUpon>PromptFrame.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\AnnotatorFrame2.resx">
+      <DependentUpon>AnnotatorFrame2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\EmotionPanel.resx">
       <DependentUpon>EmotionPanel.cs</DependentUpon>
     </EmbeddedResource>

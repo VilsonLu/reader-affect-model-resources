@@ -64,7 +64,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 85F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(500, 175);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(500, 158);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // flowLayoutPanel1
@@ -199,7 +199,7 @@
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(494, 49);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(494, 32);
             this.tableLayoutPanel3.TabIndex = 4;
             // 
             // tbIntensity
@@ -210,7 +210,7 @@
             this.tbIntensity.Maximum = 3;
             this.tbIntensity.Minimum = -2;
             this.tbIntensity.Name = "tbIntensity";
-            this.tbIntensity.Size = new System.Drawing.Size(438, 43);
+            this.tbIntensity.Size = new System.Drawing.Size(438, 26);
             this.tbIntensity.TabIndex = 4;
             this.tbIntensity.Value = 1;
             // 
@@ -220,7 +220,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "EmotionPanel2";
-            this.Size = new System.Drawing.Size(500, 175);
+            this.Size = new System.Drawing.Size(500, 158);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();

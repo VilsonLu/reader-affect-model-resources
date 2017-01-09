@@ -37,10 +37,10 @@
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.chkReaderResponse = new System.Windows.Forms.CheckedListBox();
-            this.emotionPanel21 = new DataCollector.Views.EmotionPanel2();
-            this.emotionPanel22 = new DataCollector.Views.EmotionPanel2();
-            this.emotionPanel23 = new DataCollector.Views.EmotionPanel2();
-            this.emotionPanel24 = new DataCollector.Views.EmotionPanel2();
+            this.adpPleasantness = new DataCollector.Views.EmotionPanel2();
+            this.adpAttention = new DataCollector.Views.EmotionPanel2();
+            this.adpSensitivity = new DataCollector.Views.EmotionPanel2();
+            this.adpAptitude = new DataCollector.Views.EmotionPanel2();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -65,10 +65,10 @@
             // 
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Controls.Add(this.emotionPanel21, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.emotionPanel22, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.emotionPanel23, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.emotionPanel24, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.adpPleasantness, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.adpAttention, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.adpSensitivity, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.adpAptitude, 0, 3);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -253,69 +253,69 @@
             this.chkReaderResponse.TabIndex = 2;
             this.chkReaderResponse.SelectedIndexChanged += new System.EventHandler(this.chkReaderResponse__SelectedIndexChanged);
             // 
-            // emotionPanel21
+            // adpPleasantness
             // 
-            this.emotionPanel21.Description = "(Desciption)";
-            this.emotionPanel21.IntensityValue = 1;
-            this.emotionPanel21.Label = "<AffectiveDimension>";
-            this.emotionPanel21.Location = new System.Drawing.Point(3, 3);
-            this.emotionPanel21.Name = "emotionPanel21";
-            this.emotionPanel21.Neg1Image = null;
-            this.emotionPanel21.Neg2Image = null;
-            this.emotionPanel21.Neg3Image = null;
-            this.emotionPanel21.Pos1Image = null;
-            this.emotionPanel21.Pos2Image = null;
-            this.emotionPanel21.Pos3Image = null;
-            this.emotionPanel21.Size = new System.Drawing.Size(496, 94);
-            this.emotionPanel21.TabIndex = 0;
+            this.adpPleasantness.Description = "(How amused are you with the segment?)";
+            this.adpPleasantness.IntensityValue = 1;
+            this.adpPleasantness.Label = "Pleasantness";
+            this.adpPleasantness.Location = new System.Drawing.Point(3, 3);
+            this.adpPleasantness.Name = "adpPleasantness";
+            this.adpPleasantness.Neg1Image = null;
+            this.adpPleasantness.Neg2Image = null;
+            this.adpPleasantness.Neg3Image = null;
+            this.adpPleasantness.Pos1Image = null;
+            this.adpPleasantness.Pos2Image = null;
+            this.adpPleasantness.Pos3Image = null;
+            this.adpPleasantness.Size = new System.Drawing.Size(496, 94);
+            this.adpPleasantness.TabIndex = 0;
             // 
-            // emotionPanel22
+            // adpAttention
             // 
-            this.emotionPanel22.Description = "(Desciption)";
-            this.emotionPanel22.IntensityValue = 1;
-            this.emotionPanel22.Label = "<AffectiveDimension>";
-            this.emotionPanel22.Location = new System.Drawing.Point(3, 103);
-            this.emotionPanel22.Name = "emotionPanel22";
-            this.emotionPanel22.Neg1Image = null;
-            this.emotionPanel22.Neg2Image = null;
-            this.emotionPanel22.Neg3Image = null;
-            this.emotionPanel22.Pos1Image = null;
-            this.emotionPanel22.Pos2Image = null;
-            this.emotionPanel22.Pos3Image = null;
-            this.emotionPanel22.Size = new System.Drawing.Size(496, 94);
-            this.emotionPanel22.TabIndex = 1;
+            this.adpAttention.Description = "(How interested are you with the segment?)";
+            this.adpAttention.IntensityValue = 1;
+            this.adpAttention.Label = "Attention";
+            this.adpAttention.Location = new System.Drawing.Point(3, 103);
+            this.adpAttention.Name = "adpAttention";
+            this.adpAttention.Neg1Image = null;
+            this.adpAttention.Neg2Image = null;
+            this.adpAttention.Neg3Image = null;
+            this.adpAttention.Pos1Image = null;
+            this.adpAttention.Pos2Image = null;
+            this.adpAttention.Pos3Image = null;
+            this.adpAttention.Size = new System.Drawing.Size(496, 94);
+            this.adpAttention.TabIndex = 1;
             // 
-            // emotionPanel23
+            // adpSensitivity
             // 
-            this.emotionPanel23.Description = "(Desciption)";
-            this.emotionPanel23.IntensityValue = 1;
-            this.emotionPanel23.Label = "<AffectiveDimension>";
-            this.emotionPanel23.Location = new System.Drawing.Point(3, 203);
-            this.emotionPanel23.Name = "emotionPanel23";
-            this.emotionPanel23.Neg1Image = null;
-            this.emotionPanel23.Neg2Image = null;
-            this.emotionPanel23.Neg3Image = null;
-            this.emotionPanel23.Pos1Image = null;
-            this.emotionPanel23.Pos2Image = null;
-            this.emotionPanel23.Pos3Image = null;
-            this.emotionPanel23.Size = new System.Drawing.Size(496, 94);
-            this.emotionPanel23.TabIndex = 2;
+            this.adpSensitivity.Description = "(How comfortable are you with the segment?)";
+            this.adpSensitivity.IntensityValue = 1;
+            this.adpSensitivity.Label = "Sensitivity";
+            this.adpSensitivity.Location = new System.Drawing.Point(3, 203);
+            this.adpSensitivity.Name = "adpSensitivity";
+            this.adpSensitivity.Neg1Image = null;
+            this.adpSensitivity.Neg2Image = null;
+            this.adpSensitivity.Neg3Image = null;
+            this.adpSensitivity.Pos1Image = null;
+            this.adpSensitivity.Pos2Image = null;
+            this.adpSensitivity.Pos3Image = null;
+            this.adpSensitivity.Size = new System.Drawing.Size(496, 94);
+            this.adpSensitivity.TabIndex = 2;
             // 
-            // emotionPanel24
+            // adpAptitude
             // 
-            this.emotionPanel24.Description = "(Desciption)";
-            this.emotionPanel24.IntensityValue = 1;
-            this.emotionPanel24.Label = "<AffectiveDimension>";
-            this.emotionPanel24.Location = new System.Drawing.Point(3, 303);
-            this.emotionPanel24.Name = "emotionPanel24";
-            this.emotionPanel24.Neg1Image = null;
-            this.emotionPanel24.Neg2Image = null;
-            this.emotionPanel24.Neg3Image = null;
-            this.emotionPanel24.Pos1Image = null;
-            this.emotionPanel24.Pos2Image = null;
-            this.emotionPanel24.Pos3Image = null;
-            this.emotionPanel24.Size = new System.Drawing.Size(496, 94);
-            this.emotionPanel24.TabIndex = 3;
+            this.adpAptitude.Description = "(How did you find the segment?)";
+            this.adpAptitude.IntensityValue = 1;
+            this.adpAptitude.Label = "Aptitude";
+            this.adpAptitude.Location = new System.Drawing.Point(3, 303);
+            this.adpAptitude.Name = "adpAptitude";
+            this.adpAptitude.Neg1Image = null;
+            this.adpAptitude.Neg2Image = null;
+            this.adpAptitude.Neg3Image = null;
+            this.adpAptitude.Pos1Image = null;
+            this.adpAptitude.Pos2Image = null;
+            this.adpAptitude.Pos3Image = null;
+            this.adpAptitude.Size = new System.Drawing.Size(496, 94);
+            this.adpAptitude.TabIndex = 3;
             // 
             // AnnotatorFrame2
             // 
@@ -360,9 +360,9 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckedListBox chkReaderResponse;
-        private EmotionPanel2 emotionPanel21;
-        private EmotionPanel2 emotionPanel22;
-        private EmotionPanel2 emotionPanel23;
-        private EmotionPanel2 emotionPanel24;
+        private EmotionPanel2 adpPleasantness;
+        private EmotionPanel2 adpAttention;
+        private EmotionPanel2 adpSensitivity;
+        private EmotionPanel2 adpAptitude;
     }
 }

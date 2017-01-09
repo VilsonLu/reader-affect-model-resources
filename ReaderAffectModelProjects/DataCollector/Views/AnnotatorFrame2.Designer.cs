@@ -58,7 +58,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(506, 679);
+            this.panel1.Size = new System.Drawing.Size(540, 679);
             this.panel1.TabIndex = 1;
             // 
             // tableLayoutPanel2
@@ -78,7 +78,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 170F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 170F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(502, 675);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(536, 675);
             this.tableLayoutPanel2.TabIndex = 3;
             // 
             // tableLayoutPanel1
@@ -98,7 +98,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 145F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(512, 918);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(546, 918);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // panel2
@@ -108,7 +108,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(3, 688);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(506, 44);
+            this.panel2.Size = new System.Drawing.Size(540, 44);
             this.panel2.TabIndex = 5;
             // 
             // tableLayoutPanel3
@@ -121,7 +121,7 @@
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(502, 40);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(536, 40);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // tableLayoutPanel4
@@ -138,7 +138,7 @@
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(496, 34);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(530, 34);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
             // btnStrikeYes
@@ -147,11 +147,11 @@
             this.btnStrikeYes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnStrikeYes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStrikeYes.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnStrikeYes.Location = new System.Drawing.Point(347, 0);
+            this.btnStrikeYes.Location = new System.Drawing.Point(371, 0);
             this.btnStrikeYes.Margin = new System.Windows.Forms.Padding(0);
             this.btnStrikeYes.Name = "btnStrikeYes";
-            this.btnStrikeYes.Size = new System.Drawing.Size(74, 34);
-            this.btnStrikeYes.TabIndex = 2;
+            this.btnStrikeYes.Size = new System.Drawing.Size(79, 34);
+            this.btnStrikeYes.TabIndex = 4;
             this.btnStrikeYes.Text = "YES";
             this.btnStrikeYes.UseVisualStyleBackColor = false;
             this.btnStrikeYes.Click += new System.EventHandler(this.btnStrikeYes_Click);
@@ -163,7 +163,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(341, 34);
+            this.label1.Size = new System.Drawing.Size(365, 34);
             this.label1.TabIndex = 0;
             this.label1.Text = "Did you find the segment \"striking\"?";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -174,10 +174,10 @@
             this.btnStrikeNo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnStrikeNo.Enabled = false;
             this.btnStrikeNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStrikeNo.Location = new System.Drawing.Point(421, 0);
+            this.btnStrikeNo.Location = new System.Drawing.Point(450, 0);
             this.btnStrikeNo.Margin = new System.Windows.Forms.Padding(0);
             this.btnStrikeNo.Name = "btnStrikeNo";
-            this.btnStrikeNo.Size = new System.Drawing.Size(75, 34);
+            this.btnStrikeNo.Size = new System.Drawing.Size(80, 34);
             this.btnStrikeNo.TabIndex = 5;
             this.btnStrikeNo.Text = "NO";
             this.btnStrikeNo.UseVisualStyleBackColor = false;
@@ -190,8 +190,8 @@
             this.btnSubmit.Location = new System.Drawing.Point(4, 884);
             this.btnSubmit.Margin = new System.Windows.Forms.Padding(4);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(504, 30);
-            this.btnSubmit.TabIndex = 4;
+            this.btnSubmit.Size = new System.Drawing.Size(538, 30);
+            this.btnSubmit.TabIndex = 7;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
@@ -203,7 +203,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(3, 738);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(506, 139);
+            this.panel3.Size = new System.Drawing.Size(540, 139);
             this.panel3.TabIndex = 6;
             // 
             // tableLayoutPanel5
@@ -218,7 +218,7 @@
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.44444F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75.55556F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(502, 135);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(536, 135);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
             // label2
@@ -228,7 +228,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(496, 32);
+            this.label2.Size = new System.Drawing.Size(530, 32);
             this.label2.TabIndex = 1;
             this.label2.Text = "Which aspect(s) triggrered the emotion?";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -249,8 +249,8 @@
             this.chkReaderResponse.Location = new System.Drawing.Point(25, 35);
             this.chkReaderResponse.Margin = new System.Windows.Forms.Padding(25, 3, 3, 3);
             this.chkReaderResponse.Name = "chkReaderResponse";
-            this.chkReaderResponse.Size = new System.Drawing.Size(474, 97);
-            this.chkReaderResponse.TabIndex = 2;
+            this.chkReaderResponse.Size = new System.Drawing.Size(508, 97);
+            this.chkReaderResponse.TabIndex = 6;
             this.chkReaderResponse.SelectedIndexChanged += new System.EventHandler(this.chkReaderResponse__SelectedIndexChanged);
             // 
             // adpPleasantness
@@ -258,7 +258,7 @@
             this.adpPleasantness.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.adpPleasantness.Description = "(How amused are you with the segment?)";
             this.adpPleasantness.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.adpPleasantness.IntensityValue = 1;
+            this.adpPleasantness.IntensityValue = 0;
             this.adpPleasantness.Label = "Pleasantness";
             this.adpPleasantness.Location = new System.Drawing.Point(3, 3);
             this.adpPleasantness.Name = "adpPleasantness";
@@ -268,7 +268,7 @@
             this.adpPleasantness.Pos1Image = global::DataCollector.Properties.Resources.PL_Pos1;
             this.adpPleasantness.Pos2Image = global::DataCollector.Properties.Resources.PL_Pos2;
             this.adpPleasantness.Pos3Image = global::DataCollector.Properties.Resources.PL_Pos3;
-            this.adpPleasantness.Size = new System.Drawing.Size(496, 164);
+            this.adpPleasantness.Size = new System.Drawing.Size(530, 164);
             this.adpPleasantness.TabIndex = 0;
             // 
             // adpAttention
@@ -276,7 +276,7 @@
             this.adpAttention.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.adpAttention.Description = "(How interested are you with the segment?)";
             this.adpAttention.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.adpAttention.IntensityValue = 1;
+            this.adpAttention.IntensityValue = 0;
             this.adpAttention.Label = "Attention";
             this.adpAttention.Location = new System.Drawing.Point(3, 173);
             this.adpAttention.Name = "adpAttention";
@@ -286,7 +286,7 @@
             this.adpAttention.Pos1Image = global::DataCollector.Properties.Resources.AT_Pos1;
             this.adpAttention.Pos2Image = global::DataCollector.Properties.Resources.AT_Pos2;
             this.adpAttention.Pos3Image = global::DataCollector.Properties.Resources.AT_Pos3;
-            this.adpAttention.Size = new System.Drawing.Size(496, 164);
+            this.adpAttention.Size = new System.Drawing.Size(530, 164);
             this.adpAttention.TabIndex = 1;
             // 
             // adpSensitivity
@@ -294,7 +294,7 @@
             this.adpSensitivity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.adpSensitivity.Description = "(How comfortable are you with the segment?)";
             this.adpSensitivity.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.adpSensitivity.IntensityValue = 1;
+            this.adpSensitivity.IntensityValue = 0;
             this.adpSensitivity.Label = "Sensitivity";
             this.adpSensitivity.Location = new System.Drawing.Point(3, 343);
             this.adpSensitivity.Name = "adpSensitivity";
@@ -304,7 +304,7 @@
             this.adpSensitivity.Pos1Image = global::DataCollector.Properties.Resources.SE_Pos1;
             this.adpSensitivity.Pos2Image = global::DataCollector.Properties.Resources.SE_Pos2;
             this.adpSensitivity.Pos3Image = global::DataCollector.Properties.Resources.SE_Pos3;
-            this.adpSensitivity.Size = new System.Drawing.Size(496, 164);
+            this.adpSensitivity.Size = new System.Drawing.Size(530, 164);
             this.adpSensitivity.TabIndex = 2;
             // 
             // adpAptitude
@@ -312,7 +312,7 @@
             this.adpAptitude.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.adpAptitude.Description = "(How did you find the segment?)";
             this.adpAptitude.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.adpAptitude.IntensityValue = 1;
+            this.adpAptitude.IntensityValue = 0;
             this.adpAptitude.Label = "Aptitude";
             this.adpAptitude.Location = new System.Drawing.Point(3, 513);
             this.adpAptitude.Name = "adpAptitude";
@@ -322,14 +322,14 @@
             this.adpAptitude.Pos1Image = global::DataCollector.Properties.Resources.AP_Pos1;
             this.adpAptitude.Pos2Image = global::DataCollector.Properties.Resources.AP_Pos2;
             this.adpAptitude.Pos3Image = global::DataCollector.Properties.Resources.AP_Pos3;
-            this.adpAptitude.Size = new System.Drawing.Size(496, 164);
+            this.adpAptitude.Size = new System.Drawing.Size(530, 164);
             this.adpAptitude.TabIndex = 3;
             // 
             // AnnotatorFrame2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(512, 918);
+            this.ClientSize = new System.Drawing.Size(546, 918);
             this.ControlBox = false;
             this.Controls.Add(this.tableLayoutPanel1);
             this.MaximizeBox = false;

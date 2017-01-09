@@ -212,7 +212,6 @@
             this.tbIntensity.Name = "tbIntensity";
             this.tbIntensity.Size = new System.Drawing.Size(438, 26);
             this.tbIntensity.TabIndex = 4;
-            this.tbIntensity.Value = 1;
             // 
             // EmotionPanel2
             // 

@@ -120,13 +120,35 @@ namespace DataCollector.Views {
         }
 
         /// <summary>
+        /// Offsets the value of the negative part of the trackbar.
+        /// </summary>
+        /// <param name="tbValue"></param>
+        /// <returns></returns>
+        private int GetIntensityValue(int tbValue) {
+            int value = tbValue;
+
+            switch(tbValue) {
+                case 0:
+                    value = -1; break;
+                case -1:
+                    value = -2; break;
+                case -2:
+                    value = -3; break;
+                default:
+                    value = tbValue; break;
+            }
+
+            return value;
+        }
+
+        /// <summary>
         /// Sets the values from the trackbars.
         /// </summary>
         private void SetIntensityValues() {
-            intensity_PL = adpPleasantness.IntensityValue;
-            intensity_AT = adpAttention.IntensityValue;
-            intensity_SE = adpSensitivity.IntensityValue;
-            intensity_AP = adpAptitude.IntensityValue;
+            intensity_PL = GetIntensityValue(adpPleasantness.IntensityValue);
+            intensity_AT = GetIntensityValue(adpAttention.IntensityValue);
+            intensity_SE = GetIntensityValue(adpSensitivity.IntensityValue);
+            intensity_AP = GetIntensityValue(adpAptitude.IntensityValue);
         }
 
         /// <summary>

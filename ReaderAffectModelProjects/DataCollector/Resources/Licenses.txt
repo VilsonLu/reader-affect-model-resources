@@ -1,0 +1,7 @@
+SDKs
+AForge: http://www.aforgenet.com/framework/
+Emotiv: https://github.com/Emotiv/community-sdk
+
+DataCollector App icon by: Double-J Design (http://www.doublejdesign.co.uk)
+App button icons from: Google Material Design https://material.io/icons/
+Emoji Images from http://emojione.com/

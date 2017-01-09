@@ -58,7 +58,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(506, 404);
+            this.panel1.Size = new System.Drawing.Size(506, 679);
             this.panel1.TabIndex = 1;
             // 
             // tableLayoutPanel2
@@ -72,13 +72,13 @@
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 5;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 0F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(502, 400);
+            this.tableLayoutPanel2.RowCount = 4;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 170F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 170F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 170F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 170F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(502, 675);
             this.tableLayoutPanel2.TabIndex = 3;
             // 
             // tableLayoutPanel1
@@ -94,11 +94,11 @@
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 410F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 685F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 145F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(512, 661);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(512, 918);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // panel2
@@ -106,7 +106,7 @@
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.tableLayoutPanel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(3, 413);
+            this.panel2.Location = new System.Drawing.Point(3, 688);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(506, 44);
             this.panel2.TabIndex = 5;
@@ -187,10 +187,10 @@
             // 
             this.btnSubmit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubmit.Location = new System.Drawing.Point(4, 609);
+            this.btnSubmit.Location = new System.Drawing.Point(4, 884);
             this.btnSubmit.Margin = new System.Windows.Forms.Padding(4);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(504, 48);
+            this.btnSubmit.Size = new System.Drawing.Size(504, 30);
             this.btnSubmit.TabIndex = 4;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
@@ -201,7 +201,7 @@
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Controls.Add(this.tableLayoutPanel5);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(3, 463);
+            this.panel3.Location = new System.Drawing.Point(3, 738);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(506, 139);
             this.panel3.TabIndex = 6;
@@ -255,73 +255,81 @@
             // 
             // adpPleasantness
             // 
+            this.adpPleasantness.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.adpPleasantness.Description = "(How amused are you with the segment?)";
+            this.adpPleasantness.Dock = System.Windows.Forms.DockStyle.Fill;
             this.adpPleasantness.IntensityValue = 1;
             this.adpPleasantness.Label = "Pleasantness";
             this.adpPleasantness.Location = new System.Drawing.Point(3, 3);
             this.adpPleasantness.Name = "adpPleasantness";
-            this.adpPleasantness.Neg1Image = null;
-            this.adpPleasantness.Neg2Image = null;
-            this.adpPleasantness.Neg3Image = null;
-            this.adpPleasantness.Pos1Image = null;
-            this.adpPleasantness.Pos2Image = null;
-            this.adpPleasantness.Pos3Image = null;
-            this.adpPleasantness.Size = new System.Drawing.Size(496, 94);
+            this.adpPleasantness.Neg1Image = global::DataCollector.Properties.Resources.PL_Neg1;
+            this.adpPleasantness.Neg2Image = global::DataCollector.Properties.Resources.PL_Neg2;
+            this.adpPleasantness.Neg3Image = global::DataCollector.Properties.Resources.PL_Neg3;
+            this.adpPleasantness.Pos1Image = global::DataCollector.Properties.Resources.PL_Pos1;
+            this.adpPleasantness.Pos2Image = global::DataCollector.Properties.Resources.PL_Pos2;
+            this.adpPleasantness.Pos3Image = global::DataCollector.Properties.Resources.PL_Pos3;
+            this.adpPleasantness.Size = new System.Drawing.Size(496, 164);
             this.adpPleasantness.TabIndex = 0;
             // 
             // adpAttention
             // 
+            this.adpAttention.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.adpAttention.Description = "(How interested are you with the segment?)";
+            this.adpAttention.Dock = System.Windows.Forms.DockStyle.Fill;
             this.adpAttention.IntensityValue = 1;
             this.adpAttention.Label = "Attention";
-            this.adpAttention.Location = new System.Drawing.Point(3, 103);
+            this.adpAttention.Location = new System.Drawing.Point(3, 173);
             this.adpAttention.Name = "adpAttention";
-            this.adpAttention.Neg1Image = null;
-            this.adpAttention.Neg2Image = null;
-            this.adpAttention.Neg3Image = null;
-            this.adpAttention.Pos1Image = null;
-            this.adpAttention.Pos2Image = null;
-            this.adpAttention.Pos3Image = null;
-            this.adpAttention.Size = new System.Drawing.Size(496, 94);
+            this.adpAttention.Neg1Image = global::DataCollector.Properties.Resources.AT_Neg1;
+            this.adpAttention.Neg2Image = global::DataCollector.Properties.Resources.AT_Neg2;
+            this.adpAttention.Neg3Image = global::DataCollector.Properties.Resources.AT_Neg3;
+            this.adpAttention.Pos1Image = global::DataCollector.Properties.Resources.AT_Pos1;
+            this.adpAttention.Pos2Image = global::DataCollector.Properties.Resources.AT_Pos2;
+            this.adpAttention.Pos3Image = global::DataCollector.Properties.Resources.AT_Pos3;
+            this.adpAttention.Size = new System.Drawing.Size(496, 164);
             this.adpAttention.TabIndex = 1;
             // 
             // adpSensitivity
             // 
+            this.adpSensitivity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.adpSensitivity.Description = "(How comfortable are you with the segment?)";
+            this.adpSensitivity.Dock = System.Windows.Forms.DockStyle.Fill;
             this.adpSensitivity.IntensityValue = 1;
             this.adpSensitivity.Label = "Sensitivity";
-            this.adpSensitivity.Location = new System.Drawing.Point(3, 203);
+            this.adpSensitivity.Location = new System.Drawing.Point(3, 343);
             this.adpSensitivity.Name = "adpSensitivity";
-            this.adpSensitivity.Neg1Image = null;
-            this.adpSensitivity.Neg2Image = null;
-            this.adpSensitivity.Neg3Image = null;
-            this.adpSensitivity.Pos1Image = null;
-            this.adpSensitivity.Pos2Image = null;
-            this.adpSensitivity.Pos3Image = null;
-            this.adpSensitivity.Size = new System.Drawing.Size(496, 94);
+            this.adpSensitivity.Neg1Image = global::DataCollector.Properties.Resources.SE_Neg1;
+            this.adpSensitivity.Neg2Image = global::DataCollector.Properties.Resources.SE_Neg2;
+            this.adpSensitivity.Neg3Image = global::DataCollector.Properties.Resources.SE_Neg3;
+            this.adpSensitivity.Pos1Image = global::DataCollector.Properties.Resources.SE_Pos1;
+            this.adpSensitivity.Pos2Image = global::DataCollector.Properties.Resources.SE_Pos2;
+            this.adpSensitivity.Pos3Image = global::DataCollector.Properties.Resources.SE_Pos3;
+            this.adpSensitivity.Size = new System.Drawing.Size(496, 164);
             this.adpSensitivity.TabIndex = 2;
             // 
             // adpAptitude
             // 
+            this.adpAptitude.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.adpAptitude.Description = "(How did you find the segment?)";
+            this.adpAptitude.Dock = System.Windows.Forms.DockStyle.Fill;
             this.adpAptitude.IntensityValue = 1;
             this.adpAptitude.Label = "Aptitude";
-            this.adpAptitude.Location = new System.Drawing.Point(3, 303);
+            this.adpAptitude.Location = new System.Drawing.Point(3, 513);
             this.adpAptitude.Name = "adpAptitude";
-            this.adpAptitude.Neg1Image = null;
-            this.adpAptitude.Neg2Image = null;
-            this.adpAptitude.Neg3Image = null;
-            this.adpAptitude.Pos1Image = null;
-            this.adpAptitude.Pos2Image = null;
-            this.adpAptitude.Pos3Image = null;
-            this.adpAptitude.Size = new System.Drawing.Size(496, 94);
+            this.adpAptitude.Neg1Image = global::DataCollector.Properties.Resources.AP_Neg1;
+            this.adpAptitude.Neg2Image = global::DataCollector.Properties.Resources.AP_Neg2;
+            this.adpAptitude.Neg3Image = global::DataCollector.Properties.Resources.AP_Neg3;
+            this.adpAptitude.Pos1Image = global::DataCollector.Properties.Resources.AP_Pos1;
+            this.adpAptitude.Pos2Image = global::DataCollector.Properties.Resources.AP_Pos2;
+            this.adpAptitude.Pos3Image = global::DataCollector.Properties.Resources.AP_Pos3;
+            this.adpAptitude.Size = new System.Drawing.Size(496, 164);
             this.adpAptitude.TabIndex = 3;
             // 
             // AnnotatorFrame2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(512, 661);
+            this.ClientSize = new System.Drawing.Size(512, 918);
             this.ControlBox = false;
             this.Controls.Add(this.tableLayoutPanel1);
             this.MaximizeBox = false;

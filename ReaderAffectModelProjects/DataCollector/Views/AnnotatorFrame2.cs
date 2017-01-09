@@ -38,6 +38,7 @@ namespace DataCollector.Views {
             this.parent = parent;
             log = new EmotionLogger(filename);
             InitializeComponent();
+            Size = new Size(Width, Screen.PrimaryScreen.WorkingArea.Height);
         }
 
         /// <summary>
@@ -55,10 +56,10 @@ namespace DataCollector.Views {
             fromOthers = false;
 
             // Trackbars
-            //adpPleasantness.IntensityValue = 0;
-            //adpAttention.IntensityValue = 0;
-            //adpSensitivity.IntensityValue = 0;
-            //adpAptitude.IntensityValue = 0;
+            adpPleasantness.IntensityValue = 0;
+            adpAttention.IntensityValue = 0;
+            adpSensitivity.IntensityValue = 0;
+            adpAptitude.IntensityValue = 0;
 
             // Yes/No
             btnStrikeYes.Enabled = true;
@@ -122,10 +123,10 @@ namespace DataCollector.Views {
         /// Sets the values from the trackbars.
         /// </summary>
         private void SetIntensityValues() {
-            //intensity_PL = adpPleasantness.IntensityValue;
-            //intensity_AT = adpAttention.IntensityValue;
-            //intensity_SE = adpSensitivity.IntensityValue;
-            //intensity_AP = adpAptitude.IntensityValue;
+            intensity_PL = adpPleasantness.IntensityValue;
+            intensity_AT = adpAttention.IntensityValue;
+            intensity_SE = adpSensitivity.IntensityValue;
+            intensity_AP = adpAptitude.IntensityValue;
         }
 
         /// <summary>

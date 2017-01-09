@@ -57,7 +57,7 @@ namespace DataCollector.Views {
         public Image Pos3Image {
             get { return pbPos3.BackgroundImage; }
             set {
-                pbNeg3.BackgroundImage = value;
+                pbPos3.BackgroundImage = value;
                 Invalidate();
             }
         }

@@ -9,7 +9,8 @@ using System.Threading;
 namespace DataCollector.Views {
     public partial class MainFrame : Form {
         #region Story-related Variables
-        private static AnnotatorFrame annotator;
+        //private static AnnotatorFrame annotator;
+        private static AnnotatorFrame2 annotator;
         #endregion
         #region Emotiv-related Variables
         private static EmotivConnector emoConnector;
@@ -30,7 +31,7 @@ namespace DataCollector.Views {
         /// Creates an instance of the MainFrame.
         /// </summary>
         public MainFrame() {
-            user = new PromptFrame().ShowPromptFrame();
+            //user = new PromptFrame().ShowPromptFrame();
             InitializeComponent();
             InitializeOtherFrameComponents();
             InitializeComponentConnectors();
@@ -154,7 +155,8 @@ namespace DataCollector.Views {
 
             // Story-related
             String outputEmoAnnoFilename = template + "EmoAnno.csv";
-            annotator = new AnnotatorFrame(this, outputEmoAnnoFilename);
+            //annotator = new AnnotatorFrame(this, outputEmoAnnoFilename);
+            annotator = new AnnotatorFrame2(this, outputEmoAnnoFilename);
             // Emotiv-related
             String outputEegFilename =  template + "EegData.csv";
             emoConnector.CreateOutputFile(outputEegFilename);

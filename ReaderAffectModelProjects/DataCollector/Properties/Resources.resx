@@ -169,4 +169,76 @@
   <data name="AP_Pos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\Emojis\AP_Pos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="AP_Neg1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Emojis\AP_Neg1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AP_Neg2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Emojis\AP_Neg2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AP_Neg3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Emojis\AP_Neg3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AP_Pos1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Emojis\AP_Pos1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AP_Pos2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Emojis\AP_Pos2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AP_Pos3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Emojis\AP_Pos3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AT_Neg1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Emojis\AT_Neg1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AT_Neg2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Emojis\AT_Neg2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AT_Neg3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Emojis\AT_Neg3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AT_Pos1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Emojis\AT_Pos1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AT_Pos2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Emojis\AT_Pos2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AT_Pos3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Emojis\AT_Pos3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PL_Neg1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Emojis\PL_Neg1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PL_Neg2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Emojis\PL_Neg2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PL_Neg3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Emojis\PL_Neg3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PL_Pos1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Emojis\PL_Pos1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PL_Pos2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Emojis\PL_Pos2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PL_Pos3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Emojis\PL_Pos3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SE_Neg1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Emojis\SE_Neg1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SE_Neg2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Emojis\SE_Neg2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SE_Neg3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Emojis\SE_Neg3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SE_Pos1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Emojis\SE_Pos1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SE_Pos2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Emojis\SE_Pos2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SE_Pos3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Emojis\SE_Pos3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

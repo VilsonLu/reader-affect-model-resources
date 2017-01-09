@@ -73,9 +73,69 @@ namespace DataCollector.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap AP_Neg1 {
+            get {
+                object obj = ResourceManager.GetObject("AP_Neg1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap AP_Neg2 {
+            get {
+                object obj = ResourceManager.GetObject("AP_Neg2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap AP_Neg3 {
+            get {
+                object obj = ResourceManager.GetObject("AP_Neg3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap AP_Pos {
             get {
                 object obj = ResourceManager.GetObject("AP_Pos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap AP_Pos1 {
+            get {
+                object obj = ResourceManager.GetObject("AP_Pos1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap AP_Pos2 {
+            get {
+                object obj = ResourceManager.GetObject("AP_Pos2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap AP_Pos3 {
+            get {
+                object obj = ResourceManager.GetObject("AP_Pos3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +153,69 @@ namespace DataCollector.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap AT_Neg1 {
+            get {
+                object obj = ResourceManager.GetObject("AT_Neg1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap AT_Neg2 {
+            get {
+                object obj = ResourceManager.GetObject("AT_Neg2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap AT_Neg3 {
+            get {
+                object obj = ResourceManager.GetObject("AT_Neg3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap AT_Pos {
             get {
                 object obj = ResourceManager.GetObject("AT_Pos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap AT_Pos1 {
+            get {
+                object obj = ResourceManager.GetObject("AT_Pos1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap AT_Pos2 {
+            get {
+                object obj = ResourceManager.GetObject("AT_Pos2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap AT_Pos3 {
+            get {
+                object obj = ResourceManager.GetObject("AT_Pos3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -179,9 +299,69 @@ namespace DataCollector.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap PL_Neg1 {
+            get {
+                object obj = ResourceManager.GetObject("PL_Neg1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap PL_Neg2 {
+            get {
+                object obj = ResourceManager.GetObject("PL_Neg2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap PL_Neg3 {
+            get {
+                object obj = ResourceManager.GetObject("PL_Neg3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap PL_Pos {
             get {
                 object obj = ResourceManager.GetObject("PL_Pos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap PL_Pos1 {
+            get {
+                object obj = ResourceManager.GetObject("PL_Pos1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap PL_Pos2 {
+            get {
+                object obj = ResourceManager.GetObject("PL_Pos2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap PL_Pos3 {
+            get {
+                object obj = ResourceManager.GetObject("PL_Pos3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -199,9 +379,69 @@ namespace DataCollector.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap SE_Neg1 {
+            get {
+                object obj = ResourceManager.GetObject("SE_Neg1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap SE_Neg2 {
+            get {
+                object obj = ResourceManager.GetObject("SE_Neg2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap SE_Neg3 {
+            get {
+                object obj = ResourceManager.GetObject("SE_Neg3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap SE_Pos {
             get {
                 object obj = ResourceManager.GetObject("SE_Pos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap SE_Pos1 {
+            get {
+                object obj = ResourceManager.GetObject("SE_Pos1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap SE_Pos2 {
+            get {
+                object obj = ResourceManager.GetObject("SE_Pos2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap SE_Pos3 {
+            get {
+                object obj = ResourceManager.GetObject("SE_Pos3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -229,12 +469,12 @@ namespace DataCollector.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
-        ///&lt;story title=&quot;Man from the South&quot; author=&quot;Roald Dahl&quot;&gt;
+        ///&lt;story title=&quot;The Fisherman and the Jinni&quot; author=&quot;Sheherazade (from One Thousand and One Nights)&quot;&gt;
         ///	&lt;segment&gt;
         ///		&lt;part&gt;It is said, oh wise and happy King, that a very poor fisherman who swore by Almighty God that he would only cast his net three times each day, went down to the sea late one afternoon as usual, waited until he saw the moon shining above him, and then threw his net very carefully into the water.&lt;/part&gt;
         ///	&lt;/segment&gt;
         ///	&lt;segment&gt;
-        ///		&lt;part&gt;He sat there for a time, and then, when he pulled on his ne [rest of string was truncated]&quot;;.
+        ///		&lt;part&gt;He sat there f [rest of string was truncated]&quot;;.
         /// </summary>
         public static string TheFishermanAndTheJinni {
             get {
@@ -244,7 +484,7 @@ namespace DataCollector.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
-        ///&lt;story title=&quot;Man from the South&quot; author=&quot;Roald Dahl&quot;&gt;
+        ///&lt;story title=&quot;The Veldt&quot; author=&quot;Ray Bradbury&quot;&gt;
         ///	&lt;segment&gt;
         ///		&lt;part&gt;&quot;George, I wish you&apos;d look at the nursery.&quot;&lt;/part&gt;
         ///		&lt;part&gt;&quot;What&apos;s wrong with it?&quot;&lt;/part&gt;
@@ -252,7 +492,7 @@ namespace DataCollector.Properties {
         ///		&lt;part&gt;&quot;Well, then.&quot;&lt;/part&gt;
         ///		&lt;part&gt;&quot;I just want you to look at it, is all, or call a psychologist in to look at it.&quot;&lt;/part&gt;
         ///		&lt;part&gt;&quot;What would a psychologist want with a nursery?&quot;&lt;/part&gt;
-        ///		&lt;part&gt;&quot;You know very well what he&apos;d want.&quot; His wife paused in the middle of  [rest of string was truncated]&quot;;.
+        ///		&lt;part&gt;&quot;You know very well what he&apos;d want.&quot; His wife paused in the middle of the kit [rest of string was truncated]&quot;;.
         /// </summary>
         public static string TheVeldt {
             get {

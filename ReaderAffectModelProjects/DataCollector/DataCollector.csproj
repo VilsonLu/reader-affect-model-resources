@@ -51,6 +51,9 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -109,6 +112,12 @@
     <Compile Include="Views\AnnotatorFrame.Designer.cs">
       <DependentUpon>AnnotatorFrame.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\EmotionPanel2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\EmotionPanel2.Designer.cs">
+      <DependentUpon>EmotionPanel2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\MainFrame.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +139,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\AnnotatorFrame.resx">
       <DependentUpon>AnnotatorFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\EmotionPanel2.resx">
+      <DependentUpon>EmotionPanel2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\MainFrame.resx">
       <DependentUpon>MainFrame.cs</DependentUpon>
@@ -159,6 +171,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App.ico" />
     <Content Include="avcodec-53.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

@@ -1,0 +1,69 @@
+Affective Computing (1995)
+Rosalind Picard
+
+Fear, Emotion, and Science
+	Songs vs. laws
+	Limbic perception
+	Thingking-feeling axix
+		Nonlimbic emotion and decision making
+		The Turing test
+	The effective piano teacher
+		The Quintessential emotional experience
+
+Sentic Modulation
+	Poker face, poker body?
+	Visceral and cognitive emotions
+		No one can read your mind
+		Emotional experience, expression, and state
+		"Get that look off your face"
+		It's not what she said, but how she said it
+		Beyond face and voice
+		Sentic hotline
+		Inducement of sentic states
+	Sentic state pattern recognition
+		Basic or prototype emotions
+		Affective state models
+		Cathexis in computing
+
+Things Better Left Unexplored?
+	Computers that kill
+		A dilemma
+	Unemotional, but affective computers
+		Four cases
+	Affective symmetry
+
+Affective Media
+	Entertainment
+	Expression
+		Expressive mail
+	Film/Video
+		Skip ahead to the interesting part
+	Environments
+	Aesthetic pleasure
+		Hidden forms
+		Personal taste
+		Design
+	Affective wearable computers
+		Implications for emotion theory
+
+Summary
+
+-----
+Affective Computing (Wikipedia)
+Affective computing is the study and development of systems and devices that can recognize, interpret, process, and simulate human affects. It is an interdisciplinary field spanning computer science, psychology, and cognitive science.[1] While the origins of the field may be traced as far back as to early philosophical enquiries into emotion,[2] the more modern branch of computer science originated with Rosalind Picard's 1995 paper[3] on affective computing.[4][5] A motivation for the research is the ability to simulate empathy. The machine should interpret the emotional state of humans and adapt its behaviour to them, giving an appropriate response for those emotions.
+--
+Affective computing is human-computer interaction in which a device has the ability to detect and appropriately respond to its user's emotions and other stimuli. A computing device with this capacity could gather cues to user emotion from a variety of sources. Facial expressions, posture, gestures, speech, the force or rhythm of key strokes and the temperature changes of the hand on a mouse can all signify changes in the user's emotional state, and these can all be detected and interpreted by a computer. A built-in camera captures images of the user and algorithm s are used to process the data to yield meaningful information. Speech recognition and gesture recognition are among the other technologies being explored for affective computing applications.
+
+Affective computing could offer benefits in an almost limitless range of applications. For example, in e-learning situations, the computer could detect from available cues when the user was having difficulty and offer expanded explanations or additional information. Other applications include e-therapy: psychological health services, such as counseling, delivered online. Internet-based therapy, although increasingly common, does not give a therapist as many cues to the client's emotional state as are available in a real-world session. Through affective computing, the client's posture, gestures, and facial expressions could be used, along with their words, for a more accurate evaluation of their psychological state.
+
+Affective computing gets its name from the field of Psychology, in which "affect" is, basically, a synonym for "emotion."
+
+--
+Emotional Intelligence
+- the capacity to be aware of, control, and express one's emotions, and to handle interpersonal relationships judiciously and empathetically.
+- Emotional Intelligence (EQ or EI) is a term created by two researchers – Peter Salavoy and John Mayer – and popularized by Dan Goleman in his 1996 book of the same name. We define EI as the ability to: Recognize, understand and manage our own emotions.
+
+-----
+Affective Computing
+by Rosalind Picard
+QA76.9 H85 P5 1997

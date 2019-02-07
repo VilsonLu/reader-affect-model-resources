@@ -1,0 +1,191 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Preprocessing</name>
+    </assembly>
+    <members>
+        <member name="T:Preprocessing.TimeDateMethods">
+            <summary>
+            This class provides functions for conversion to different Time formats
+            </summary>
+        </member>
+        <member name="M:Preprocessing.TimeDateMethods.UNIXTimetoDateTime(System.Double)">
+            <summary>
+            Convert UNIX Time to DateTime object
+            </summary>
+            <param name="tempTime"></param>
+            <returns>Returns a DateTime object with a date: January 1, 1970</returns>
+        </member>
+        <member name="M:Preprocessing.TimeDateMethods.toDateTime(System.Int32,System.Int32,System.Int32,System.String)">
+            <summary>
+            Converts a timestamp String to DateTime
+            </summary>
+            <param name="year">Integer representation of the year</param>
+            <param name="month">Integer representation of the month</param>
+            <param name="day">Integer representation of the day</param>
+            <param name="timestamp">String timestamp with format: hh:mm:ss AM/PM</param>
+            <returns></returns>
+        </member>
+        <member name="M:Preprocessing.TimeDateMethods.toDateTime(System.String)">
+            <summary>
+            Converts a timestamp String to DateTime
+            Date is set to January 1, 2011
+            </summary>
+            <param name="timestamp"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Preprocessing.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Preprocessing.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Preprocessing.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="M:Preprocessing.Program.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="F:Preprocessing.Form1.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Preprocessing.Form1.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Preprocessing.Form1.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Preprocessing.Mouse.MergeClick">
+            <summary>
+            This class merges EEG log and mouse click log
+            </summary>
+        </member>
+        <member name="M:Preprocessing.Mouse.MergeClick.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructor. Does processing after instantiated.
+            </summary>
+            <param name="eeg">Full name of eeg file</param>
+            <param name="click">Full name of mouse clicks log</param>
+            <param name="write">Output file full name</param>
+        </member>
+        <member name="T:Preprocessing.StringMethods">
+            <summary>
+            This class provides functions that involve String processing
+            </summary>
+        </member>
+        <member name="M:Preprocessing.StringMethods.writeColumns(System.Collections.Generic.List{System.String},System.IO.StreamWriter)">
+            <summary>
+            Writes the column headers for a file
+            </summary>
+            <param name="columnLabels">A list of column labels in String format</param>
+            <param name="write">An instantiated StreamWriter to be used for writing the columns</param>
+        </member>
+        <member name="M:Preprocessing.StringMethods.addToLast(System.String[],System.String)">
+            <summary>
+            Add the String to the end of the Array.
+            </summary>
+            <param name="container">The array to which the new String will be added</param>
+            <param name="word">The String to be added to the array</param>
+            <returns>An array of String that is one element bigger than the original array</returns>
+        </member>
+        <member name="M:Preprocessing.StringMethods.toList(System.String[])">
+            <summary>
+            Convert an array to a List of String
+            </summary>
+            <param name="arr">The array to be converted</param>
+            <returns>A list representation of the array</returns>
+        </member>
+        <member name="T:Preprocessing.doWindow">
+            <summary>
+            This class outputs windowed csv's with a 50% overlap
+            </summary>
+        </member>
+        <member name="M:Preprocessing.doWindow.#ctor(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="source">Full name of path to be windowed</param>
+            <param name="directory">Output directory</param>
+            <param name="skip">Skip first n seconds</param>
+            <param name="interval">Length of each window</param>
+        </member>
+        <member name="T:Preprocessing.Context.ContextMerge">
+            <summary>
+            Class for merging the distilled context file
+            </summary>
+        </member>
+        <member name="M:Preprocessing.Context.ContextMerge.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Does the merging after instantiation
+            </summary>
+            <param name="eeg">Full name of the eeg file</param>
+            <param name="context">Full name of context file</param>
+            <param name="output">Full name of the output file</param>
+        </member>
+        <member name="T:Preprocessing.Emotion.EmotionMerge">
+            <summary>
+            This class merges the EEG log with the emotion log
+            </summary>
+        </member>
+        <member name="M:Preprocessing.Emotion.EmotionMerge.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructor. Merges after instantiation.
+            </summary>
+            <param name="eeg">Source of EEG file</param>
+            <param name="emotion">Source of emotion log</param>
+            <param name="write">Output file</param>
+        </member>
+        <member name="T:Preprocessing.Mouse.Movement">
+            <summary>
+            This class computes the distance traveled by the mouse per second and stores it to a new file
+            </summary>
+        </member>
+        <member name="M:Preprocessing.Mouse.Movement.#ctor(System.String,System.String)">
+            <summary>
+            Constructor. Processes after instantiation 
+            </summary>
+            <param name="source">Mouse frequency log full name</param>
+            <param name="output">Output file full name</param>
+        </member>
+        <member name="M:Preprocessing.Mouse.Movement.getDistance(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Computes the Eucledian distance of 2 points
+            </summary>
+            <param name="x1">X value of first point</param>
+            <param name="y1">Y value of first point</param>
+            <param name="x2">X value of second point</param>
+            <param name="y2">Y value of second point</param>
+            <returns></returns>
+        </member>
+        <member name="T:Preprocessing.Mouse.MergeMovement">
+            <summary>
+            This class merges EEG log with the processed movement file
+            </summary>
+        </member>
+        <member name="M:Preprocessing.Mouse.MergeMovement.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructor. Merges after instantiation
+            </summary>
+            <param name="eegname">Full name of EEG file</param>
+            <param name="movementname">Full name of processed movement file</param>
+            <param name="output">Full name of output file</param>
+        </member>
+    </members>
+</doc>

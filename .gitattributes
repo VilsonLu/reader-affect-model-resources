@@ -1,3 +1,0 @@
-EmotivXavierControlPanelv3.3.3Installer.exe filter=lfs diff=lfs merge=lfs -text
-Dev* filter=lfs diff=lfs merge=lfs -text
-*install.exe filter=lfs diff=lfs merge=lfs -text

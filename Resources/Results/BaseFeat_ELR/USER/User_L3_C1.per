@@ -1,0 +1,396 @@
+<object-stream>
+  <PerformanceVector id="1" serialization="custom">
+    <com.rapidminer.operator.AbstractIOObject>
+      <default>
+        <source>Performance</source>
+      </default>
+    </com.rapidminer.operator.AbstractIOObject>
+    <com.rapidminer.operator.ResultObjectAdapter>
+      <default>
+        <annotations id="2">
+          <keyValueMap id="3"/>
+        </annotations>
+      </default>
+    </com.rapidminer.operator.ResultObjectAdapter>
+    <AverageVector>
+      <default>
+        <averagesList id="4">
+          <kappa id="5" serialization="custom">
+            <com.rapidminer.operator.ResultObjectAdapter>
+              <default>
+                <annotations id="6">
+                  <keyValueMap id="7"/>
+                </annotations>
+              </default>
+            </com.rapidminer.operator.ResultObjectAdapter>
+            <com.rapidminer.tools.math.Averagable>
+              <default>
+                <averageCount>10</averageCount>
+                <meanSquaredSum>3.2344748228350797</meanSquaredSum>
+                <meanSum>5.687008784096163</meanSum>
+              </default>
+            </com.rapidminer.tools.math.Averagable>
+            <kappa>
+              <default>
+                <type>0</type>
+                <classNameMap id="8">
+                  <entry>
+                    <string>false</string>
+                    <int>0</int>
+                  </entry>
+                  <entry>
+                    <string>true</string>
+                    <int>1</int>
+                  </entry>
+                </classNameMap>
+                <classNames id="9">
+                  <string>false</string>
+                  <string>true</string>
+                </classNames>
+                <counter id="10">
+                  <double-array id="11">
+                    <double>1748.0</double>
+                    <double>12.0</double>
+                  </double-array>
+                  <double-array id="12">
+                    <double>1319.0</double>
+                    <double>7.0</double>
+                  </double-array>
+                </counter>
+                <labelAttribute class="BinominalAttribute" id="13" serialization="custom">
+                  <com.rapidminer.example.table.AbstractAttribute>
+                    <default>
+                      <annotations id="14">
+                        <keyValueMap id="15"/>
+                      </annotations>
+                      <attributeDescription id="16">
+                        <name>FROM_NARRATIVE</name>
+                        <valueType>6</valueType>
+                        <blockType>1</blockType>
+                        <defaultValue>0.0</defaultValue>
+                        <index>254</index>
+                      </attributeDescription>
+                      <constructionDescription>FROM_NARRATIVE</constructionDescription>
+                      <statistics class="linked-list" id="17">
+                        <NominalStatistics id="18">
+                          <mode>-1</mode>
+                          <maxCounter>0</maxCounter>
+                        </NominalStatistics>
+                        <UnknownStatistics id="19">
+                          <unknownCounter>0</unknownCounter>
+                        </UnknownStatistics>
+                      </statistics>
+                      <transformations id="20"/>
+                    </default>
+                  </com.rapidminer.example.table.AbstractAttribute>
+                  <BinominalAttribute>
+                    <default>
+                      <nominalMapping class="BinominalMapping" id="21">
+                        <firstValue>false</firstValue>
+                        <secondValue>true</secondValue>
+                      </nominalMapping>
+                    </default>
+                  </BinominalAttribute>
+                </labelAttribute>
+                <predictedLabelAttribute class="BinominalAttribute" id="22" serialization="custom">
+                  <com.rapidminer.example.table.AbstractAttribute>
+                    <default>
+                      <annotations id="23">
+                        <keyValueMap id="24"/>
+                      </annotations>
+                      <attributeDescription id="25">
+                        <name>prediction(FROM_NARRATIVE)</name>
+                        <valueType>6</valueType>
+                        <blockType>1</blockType>
+                        <defaultValue>0.0</defaultValue>
+                        <index>282</index>
+                      </attributeDescription>
+                      <constructionDescription>prediction(FROM_NARRATIVE)</constructionDescription>
+                      <statistics class="linked-list" id="26">
+                        <NominalStatistics id="27">
+                          <mode>0</mode>
+                          <maxCounter>1584</maxCounter>
+                          <scores id="28">
+                            <long>1584</long>
+                            <long>1193</long>
+                          </scores>
+                        </NominalStatistics>
+                        <UnknownStatistics id="29">
+                          <unknownCounter>0</unknownCounter>
+                        </UnknownStatistics>
+                      </statistics>
+                      <transformations id="30"/>
+                    </default>
+                  </com.rapidminer.example.table.AbstractAttribute>
+                  <BinominalAttribute>
+                    <default>
+                      <nominalMapping class="BinominalMapping" reference="21"/>
+                    </default>
+                  </BinominalAttribute>
+                </predictedLabelAttribute>
+              </default>
+            </kappa>
+          </kappa>
+          <kappa id="31" serialization="custom">
+            <com.rapidminer.operator.ResultObjectAdapter>
+              <default>
+                <annotations id="32">
+                  <keyValueMap id="33"/>
+                </annotations>
+              </default>
+            </com.rapidminer.operator.ResultObjectAdapter>
+            <com.rapidminer.tools.math.Averagable>
+              <default>
+                <averageCount>10</averageCount>
+                <meanSquaredSum>1.860457254642754</meanSquaredSum>
+                <meanSum>4.312991215903838</meanSum>
+              </default>
+            </com.rapidminer.tools.math.Averagable>
+            <kappa>
+              <default>
+                <type>1</type>
+                <classNameMap id="34">
+                  <entry>
+                    <string>false</string>
+                    <int>0</int>
+                  </entry>
+                  <entry>
+                    <string>true</string>
+                    <int>1</int>
+                  </entry>
+                </classNameMap>
+                <classNames id="35">
+                  <string>false</string>
+                  <string>true</string>
+                </classNames>
+                <counter id="36">
+                  <double-array id="37">
+                    <double>1748.0</double>
+                    <double>12.0</double>
+                  </double-array>
+                  <double-array id="38">
+                    <double>1319.0</double>
+                    <double>7.0</double>
+                  </double-array>
+                </counter>
+                <labelAttribute class="BinominalAttribute" reference="13"/>
+                <predictedLabelAttribute class="BinominalAttribute" reference="22"/>
+              </default>
+            </kappa>
+          </kappa>
+          <kappa id="39" serialization="custom">
+            <com.rapidminer.operator.ResultObjectAdapter>
+              <default>
+                <annotations id="40">
+                  <keyValueMap id="41"/>
+                </annotations>
+              </default>
+            </com.rapidminer.operator.ResultObjectAdapter>
+            <com.rapidminer.tools.math.Averagable>
+              <default>
+                <averageCount>10</averageCount>
+                <meanSquaredSum>0.0011995569191159147</meanSquaredSum>
+                <meanSum>-0.017495411144055673</meanSum>
+              </default>
+            </com.rapidminer.tools.math.Averagable>
+            <kappa>
+              <default>
+                <type>2</type>
+                <classNameMap id="42">
+                  <entry>
+                    <string>false</string>
+                    <int>0</int>
+                  </entry>
+                  <entry>
+                    <string>true</string>
+                    <int>1</int>
+                  </entry>
+                </classNameMap>
+                <classNames id="43">
+                  <string>false</string>
+                  <string>true</string>
+                </classNames>
+                <counter id="44">
+                  <double-array id="45">
+                    <double>1748.0</double>
+                    <double>12.0</double>
+                  </double-array>
+                  <double-array id="46">
+                    <double>1319.0</double>
+                    <double>7.0</double>
+                  </double-array>
+                </counter>
+                <labelAttribute class="BinominalAttribute" reference="13"/>
+                <predictedLabelAttribute class="BinominalAttribute" reference="22"/>
+              </default>
+            </kappa>
+          </kappa>
+          <weighted-mean-precision id="47" serialization="custom">
+            <com.rapidminer.operator.ResultObjectAdapter>
+              <default>
+                <annotations id="48">
+                  <keyValueMap id="49"/>
+                </annotations>
+              </default>
+            </com.rapidminer.operator.ResultObjectAdapter>
+            <com.rapidminer.tools.math.Averagable>
+              <default>
+                <averageCount>10</averageCount>
+                <meanSquaredSum>2.4925140327649764</meanSquaredSum>
+                <meanSum>4.992281840966051</meanSum>
+              </default>
+            </com.rapidminer.tools.math.Averagable>
+            <weighted-mean-precision>
+              <default>
+                <type>0</type>
+                <weightSum>2.0</weightSum>
+                <classNameMap id="50">
+                  <entry>
+                    <string>false</string>
+                    <int>0</int>
+                  </entry>
+                  <entry>
+                    <string>true</string>
+                    <int>1</int>
+                  </entry>
+                </classNameMap>
+                <classNames id="51">
+                  <string>false</string>
+                  <string>true</string>
+                </classNames>
+                <classWeights id="52">
+                  <double>1.0</double>
+                  <double>1.0</double>
+                </classWeights>
+                <counter id="53">
+                  <double-array id="54">
+                    <double>1748.0</double>
+                    <double>12.0</double>
+                  </double-array>
+                  <double-array id="55">
+                    <double>1319.0</double>
+                    <double>7.0</double>
+                  </double-array>
+                </counter>
+                <labelAttribute class="BinominalAttribute" reference="13"/>
+                <predictedLabelAttribute class="BinominalAttribute" reference="22"/>
+              </default>
+            </weighted-mean-precision>
+          </weighted-mean-precision>
+          <weighted-mean-precision id="56" serialization="custom">
+            <com.rapidminer.operator.ResultObjectAdapter>
+              <default>
+                <annotations id="57">
+                  <keyValueMap id="58"/>
+                </annotations>
+              </default>
+            </com.rapidminer.operator.ResultObjectAdapter>
+            <com.rapidminer.tools.math.Averagable>
+              <default>
+                <averageCount>10</averageCount>
+                <meanSquaredSum>2.418519745324579</meanSquaredSum>
+                <meanSum>4.516343601991002</meanSum>
+              </default>
+            </com.rapidminer.tools.math.Averagable>
+            <weighted-mean-precision>
+              <default>
+                <type>1</type>
+                <weightSum>2.0</weightSum>
+                <classNameMap id="59">
+                  <entry>
+                    <string>false</string>
+                    <int>0</int>
+                  </entry>
+                  <entry>
+                    <string>true</string>
+                    <int>1</int>
+                  </entry>
+                </classNameMap>
+                <classNames id="60">
+                  <string>false</string>
+                  <string>true</string>
+                </classNames>
+                <classWeights id="61">
+                  <double>1.0</double>
+                  <double>1.0</double>
+                </classWeights>
+                <counter id="62">
+                  <double-array id="63">
+                    <double>1748.0</double>
+                    <double>12.0</double>
+                  </double-array>
+                  <double-array id="64">
+                    <double>1319.0</double>
+                    <double>7.0</double>
+                  </double-array>
+                </counter>
+                <labelAttribute class="BinominalAttribute" reference="13"/>
+                <predictedLabelAttribute class="BinominalAttribute" reference="22"/>
+              </default>
+            </weighted-mean-precision>
+          </weighted-mean-precision>
+          <correlation id="65" serialization="custom">
+            <com.rapidminer.operator.ResultObjectAdapter>
+              <default>
+                <annotations id="66">
+                  <keyValueMap id="67"/>
+                </annotations>
+              </default>
+            </com.rapidminer.operator.ResultObjectAdapter>
+            <com.rapidminer.tools.math.Averagable>
+              <default>
+                <averageCount>10</averageCount>
+                <meanSquaredSum>0.013359155581710191</meanSquaredSum>
+                <meanSum>0.18651302405254444</meanSum>
+              </default>
+            </com.rapidminer.tools.math.Averagable>
+            <correlation>
+              <default>
+                <exampleCount>3086.0</exampleCount>
+                <sumLabel>1326.0</sumLabel>
+                <sumLabelPredict>7.0</sumLabelPredict>
+                <sumLabelSqr>1326.0</sumLabelSqr>
+                <sumPredict>19.0</sumPredict>
+                <sumPredictSqr>19.0</sumPredictSqr>
+                <labelAttribute class="BinominalAttribute" reference="13"/>
+                <predictedLabelAttribute class="BinominalAttribute" reference="22"/>
+              </default>
+            </correlation>
+          </correlation>
+        </averagesList>
+      </default>
+    </AverageVector>
+    <PerformanceVector>
+      <default>
+        <comparator class="com.rapidminer.operator.performance.PerformanceVector$DefaultComparator" id="68"/>
+        <currentValues id="69">
+          <entry>
+            <string>correlation</string>
+            <double>0.018651302405254443</double>
+          </entry>
+          <entry>
+            <string>accuracy</string>
+            <double>0.5687008784096163</double>
+          </entry>
+          <entry>
+            <string>weighted_mean_recall</string>
+            <double>0.4992281840966051</double>
+          </entry>
+          <entry>
+            <string>kappa</string>
+            <double>-0.0017495411144055673</double>
+          </entry>
+          <entry>
+            <string>weighted_mean_precision</string>
+            <double>0.4516343601991002</double>
+          </entry>
+          <entry>
+            <string>classification_error</string>
+            <double>0.4312991215903838</double>
+          </entry>
+        </currentValues>
+        <mainCriterion>first</mainCriterion>
+      </default>
+    </PerformanceVector>
+  </PerformanceVector>
+</object-stream>

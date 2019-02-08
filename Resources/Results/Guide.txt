@@ -1,0 +1,32 @@
+T1 = Sex
+	DS1 = Female
+	DS2 = Male
+
+T2 = RP
+	DS1 = RP1
+	DS2 = RP2
+	DS2 = RP2
+	DS2 = RP2
+	
+T3 = RF
+	DS1 = RF1
+	DS2 = RF2
+	DS3 = RF3
+	DS4 = RF4
+
+HoE:
+	L1 = AP
+	L2 = AT
+	L3 = PL
+	L4 = SE
+
+ELR:
+	L1 = AE
+	L2 = EV
+	L3 = NA
+	L4 = OT
+	
+C1 = DT
+C2 = NB [dont mind this]
+C3 = SVM
+C4 = MLP
